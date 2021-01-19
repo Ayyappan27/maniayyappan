@@ -2,10 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('front_office.welcome');
+Route::group(['namespace' => 'FrontOffice'], function() {
+    Route::get('/', 'WelcomeController@index')->name('welcome');
 });
-
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
