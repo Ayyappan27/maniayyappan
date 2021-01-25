@@ -5,6 +5,9 @@ use App\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
 
+use App\Models\Jobseeker;
+use App\User;
+
 class WelcomeController extends Controller
 {
     /**
@@ -24,6 +27,8 @@ class WelcomeController extends Controller
      */
     public function index()
     {
-        return view('front_office.welcome');
+        // $job = Jobseeker::with(['user', 'links', 'skills'])->get();
+        // dd($job);
+        return view('front_office.home');
     }
 }

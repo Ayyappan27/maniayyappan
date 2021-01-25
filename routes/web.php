@@ -2,9 +2,12 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::group(['namespace' => 'FrontOffice'], function() {
-    Route::get('/', 'WelcomeController@index')->name('welcome');
-});
-Auth::routes();
+Route::redirect('/', '/en');
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::group(['prefix' => '{language}', 'namespace' => 'FrontOffice'], function() {
+    Route::get('/', 'WelcomeController@index')->name('front.home');
+    Route::get('/about', 'AboutController@index')->name('front.about');
+    Route::get('/contact', 'ContactController@index')->name('front.contact');
+});
+
+Auth::routes();
