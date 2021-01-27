@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreatePrivacyAndPoliciesTable extends Migration
+class CreateIndustryTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,9 @@ class CreatePrivacyAndPoliciesTable extends Migration
      */
     public function up()
     {
-        Schema::create('privacy_and_policies', function (Blueprint $table) {
+        Schema::create('tbl_industry', function (Blueprint $table) {
             $table->id();
-            $table->string('language');
-            $table->string('content', 2000);
+            $table->string('industry_name');
             $table->timestamps();
         });
     }
@@ -28,6 +27,6 @@ class CreatePrivacyAndPoliciesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('privacy_and_policies');
+        Schema::dropIfExists('tbl_industry');
     }
 }

@@ -1,5 +1,5 @@
 <!doctype html>
-<html {{ ((app()->getLocale()) == 'ar') ? "dir=rtl" : "dir=ltr" }}>
+<html  >
 <head>
 <meta charset="utf-8">
     <meta name="keywords" content="HTML5 Template" />
@@ -168,15 +168,14 @@ feature info section -->
           <div class="col-md-6 ">
             <div class="d-flex justify-content-md-start justify-content-center">
               <ul class="list-unstyled d-flex mb-0">
-                <li><a href="#">Privacy Policy</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="#">Team</a></li>
-                <li><a href="contact-us.html">Contact</a></li>
+                <li><a href="privacypolicy">{{ __('menu.Privacy Policy') }}</a></li>
+                <li><a href="about">{{ __('menu.About') }}</a></li>
+                <li><a href="contact">{{ __('menu.Contact') }}</a></li>
               </ul>
             </div>
           </div>
           <div class="col-md-6 text-center text-md-right mt-4 mt-md-0">
-            <p class="mb-0"> &copy;Copyright <span id="copyright"> <script>document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))</script></span> <a href="#"> Linkia </a> All Rights Reserved </p>
+            <p class="mb-0"> &copy;Copyright <span id="copyright"> <script>document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))</script></span> <a href="#"> Wize Job Portal </a> {{ __('menu.All Rights Reserved') }} </p>
           </div>
         </div>
       </div>

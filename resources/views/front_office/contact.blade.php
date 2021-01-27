@@ -7,10 +7,10 @@ inner banner -->
   <div class="container">
     <div class="row">
       <div class="col-12">
-        <h2 class="text-primary">Contact Us</h2>
+        <h2 class="text-primary">{{ __('menu.Contact') }}</h2>
         <ol class="breadcrumb mb-0 p-0">
-          <li class="breadcrumb-item"><a href="index.html"> Home </a></li>
-          <li class="breadcrumb-item active"> <i class="fas fa-chevron-right"></i> <span> Contact us </span></li>
+          <li class="breadcrumb-item"><a href="index.html"> {{ __('menu.Home') }} </a></li>
+          <li class="breadcrumb-item active"> <i class="fas fa-chevron-right"></i> <span> {{ __('menu.Contact') }} </span></li>
         </ol>
       </div>
     </div>
@@ -22,7 +22,8 @@ inner banner -->
 <!--=================================
 feature-info -->
 <section class="space-ptb">
-  <div class="container">
+   <div class="container">
+    @foreach($data as $dataa)
     <div class="row">
       <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
         <div class="feature-info feature-info-border p-4 text-center">
@@ -30,9 +31,9 @@ feature-info -->
             <i class="flaticon-placeholder"></i>
           </div>
           <div class="feature-info-content">
-            <h5 class="text-black">Address</h5>
-            <span class="d-block">214 West Arnold St. </span>
-            <span>New York, NY 10002</span>
+            <h5 class="text-black">{{ __('menu.Address') }}</h5>
+            <span class="d-block">214 {{  __('menu.West Arnold St.')  }} </span>
+            <span>{{  __('menu.New York, NY')  }} 10002</span>
           </div>
         </div>
       </div>
@@ -42,9 +43,9 @@ feature-info -->
             <i class="flaticon-contact fa-flip-horizontal"></i>
           </div>
           <div class="feature-info-content">
-            <h5 class="text-black">Phone Number</h5>
-            <span class="d-block">(123) 345-6789</span>
-            <span>(456) 478-2589</span>
+            <h5 class="text-black">{{ __('menu.Phone Number') }}</h5>
+            <span class="d-block">{{ $dataa['phone_number'] }}</span>
+            <span>{{ $dataa['whatsapp_number'] }}</span>
           </div>
         </div>
       </div>
@@ -54,9 +55,8 @@ feature-info -->
             <i class="flaticon-approval"></i>
           </div>
           <div class="feature-info-content">
-            <h5 class="text-black">Email</h5>
-            <span class="d-block">support@jobber.demo</span>
-            <span>gethelp@jobber.demo</span>
+            <h5 class="text-black">{{ __('menu.Email') }}</h5>
+            <span class="d-block">{{ $dataa['email'] }}</span>
           </div>
         </div>
       </div>
@@ -66,13 +66,13 @@ feature-info -->
             <i class="flaticon-curriculum"></i>
           </div>
           <div class="feature-info-content">
-            <h5 class="text-black">Fax</h5>
-            <span class="d-block">(123) 345-6789</span>
-            <span>(456) 478-2589</span>
+            <h5 class="text-black">{{ __('menu.Website') }}</h5>
+            <span class="d-block">{{ $dataa['website_link'] }}</span>
           </div>
         </div>
       </div>
     </div>
+    @endforeach
   </div>
 </section>
 <!--=================================
