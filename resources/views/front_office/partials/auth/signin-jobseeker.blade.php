@@ -17,7 +17,7 @@
             <div class="col-md-6">
             <div class="ml-md-3 mt-3 mt-md-0 forgot-pass">
                 <a href="#">Forgot Password?</a>
-                <p class="mt-1">Don't have account? <a href="register.html">Sign Up here</a></p>
+                <p class="mt-1">Don't have account? <a href="registration">Sign Up here</a></p>
             </div>
             </div>
         </div>

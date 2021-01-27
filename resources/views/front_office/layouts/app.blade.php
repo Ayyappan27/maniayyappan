@@ -22,8 +22,12 @@
     <link rel="stylesheet" href="{{ asset('front_office/css/owl-carousel/owl.carousel.min.css') }}" />
     <link rel="stylesheet" href="{{ asset('front_office/css/subtle-slideshow.css') }}" />
 
+ 
+    <link rel="stylesheet" href="{{ asset('front_office/css/magnific-popup/magnific-popup.css') }}" />
+
     <!-- Template Style -->
     <link rel="stylesheet" href="{{ asset('front_office/css/style.css') }}" />
+    <link rel="stylesheet" href="{{ asset('front_office/css/custom.css') }}" />
 
 </head>
 <body>
@@ -39,7 +43,7 @@ feature info section -->
 <section class="feature-info-section">
   <div class="container">
     <div class="row">
-      <div class="col-lg-6 mb-lg-0 mb-4">
+      <div class="col-lg-4 mb-lg-0 mb-4">
         <div class="feature-info feature-info-02 p-4 p-lg-5 bg-primary">
           <div class="feature-info-icon mb-3 mb-sm-0 text-dark">
             <i class="flaticon-team"></i>
@@ -47,22 +51,38 @@ feature info section -->
           <div class="feature-info-content text-white pl-sm-4 pl-0">
             <p>Jobseeker</p>
             <h5 class="text-white">Looking For Job?</h5>
+          <!-- <a class="ml-auto align-self-center" href="#">Apply now<i class="fas fa-long-arrow-alt-right"></i> </a> -->
           </div>
-          <a class="ml-auto align-self-center" href="#">Apply now<i class="fas fa-long-arrow-alt-right"></i> </a>
         </div>
       </div>
-      <div class="col-lg-6">
-        <div class="feature-info feature-info-02 p-4 p-lg-5 bg-dark">
+      
+   
+
+      <div class="col-lg-4 mb-lg-0 mb-4">
+        <div class="feature-info feature-info-02 p-4 p-lg-5 bg-primary">
           <div class="feature-info-icon mb-3 mb-sm-0 text-dark">
             <i class="flaticon-job-3"></i>
           </div>
           <div class="feature-info-content text-white pl-sm-4 pl-0">
             <p>Recruiter</p>
             <h5 class="text-white">Are You Recruiting?</h5>
+            <!-- <a class="ml-auto align-self-center" href="#">Apply now<i class="fas fa-long-arrow-alt-right"></i> </a> -->
           </div>
-          <a class="ml-auto align-self-center" href="#">Post a job<i class="fas fa-long-arrow-alt-right"></i> </a>
         </div>
       </div>
+      <div class="col-lg-4 mb-lg-0 mb-4">
+        <div class="feature-info feature-info-02 p-4 p-lg-5 bg-primary">
+          <div class="feature-info-icon mb-3 mb-sm-0 text-dark">
+            <i class="flaticon-job"></i>
+          </div>
+          <div class="feature-info-content text-white pl-sm-4 pl-0">
+            <p>Individuals</p>
+            <h5 class="text-white">Looking For Job?</h5>
+            <!-- <a class="ml-auto align-self-center" href="#">Apply now<i class="fas fa-long-arrow-alt-right"></i> </a> -->
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
@@ -181,6 +201,10 @@ feature info section -->
     <script src="{{ asset('front_office/js/owl-carousel/owl-carousel.min.js') }}"></script>
     <script src="{{ asset('front_office/js/slideshow/jquery.velocity.min.js') }}"></script>
     <script src="{{ asset('front_office/js/slideshow/jquery.kenburnsy.js') }}"></script>
+
+    <script src="{{ asset('front_office/js/jquery.appear.js') }}"></script>
+    <script src="{{ asset('front_office/counter/jquery.countTo.js') }}"></script>
+    <script src="{{ asset('front_office/js/magnific-popup/jquery.magnific-popup.min.js') }}"></script>
 
     <!-- Template Scripts (Do not remove)-->
     <script src="{{ asset('front_office/js/custom.js') }}"></script>

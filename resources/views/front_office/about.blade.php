@@ -20,7 +20,7 @@ inner banner -->
 
 <!--=================================
 Millions of jobs -->
-<section class="space-ptb" style="background-image: url(images/google-map.png); background-position: center center; background-repeat: no-repeat;">
+<section class="space-ptb" style="background-image: url(../front_office/images/google-map.png); background-position: center center; background-repeat: no-repeat;">
   <div class="container">
     <div class="row justify-content-center text-center">
       <div class="col-md-6">
@@ -29,7 +29,7 @@ Millions of jobs -->
       <div class="col-lg-10">
         <div class="text-center">
           <p class="mb-lg-5 mb-4 lead">We also know those epic stories, those modern-day legends surrounding the early failures of such supremely successful folks as Michael Jordan and Bill Gates. We can look a bit further back in time to Albert Einstein or even further back to Abraham Lincoln.</p>
-          <img class="img-fluid mt-lg-4 mt-3" src="images/about/about-img1.png" alt="">
+          <img class="img-fluid mt-lg-4 mt-3" src="../front_office/images/about/about-img1.png" alt="">
         </div>
       </div>
     </div>
@@ -90,14 +90,14 @@ Why You Choose Job -->
       <div class="col-lg-6 mb-5 mb-lg-0">
         <div class="row">
           <div class="col-sm-7">
-            <img class="img-fluid mb-2 mb-sm-0 w-100" src="images/about/01.png" alt="">
+            <img class="img-fluid mb-2 mb-sm-0 w-100" src="../front_office/images/about/01.png" alt="">
           </div>
           <div class="col-sm-5 mt-4">
-            <img class="img-fluid mb-2 w-100" src="images/about/02.png" alt="">
+            <img class="img-fluid mb-2 w-100" src="../front_office/images/about/02.png" alt="">
             <div class=" mt-4">
               <a class="popup-icon popup-youtube bg-holder bg-overlay-black-70" href="https://www.youtube.com/watch?v=LgvseYYhqU0">
                 <i class="flaticon-play-button"></i>
-                <img class="img-fluid w-100" src="images/about/03.png" alt="">
+                <img class="img-fluid w-100" src="../front_office/images/about/03.png" alt="">
               </a>
             </div>
           </div>
@@ -212,7 +212,7 @@ Testimonial -->
           <div class="item">
             <div class="testimonial-item text-center">
               <div class="avatar">
-                <img class="img-fluid rounded-circle" src="images/avatar/04.jpg" alt="">
+                <img class="img-fluid rounded-circle" src="../front_office/images/avatar/04.jpg" alt="">
               </div>
               <div class="testimonial-content">
                 <p>The Jobber database has been one of our current sources for recruitment, backed by a very experienced team who would go out of their way to make sure that requests are taken ahead.</p>
@@ -227,7 +227,7 @@ Testimonial -->
           <div class="item">
             <div class="testimonial-item text-center">
               <div class="avatar">
-                <img class="img-fluid rounded-circle" src="images/avatar/02.jpg" alt="">
+                <img class="img-fluid rounded-circle" src="../front_office/images/avatar/02.jpg" alt="">
               </div>
               <div class="testimonial-content">
                 <p>Portal is very user-friendly in terms of searching for resumes and job postings. Also, they have an excellent database to search for resumes. As far as services are involved, it's terrific! </p>

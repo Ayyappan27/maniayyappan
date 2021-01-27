@@ -1,0 +1,42 @@
+.modal-z-index{
+  z-index: 99999;
+}
+.wize-yellow-bg{
+  background: #FCCF17;
+}
+.wize-yellow-clr{
+    color: #FCCF17; 
+} 
+.header .add-listing .btn-white:focus i{
+    color: #000000;
+}
+@media only screen and (max-width: 991px) {
+    .navbar .navbar-nav .nav-link:hover,
+    .navbar .navbar-nav .nav-item.active .nav-link{
+        color: #FCCF17; 
+    }
+}
+/*********** Loder Start ****************/
+.loading {
+    position: fixed;
+    top: 0; 
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: #ffffff;
+    z-index:99999999999;
+    height: 100vh;
+    display:none;
+}
+.loader {
+    width:250px;
+    height: auto;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+/*********** Loder End   ****************/

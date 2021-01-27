@@ -91,7 +91,7 @@ Browse listing -->
               <div class="col-lg-6 col-sm-6">
                 <div class="job-list job-grid">
                   <div class="job-list-logo ">
-                    <img class="img-fluid" src="images/svg/10.svg" alt="">
+                    <img class="img-fluid" src="front_office/images/svg/10.svg" alt="">
                   </div>
                   <div class="job-list-details">
                     <div class="job-list-info">
@@ -120,7 +120,7 @@ Browse listing -->
               <div class="col-lg-6 col-sm-6">
                 <div class="job-list job-grid">
                   <div class="job-list-logo ">
-                    <img class="img-fluid" src="images/svg/11.svg" alt="">
+                    <img class="img-fluid" src="front_office/images/svg/11.svg" alt="">
                   </div>
                   <div class="job-list-details">
                     <div class="job-list-info">
@@ -149,7 +149,7 @@ Browse listing -->
               <div class="col-lg-6 col-sm-6">
                 <div class="job-list job-grid">
                   <div class="job-list-logo ">
-                    <img class="img-fluid" src="images/svg/12.svg" alt="">
+                    <img class="img-fluid" src="front_office/images/svg/12.svg" alt="">
                   </div>
                   <div class="job-list-details">
                     <div class="job-list-info">
@@ -178,7 +178,7 @@ Browse listing -->
               <div class="col-lg-6 col-sm-6">
                 <div class="job-list job-grid">
                   <div class="job-list-logo ">
-                    <img class="img-fluid" src="images/svg/17.svg" alt="">
+                    <img class="img-fluid" src="front_office/images/svg/17.svg" alt="">
                   </div>
                   <div class="job-list-details">
                     <div class="job-list-info">
@@ -214,7 +214,7 @@ Browse listing -->
               <div class="col-lg-6 col-sm-6">
                 <div class="job-list job-grid">
                   <div class="job-list-logo ">
-                    <img class="img-fluid" src="images/svg/13.svg" alt="">
+                    <img class="img-fluid" src="front_office/images/svg/13.svg" alt="">
                   </div>
                   <div class="job-list-details">
                     <div class="job-list-info">
@@ -243,7 +243,7 @@ Browse listing -->
               <div class="col-lg-6 col-sm-6">
                 <div class="job-list job-grid">
                   <div class="job-list-logo ">
-                    <img class="img-fluid" src="images/svg/14.svg" alt="">
+                    <img class="img-fluid" src="front_office/images/svg/14.svg" alt="">
                   </div>
                   <div class="job-list-details">
                     <div class="job-list-info">
@@ -272,7 +272,7 @@ Browse listing -->
               <div class="col-lg-6 col-sm-6">
                 <div class="job-list job-grid">
                   <div class="job-list-logo ">
-                    <img class="img-fluid" src="images/svg/15.svg" alt="">
+                    <img class="img-fluid" src="front_office/images/svg/15.svg" alt="">
                   </div>
                   <div class="job-list-details">
                     <div class="job-list-info">
@@ -301,7 +301,7 @@ Browse listing -->
               <div class="col-lg-6 col-sm-6">
                 <div class="job-list job-grid">
                   <div class="job-list-logo ">
-                    <img class="img-fluid" src="images/svg/16.svg" alt="">
+                    <img class="img-fluid" src="front_office/images/svg/16.svg" alt="">
                   </div>
                   <div class="job-list-details">
                     <div class="job-list-info">
@@ -370,7 +370,7 @@ Browse listing -->
               <h5>Featured Company</h5>
             </div>
             <div class="mb-3">
-              <img class="img-fluid" src="images/bg/bg-01.jpg" alt="">
+              <img class="img-fluid" src="front_office/images/bg/bg-01.jpg" alt="">
             </div>
             <div class="employers-list-details">
               <div class="employers-list-info">
@@ -392,7 +392,7 @@ Browse listing -->
             <div class="item">
               <div class="employers-grid bg-white py-4">
                 <div class="employers-list-logo pt-0">
-                  <img class="img-fluid" src="images/svg/09.svg" alt="">
+                  <img class="img-fluid" src="front_office/images/svg/09.svg" alt="">
                 </div>
                 <div class="employers-list-details">
                   <div class="employers-list-info">
@@ -414,7 +414,7 @@ Browse listing -->
             <div class="item">
               <div class="employers-grid bg-white py-4">
                 <div class="employers-list-logo pt-0">
-                  <img class="img-fluid" src="images/svg/08.svg" alt="">
+                  <img class="img-fluid" src="front_office/images/svg/08.svg" alt="">
                 </div>
                 <div class="employers-list-details">
                   <div class="employers-list-info">
@@ -436,7 +436,7 @@ Browse listing -->
             <div class="item">
               <div class="employers-grid bg-white py-4">
                 <div class="employers-list-logo pt-0">
-                  <img class="img-fluid" src="images/svg/06.svg" alt="">
+                  <img class="img-fluid" src="front_office/images/svg/06.svg" alt="">
                 </div>
                 <div class="employers-list-details">
                   <div class="employers-list-info">
@@ -544,7 +544,7 @@ Why You Choose -->
 <section class="bg-light">
   <div class="container-fluid p-0">
     <div class="row align-self-center m-0">
-      <div class="col-md-6 bg-holder" style="background-image: url(images/bg/cover-bg-2.jpg); background-size: cover;">
+      <div class="col-md-6 bg-holder" style="background-image: url(front_office/images/bg/cover-bg-2.jpg); background-size: cover;">
       </div>
       <div class="col-xl-6 col-lg-6 col-md-12">
         <div class="feature-content">
@@ -615,7 +615,7 @@ Top Companies -->
           <div class="item">
             <div class="employers-grid mb-4 mb-lg-0">
               <div class="employers-list-logo">
-                <img class="img-fluid" src="images/svg/07.svg" alt="">
+                <img class="img-fluid" src="front_office/images/svg/07.svg" alt="">
               </div>
               <div class="employers-list-details">
                 <div class="employers-list-info">
@@ -637,7 +637,7 @@ Top Companies -->
           <div class="item">
             <div class="employers-grid mb-4 mb-md-0">
               <div class="employers-list-logo">
-                <img class="img-fluid" src="images/svg/08.svg" alt="">
+                <img class="img-fluid" src="front_office/images/svg/08.svg" alt="">
               </div>
               <div class="employers-list-details">
                 <div class="employers-list-info">
@@ -659,7 +659,7 @@ Top Companies -->
           <div class="item">
             <div class="employers-grid mb-4 mb-lg-0">
               <div class="employers-list-logo">
-                <img class="img-fluid" src="images/svg/09.svg" alt="">
+                <img class="img-fluid" src="front_office/images/svg/09.svg" alt="">
               </div>
               <div class="employers-list-details">
                 <div class="employers-list-info">
@@ -681,7 +681,7 @@ Top Companies -->
           <div class="item">
             <div class="employers-grid mb-4 mb-md-0">
               <div class="employers-list-logo">
-                <img class="img-fluid" src="images/svg/10.svg" alt="">
+                <img class="img-fluid" src="front_office/images/svg/10.svg" alt="">
               </div>
               <div class="employers-list-details">
                 <div class="employers-list-info">
@@ -703,7 +703,7 @@ Top Companies -->
           <div class="item">
             <div class="employers-grid mb-4 mb-lg-0">
               <div class="employers-list-logo">
-                <img class="img-fluid" src="images/svg/11.svg" alt="">
+                <img class="img-fluid" src="front_office/images/svg/11.svg" alt="">
               </div>
               <div class="employers-list-details">
                 <div class="employers-list-info">
@@ -725,7 +725,7 @@ Top Companies -->
           <div class="item">
             <div class="employers-grid mb-4 mb-lg-0">
               <div class="employers-list-logo">
-                <img class="img-fluid" src="images/svg/12.svg" alt="">
+                <img class="img-fluid" src="front_office/images/svg/12.svg" alt="">
               </div>
               <div class="employers-list-details">
                 <div class="employers-list-info">
@@ -747,7 +747,7 @@ Top Companies -->
           <div class="item">
             <div class="employers-grid mb-4 mb-md-0">
               <div class="employers-list-logo">
-                <img class="img-fluid" src="images/svg/13.svg" alt="">
+                <img class="img-fluid" src="front_office/images/svg/13.svg" alt="">
               </div>
               <div class="employers-list-details">
                 <div class="employers-list-info">
@@ -769,7 +769,7 @@ Top Companies -->
           <div class="item">
             <div class="employers-grid mb-4 mb-lg-0">
               <div class="employers-list-logo">
-                <img class="img-fluid" src="images/svg/14.svg" alt="">
+                <img class="img-fluid" src="front_office/images/svg/14.svg" alt="">
               </div>
               <div class="employers-list-details">
                 <div class="employers-list-info">
@@ -791,7 +791,7 @@ Top Companies -->
           <div class="item">
             <div class="employers-grid mb-4 mb-lg-0">
               <div class="employers-list-logo">
-                <img class="img-fluid" src="images/svg/15.svg" alt="">
+                <img class="img-fluid" src="front_office/images/svg/15.svg" alt="">
               </div>
               <div class="employers-list-details">
                 <div class="employers-list-info">
@@ -830,7 +830,7 @@ Easiest Way to Use -->
         </div>
       </div>
     </div>
-    <div class="row bg-holder-pattern mr-md-0 ml-md-0" style="background-image: url('images/step/pattern-01.png');">
+    <div class="row bg-holder-pattern mr-md-0 ml-md-0" style="background-image: url('front_office/images/step/pattern-01.png');">
       <div class="col-md-4 mb-4 mb-md-0">
         <div class="feature-step text-center">
           <div class="feature-info-icon">
@@ -872,7 +872,7 @@ Easiest Way to Use -->
 
 <!--=================================
 Candidate post-box list -->
-<section class="space-ptb">
+<section class="mt-4 pt-4 mb-4 pb-4">
   <div class="container">
     <div class="row">
       <div class="col-12">
@@ -886,7 +886,7 @@ Candidate post-box list -->
         <div class="item">
           <div class="candidate-list candidate-grid">
             <div class="candidate-list-image">
-              <img class="img-fluid" src="images/avatar/06.jpg" alt="" >
+              <img class="img-fluid" src="front_office/images/avatar/06.jpg" alt="" >
             </div>
             <div class="candidate-list-details">
               <div class="candidate-list-info">
@@ -910,7 +910,7 @@ Candidate post-box list -->
         <div class="item">
           <div class="candidate-list candidate-grid">
             <div class="candidate-list-image">
-              <img class="img-fluid" src="images/avatar/02.jpg" alt="" >
+              <img class="img-fluid" src="front_office/images/avatar/02.jpg" alt="" >
             </div>
             <div class="candidate-list-details">
               <div class="candidate-list-info">
@@ -934,7 +934,7 @@ Candidate post-box list -->
         <div class="item">
           <div class="candidate-list candidate-grid">
             <div class="candidate-list-image">
-              <img class="img-fluid" src="images/avatar/01.jpg" alt="" >
+              <img class="img-fluid" src="front_office/images/avatar/01.jpg" alt="" >
             </div>
             <div class="candidate-list-details">
               <div class="candidate-list-info">
@@ -958,7 +958,7 @@ Candidate post-box list -->
         <div class="item">
           <div class="candidate-list candidate-grid">
             <div class="candidate-list-image">
-              <img class="img-fluid" src="images/avatar/03.jpg" alt="" >
+              <img class="img-fluid" src="front_office/images/avatar/03.jpg" alt="" >
             </div>
             <div class="candidate-list-details">
               <div class="candidate-list-info">
@@ -982,7 +982,7 @@ Candidate post-box list -->
         <div class="item">
           <div class="candidate-list candidate-grid">
             <div class="candidate-list-image">
-              <img class="img-fluid" src="images/avatar/04.jpg" alt="" >
+              <img class="img-fluid" src="front_office/images/avatar/04.jpg" alt="" >
             </div>
             <div class="candidate-list-details">
               <div class="candidate-list-info">
@@ -1006,7 +1006,7 @@ Candidate post-box list -->
         <div class="item">
           <div class="candidate-list candidate-grid">
             <div class="candidate-list-image">
-              <img class="img-fluid" src="images/avatar/05.jpg" alt="" >
+              <img class="img-fluid" src="front_office/images/avatar/05.jpg" alt="" >
             </div>
             <div class="candidate-list-details">
               <div class="candidate-list-info">
@@ -1037,7 +1037,7 @@ Candidate post-box list -->
 
 <!--=================================
 Action box -->
-<section class="space-ptb bg-holder bg-overlay-black-60" style="background-image: url(images/slider/banner-02.jpg);">
+<!-- <section class="space-ptb bg-holder bg-overlay-black-60" style="background-image: url(images/slider/banner-02.jpg);">
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-lg-8 text-center">
@@ -1050,13 +1050,13 @@ Action box -->
       </div>
     </div>
   </div>
-</section>
+</section> -->
 <!--=================================
 Action box -->
 
 <!--=================================
 Plans&and Packages -->
-<section class="space-ptb">
+<section class="mt-4 mb-4 pb-4">
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-md-10 col-lg-8">
@@ -1070,43 +1070,33 @@ Plans&and Packages -->
       <div class="col-md-4 text-center">
         <div class="pricing-plan pricing-plan-02 mt-md-3 mt-0 free">
           <div class="pricing-price">
-            <span>$00</span>
-            <h5 class="pricing-title">Free Forever</h5>
+            <span>$3.99 </span>
           </div>
           <ul class="list-unstyled pricing-list">
-            <li>Appear in general results</li>
-            <li>Accept mobile app </li>
-          </ul>
-          <a class="btn btn-outline" href="#">Post a Job</a>
-        </div>
-      </div>
-      <div class="col-md-4 text-center">
-        <div class="pricing-plan pricing-plan-02 sponsor active">
-          <div class="pricing-price">
-            <span>$10</span>
-            <h5 class="pricing-title">Sponsor Jobs</h5>
-          </div>
-          <ul class="list-unstyled pricing-list">
-            <li>Premium placement</li>
-            <li>PPC on your Job</li>
-            <li>Reach more candidates</li>
+            <li>Subscription for one month</li>
           </ul>
           <a class="btn btn-outline" href="#">Get Started</a>
         </div>
       </div>
       <div class="col-md-4 text-center">
-        <div class="pricing-plan pricing-plan-02 premium mt-md-3 mb-0">
+        <div class="pricing-plan pricing-plan-02 sponsor active">
           <div class="pricing-price">
-            <span>$299</span>
-            <h5 class="pricing-title">Premium Plan</h5>
+            <span>$12.99 </span>
           </div>
           <ul class="list-unstyled pricing-list">
-            <li>Job ad live for six-weeks</li>
-            <li>50 Feature Jobs </li>
-            <li>Premium placement </li>
-            <li>Desktop, mobile and Job Alerts</li>
+            <li>Subscription for one year</li>          </ul>
+          <a class="btn btn-outline" href="#">Get Started</a>
+        </div>
+      </div>
+      <div class="col-md-4 text-center">
+        <div class="pricing-plan pricing-plan-02 mt-md-3 mt-0 free">
+          <div class="pricing-price">
+            <span>$8.99</span>
+          </div>
+          <ul class="list-unstyled pricing-list">
+            <li>Subscription for six month</li>
           </ul>
-          <a class="btn btn-outline" href="#">Select Plan</a>
+          <a class="btn btn-outline" href="#">Get Started</a>
         </div>
       </div>
     </div>

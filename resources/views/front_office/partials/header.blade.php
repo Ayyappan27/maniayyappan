@@ -21,8 +21,8 @@ Header -->
               Listing <i class="fas fa-chevron-down fa-xs"></i>
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="job-grid.html">Job Grid</a></li>
-              <li><a class="dropdown-item" href="job-listing.html">Job Listing</a></li>
+              <li><a class="dropdown-item" href="#">Job Grid</a></li>
+              <li><a class="dropdown-item" href="#">Job Listing</a></li>
             </ul>
           </li>
           <li class="nav-item dropdown {{ Request::segment(2) === 'about' ? 'active' : null }}">
@@ -36,16 +36,16 @@ Header -->
               Profile <i class="fas fa-chevron-down fa-xs"></i>
             </a>
             <ul class="dropdown-menu left-side">
-                <li><a class="dropdown-item" href="dashboard-employer.html">Dashboard</a></li>
-                <li><a class="dropdown-item" href="dashboard-employer-my-profile.html">Profile</a></li>
-                <li><a class="dropdown-item" href="dashboard-employer-change-password.html">Change Password </a></li>
-                <li><a class="dropdown-item" href="dashboard-employer-manage-candidates.html">Manage Candidates</a></li>
+                <li><a class="dropdown-item" href="#">Dashboard</a></li>
+                <li><a class="dropdown-item" href="#">Profile</a></li>
+                <li><a class="dropdown-item" href="#">Change Password </a></li>
+                <li><a class="dropdown-item" href="#">Manage Candidates</a></li>
             </ul>
           </li>
         </ul>
       </div>
       <div class="add-listing">
-        <a class="btn btn-white btn-md" href="login.html" data-toggle="modal" data-target="#exampleModalCenter"> <i class="far fa-user mr-3"></i>Sign in</a>
+        <a class="btn btn-white btn-md" href="#" data-toggle="modal" data-target="#exampleModalCenter"> <i class="far fa-user mr-3"></i>Sign in</a>
       </div>
       <div class="add-listing ml-3">
         <a href="{{ route(Route::currentRouteName(), 'ar') }}">
