@@ -17,7 +17,7 @@ inner banner -->
   </div>
 </div>
 <!--=================================
-inner banner -->
+inner banner --> 
 
 <!--=================================
 feature-info -->

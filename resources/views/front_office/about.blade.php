@@ -17,7 +17,7 @@ inner banner -->
 </div>
 <!--=================================
 inner banner -->
-
+  
 <!--=================================
 Millions of jobs -->
 <section class="space-ptb" style="background-image: url(../front_office/images/google-map.png); background-position: center center; background-repeat: no-repeat;">

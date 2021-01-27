@@ -12,4 +12,4 @@ Route::group(['prefix' => '{language}', 'namespace' => 'FrontOffice'], function(
     Route::get('/privacypolicy', 'PrivacyPolicyController@index')->name('front.privacypolicy');
 });
 
-Auth::routes();
+Auth::routes(); 

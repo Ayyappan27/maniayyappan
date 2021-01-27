@@ -30,5 +30,5 @@ class WelcomeController extends Controller
         // $job = Jobseeker::with(['user', 'links', 'skills'])->get();
         // dd($job);
         return view('front_office.home');
-    }
+    } 
 }
