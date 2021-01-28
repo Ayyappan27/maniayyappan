@@ -6,10 +6,10 @@ inner banner -->
   <div class="container">
     <div class="row">
       <div class="col-12">
-        <h2 class="text-primary">About Us</h2>
+        <h2 class="text-primary">{{ __('menu.About') }}</h2>
         <ol class="breadcrumb mb-0 p-0">
-          <li class="breadcrumb-item"><a href="index.html"> Home </a></li>
-          <li class="breadcrumb-item active"> <i class="fas fa-chevron-right"></i> <span> About us </span></li>
+          <li class="breadcrumb-item"><a href="index.html"> {{ __('menu.Home') }} </a></li>
+          <li class="breadcrumb-item active"> <i class="fas fa-chevron-right"></i> <span> {{ __('menu.About') }} </span></li>
         </ol>
       </div>
     </div>
@@ -23,15 +23,9 @@ Millions of jobs -->
 <section class="space-ptb" style="background-image: url(../front_office/images/google-map.png); background-position: center center; background-repeat: no-repeat;">
   <div class="container">
     <div class="row justify-content-center text-center">
-      <div class="col-md-6">
-        <h2 class="mb-4">Millions of jobs, finds the one that's right for you</h2>
-      </div>
-      <div class="col-lg-10">
-        <div class="text-center">
-          <p class="mb-lg-5 mb-4 lead">We also know those epic stories, those modern-day legends surrounding the early failures of such supremely successful folks as Michael Jordan and Bill Gates. We can look a bit further back in time to Albert Einstein or even further back to Abraham Lincoln.</p>
-          <img class="img-fluid mt-lg-4 mt-3" src="../front_office/images/about/about-img1.png" alt="">
-        </div>
-      </div>
+      @foreach($data as $dataa)
+        {!! html_entity_decode($dataa['content']) !!}
+      @endforeach
     </div>
   </div>
 </section>

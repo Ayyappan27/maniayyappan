@@ -3,11 +3,14 @@
 namespace App\Http\Controllers\FrontOffice;
 
 use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
+use Request;
+use App\Models\Privacy;
 
 class PrivacyPolicyController extends Controller
 {
     public function index() {
-        return view('front_office.privacypolicy'); 
+    	$lang = Request::segment(1);
+        $data = Privacy::where('language', $lang)->get();
+        return view('front_office.privacypolicy', ['data' => $data ]);
     }
 }
