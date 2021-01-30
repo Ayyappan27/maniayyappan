@@ -13,6 +13,7 @@ class LoginController extends Controller
         if (Auth::guard('admin')->check()) {
             return redirect('admin');
         }
+        // return view('dashboard.pages.dashboard.index');
         return view('dashboard.auth.login');
     }
 
@@ -26,7 +27,7 @@ class LoginController extends Controller
             return redirect('admin');
         } else {
             session()->flash('error', 'Incorrect email or password !');
-            return redirect('admin/login');
+            return redirect('admin');
         }
     }
 

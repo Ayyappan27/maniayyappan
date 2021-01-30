@@ -1,9 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+Route::get('/admin', 'LoginController@index');
 Route::redirect('/', '/en');
-
 Route::group(['prefix' => '{language}', 'namespace' => 'FrontOffice'], function() {
     Route::get('/', 'WelcomeController@index')->name('front.home');
     Route::get('/about', 'AboutController@index')->name('front.about');
@@ -11,5 +10,4 @@ Route::group(['prefix' => '{language}', 'namespace' => 'FrontOffice'], function(
     Route::get('/registration', 'RegistrationController@index')->name('front.registration');
     Route::get('/privacypolicy', 'PrivacyPolicyController@index')->name('front.privacypolicy');
 });
-
-Auth::routes(); 
+Auth::routes();

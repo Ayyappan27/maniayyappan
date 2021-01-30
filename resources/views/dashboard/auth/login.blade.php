@@ -1,98 +1,90 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- CSRF Token -->
-    <meta name="csrf-token" content="{{ csrf_token() }}">
-
-    <title>{{ config('app.name', 'Laravel') }}</title>
-
-    <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
-
-    <!-- Fonts -->
-    <link rel="dns-prefetch" href="//fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
-
-    <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-</head>
-<body>
-<div id="app">
-    <main class="py-4">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-md-8">
-                    <div class="card">
-                        <div class="card-header">Login admin</div>
-
-                        <div class="card-body">
-                            <form method="POST" action="{{ route('admin.login') }}">
-                                @csrf
-
-                                <div class="form-group row">
-                                    <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
-
-                                    <div class="col-md-6">
-                                        <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+      <title> :: wize genie ::</title>
+      <link rel="apple-touch-icon" href="{{ asset('/dashboard/app-assets/images/ico/apple-icon-120.png')}}">
+      <link rel="shortcut icon" type="image/x-icon" href="{{ asset('/dashboard/app-assets/images/logo/logo.png')}}">
+      <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i%7CQuicksand:300,400,500,700" rel="stylesheet">
+      <link rel="stylesheet" type="text/css" href="{{ asset('/dashboard/app-assets/css/bootstrap.css')}}">
+      <link rel="stylesheet" type="text/css" href="{{ asset('/dashboard/app-assets/css/colors.css')}}">
+      <link rel="stylesheet" type="text/css" href="{{ asset('/dashboard/app-assets/css/components.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('/dashboard/app-assets/css/custom.css')}}">
+   </head>
+   <body class="vertical-layout vertical-menu 1-column  blank-page" data-open="click" data-menu="vertical-menu" data-col="1-column">
+      <!-- BEGIN: Content-->
+      <div class="app-content content">
+         <div class="content-overlay"></div>
+         <div class="content-wrapper">
+            <div class="content-header row">
+            </div>
+            <div class="content-body">
+               <section class="row flexbox-container">
+                  <div class="col-12 d-flex align-items-center justify-content-center">
+                     <div class="col-lg-4 col-md-8 col-10 box-shadow-2 p-0">
+                        <div class="card border-grey border-lighten-3 m-0">
+                           <div class="card-header border-0">
+                              <div class="card-title text-center">
+                                 <div class="mt-1">
+                                    <img style="width: 250px;" src="{{ asset('/dashboard/app-assets/images/logo/logo.png')}}" alt="branding logo">
+                                </div>
+                              </div>
+                           </div>
+                           <div class="card-content">
+                              <h3 class="card-subtitle line-on-side text-muted text-center font-small-3 mx-2 mb-1">
+                                 <span class="font-weight-bold"> Account Details</span>
+                              </h3>
+                              <div class="card-body pt-0">
+                                 <form class="form-horizontal" method="POST" action="{{ route('admin.login') }}">
+                                    @csrf
+                                    <fieldset class="form-group floating-label-form-group">
+                                       <label for="user-name">{{ __('E-Mail Address') }}</label>
+                                       <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus >
                                         @error('email')
                                         <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
+                                            <strong>{{ $message }}</strong>
+                                        </span>
                                         @enderror
-                                    </div>
-                                </div>
+                                    </fieldset>
+                                    <fieldset class="form-group floating-label-form-group mb-1">
+                                       <label for="user-password">{{ __('Password') }}</label>
+                                       <input  id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
 
-                                <div class="form-group row">
-                                    <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
-
-                                    <div class="col-md-6">
-                                        <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
-
-                                        @error('password')
+                                       @error('password')
                                         <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
-                                    </span>
+                                       </span>
                                         @enderror
-                                    </div>
-                                </div>
 
-                                <div class="form-group row">
-                                    <div class="col-md-6 offset-md-4">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" name="rememberme" id="remember"  {{ old('remember') ? 'checked' : '' }}>
 
-                                            <label class="form-check-label" for="remember">
-                                                {{ __('Remember Me') }}
-                                            </label>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="form-group row mb-0">
-                                    <div class="col-md-8 offset-md-4">
-                                        <button type="submit" class="btn btn-primary">
-                                            {{ __('Login') }}
-                                        </button>
+                                    </fieldset>
+                                    <div class="form-group row">
+                                       <div class="col-sm-6 col-12 text-center text-sm-left">
+                                          <fieldset>
+                                             <input type="checkbox" id="remember-me" class="chk-remember">
+                                             <label for="remember-me"> {{ __('Remember Me') }}</label>
+                                          </fieldset>
+                                       </div>
+                                       <div class="col-sm-6 col-12 float-sm-left text-center text-sm-right">
 
                                         @if (Route::has('password.request'))
-                                            <a class="btn btn-link" href="{{ route('password.request') }}">
-                                                {{ __('Forgot Your Password?') }}
-                                            </a>
+                                         <a href="{{ route('password.request')}}" class="card-link"> {{ __('Forgot Password?') }}</a>
                                         @endif
+
                                     </div>
-                                </div>
-                            </form>
+                                    </div>
+                                    <button type="submit" class="btn btn-green btn-block mb-2"><i class="ft-unlock"></i> {{ __('Login') }}</button>
+                                 </form>
+                              </div>
+                           </div>
                         </div>
-                    </div>
-                </div>
+                     </div>
+                  </div>
+               </section>
             </div>
-        </div>
-
-    </main>
-</div>
-</body>
+         </div>
+      </div>
+   </body>
 </html>
-
