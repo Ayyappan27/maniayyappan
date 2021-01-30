@@ -78,7 +78,6 @@ class CompanyController extends Controller
                 'updated_at'=> now()
             ]
         );
-
         return redirect()->route('front.registration', app()->getLocale())->with('toast_success', 'User was Created!');
     }
 }
