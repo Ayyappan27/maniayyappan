@@ -32,7 +32,7 @@ class IndividualSeeder extends Seeder
                     'email' => $faker->unique()->email,
                     'password' => bcrypt('individual'),
                     'userable_id' => $index,
-                    'userable_type' => 'App\Models\Individual' ,
+                    'userable_type' => 'App\Models\Individual',
                     'gender' => $index % 2 === 0 ? 'Male' : 'Female',
                     'created_at' => now(),
                     'updated_at'=> now()

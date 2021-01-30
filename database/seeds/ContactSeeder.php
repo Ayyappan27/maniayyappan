@@ -12,14 +12,14 @@ class ContactSeeder extends Seeder
     public function run()
     {
         DB::table('contacts')->insert([
-            'phone_number' => '(123) 345-6789',
-            'whatsapp_number' => '(456) 478-2589',
+            'phone_number' => '(00974) 12345678',
+            'whatsapp_number' => '(00974) 12345678',
             'facebook_link' => '#',
             'instagram_link' => '#',
             'linkedin_link' => '#',
             'twitter_link' => '#',
-            'website_link' => 'www.wizejobportal.com',
-            'email' => 'support@wizrgenie.com',
+            'website_link' => 'https://wizegenie.com',
+            'email' => 'support@wizegenie.com',
             'created_at' => now(),
             'updated_at' => now(),
         ]);

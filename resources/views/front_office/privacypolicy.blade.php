@@ -18,7 +18,7 @@ inner banner -->
  
 <!--=================================
 Terms and conditions -->
-<section class="space-ptb">
+<section class="space-ptb">  
   <div class="container">
     <div class="row">
       <div class="col-12">
