@@ -13,4 +13,5 @@ class PrivacyPolicyController extends Controller
         $data = Privacy::where('language', $lang)->get();
         return view('front_office.privacypolicy', ['data' => $data ]);
     }
+
 }

@@ -46,7 +46,7 @@ Header -->
         </ul>
       </div>
       <div class="add-listing">
-        <a class="btn btn-white btn-md" href="#" data-toggle="modal" data-target="#exampleModalCenter"> <i class="far fa-user mr-3"></i>{{ __('menu.Sign in') }}</a>
+        <a class="btn btn-white btn-md" href="javascript:void(0);" data-toggle="modal" data-target="#exampleModalCenter"> <i class="far fa-user mr-3"></i>{{ __('menu.Sign in') }}</a>
       </div>
       <div class="add-listing ml-3">
         <a href="{{ route(Route::currentRouteName(), 'ar') }}">

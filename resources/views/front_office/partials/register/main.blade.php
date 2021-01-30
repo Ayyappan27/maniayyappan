@@ -33,7 +33,7 @@ Register -->
             <legend class="px-2">Choose your Account Type</legend>
             <ul class="nav nav-tabs nav-tabs-border d-flex" role="tablist">
               <li class="nav-item mr-4">
-                <a class="nav-link active"  data-toggle="tab" href="#individual" role="tab" >
+                <a class="nav-link active"  data-toggle="tab" href="#reg-individual" role="tab" >
                   <div class="d-flex">
                     <div class="tab-icon">
                       <i class="flaticon-users"></i>
@@ -46,7 +46,7 @@ Register -->
                 </a>
               </li>
               <li class="nav-item ml-auto">
-                <a class="nav-link" data-toggle="tab" href="#company" role="tab">
+                <a class="nav-link" data-toggle="tab" href="#reg-company" role="tab">
                   <div class="d-flex">
                     <div class="tab-icon">
                       <i class="flaticon-suitcase"></i>
@@ -60,7 +60,7 @@ Register -->
               </li>
 
               <li class="nav-item ml-4">
-                <a class="nav-link"  data-toggle="tab" href="#jobseeker" role="tab" >
+                <a class="nav-link"  data-toggle="tab" href="#reg-jobseeker" role="tab" >
                   <div class="d-flex">
                     <div class="tab-icon">
                       <i class="flaticon-job"></i>
@@ -79,8 +79,8 @@ Register -->
           <div class="tab-content">
             
             @include('front_office.partials.register.signup-jobseeker')
-            @include('front_office.partials.register.signup-individual')
             @include('front_office.partials.register.signup-company')
+            @include('front_office.partials.register.signup-individual')
            
 
 

@@ -437,4 +437,3 @@ NOTE: This file contains all scripts for the actual Template.
 		POTENZA.carousel();
 	});
 })(jQuery);
-

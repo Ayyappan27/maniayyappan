@@ -13,7 +13,7 @@
             <legend class="px-2">Choose your Account Type</legend>
             <ul class="nav nav-tabs nav-tabs-border d-flex" role="tablist">
               <li class="nav-item mr-4">
-                <a class="nav-link active"  data-toggle="tab" href="#jobseeker" role="tab" aria-selected="false">
+                <a class="nav-link active" data-toggle="tab" href="#jobseeker" role="tab">
                   <div class="d-flex">
                     <div class="tab-icon">
                       <i class="flaticon-users"></i>
@@ -26,7 +26,7 @@
                 </a>
               </li>
               <li class="nav-item mr-4">
-                <a class="nav-link"  data-toggle="tab" href="#individual" role="tab" aria-selected="false">
+                <a class="nav-link"  data-toggle="tab" href="#individual" role="tab">
                   <div class="d-flex">
                     <div class="tab-icon">
                       <i class="flaticon-suitcase"></i>
@@ -39,7 +39,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link"  data-toggle="tab" href="#company" role="tab" aria-selected="false">
+                <a class="nav-link" data-toggle="tab" href="#company" role="tab">
                   <div class="d-flex">
                     <div class="tab-icon">
                       <i class="flaticon-suitcase"></i>

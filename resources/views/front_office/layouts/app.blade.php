@@ -207,5 +207,6 @@ feature info section -->
 
     <!-- Template Scripts (Do not remove)-->
     <script src="{{ asset('front_office/js/custom.js') }}"></script>
+    @include('sweetalert::alert')
 </body>
 </html>

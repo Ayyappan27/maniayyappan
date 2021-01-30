@@ -8,6 +8,11 @@ use App\User;
 
 class Jobseeker extends Model
 {
+
+    protected $table = 'jobseekers';
+
+    protected $fillable = ['address', 'country', 'city', 'education_level', 'nationality'];
+
     public function user()
     {
         return $this->morphOne(User::class, 'userable');

@@ -8,3 +8,47 @@
 .header-navbar .navbar-container{
 	background: #FCCF17;
 }
+.btn-green{
+  border-color: #00848C!important;
+  background-color: #00848C!important;
+  color: #FFFFFF;
+}
+.preloadersection {
+    position: fixed;
+    top: 0; 
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: #ffffff;
+    z-index:9999;
+    height: 100vh;
+}
+.preloaderinnersection {
+    width:250px;
+    height: auto;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#userlist thead input {
+    width: 100%;
+    border: 1px solid #babfc7;
+    border-radius: 14px;
+    outline: none;
+    font-size: 12px;
+    padding: 4px;
+    padding-left: 8px;
+}
+
+table tbody td{
+    padding: 8px 10px 8px 18px!important;
+}
+.w100{
+	width: 100%!important;
+}
+.ml5{
+    margin-left: 5px;
+}
