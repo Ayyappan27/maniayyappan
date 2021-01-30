@@ -35,6 +35,7 @@ Route::group(['prefix' => '{language}', 'namespace' => 'FrontOffice'], function(
 
     Route::any('/logout', 'Auth\JobSeekerController@logout')->name('front.logout');
 });
+
 Route::post('{language}/jobseeker', 'FrontOffice\Auth\JobSeekerController@registration');
 Route::post('{language}/individual', 'FrontOffice\Auth\IndividualController@registration');
 Route::post('{language}/company', 'FrontOffice\Auth\CompanyController@registration');
