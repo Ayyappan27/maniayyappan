@@ -971,6 +971,7 @@ hr {
   color: #ffffff; }
 
 .feature-info .feature-info-content h5 {
+  font-size: 15px;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out; }
 

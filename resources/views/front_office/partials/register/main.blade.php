@@ -39,7 +39,7 @@ Register -->
                       <i class="flaticon-users"></i>
                     </div>
                     <div class="ml-3">
-                      <h6 class="mb-0 mt-2">Candidatae</h6>
+                      <h6 class="mb-0 mt-2"> Individual</h6>
                       <!-- <p class="mb-0">I want to discover companies.</p> -->
                     </div>
                   </div>
@@ -52,13 +52,12 @@ Register -->
                       <i class="flaticon-suitcase"></i>
                     </div>
                     <div class="ml-3">
-                      <h6 class="mb-0 mt-2">Employer</h6>
+                      <h6 class="mb-0 mt-2">Company</h6>
                       <!-- <p class="mb-0">I want to attract the best talent.</p> -->
                     </div>
                   </div>
                 </a>
               </li>
-
               <li class="nav-item ml-4">
                 <a class="nav-link"  data-toggle="tab" href="#reg-jobseeker" role="tab" >
                   <div class="d-flex">
@@ -66,47 +65,19 @@ Register -->
                       <i class="flaticon-job"></i>
                     </div>
                     <div class="ml-3">
-                      <h6 class="mb-0 mt-2">Job seeker</h6>
+                      <h6 class="mb-0 mt-2">Job Seeker</h6>
                       <!-- <p class="mb-0">I want to job .</p> -->
                     </div>
                   </div>
                 </a>
               </li>
-
-           
             </ul>
           </fieldset>
           <div class="tab-content">
-            
             @include('front_office.partials.register.signup-jobseeker')
             @include('front_office.partials.register.signup-company')
             @include('front_office.partials.register.signup-individual')
-           
-
-
-
           </div>
-          <!-- <div class="mt-4">
-            <fieldset>
-              <legend class="px-2">Login or Sign up with</legend>
-              <div class="social-login">
-                <ul class="list-unstyled d-flex mb-0">
-                  <li class="facebook text-center">
-                    <a href="#"> <i class="fab fa-facebook-f mr-4"></i>Login with Facebook</a>
-                  </li>
-                  <li class="twitter text-center">
-                    <a href="#"> <i class="fab fa-twitter mr-4"></i>Login with Twitter</a>
-                  </li>
-                  <li class="google text-center">
-                    <a href="#"> <i class="fab fa-google mr-4"></i>Login with Google</a>
-                  </li>
-                  <li class="linkedin text-center">
-                    <a href="#"> <i class="fab fa-linkedin-in mr-4"></i>Login with Linkedin</a>
-                  </li>
-                </ul>
-              </div>
-            </fieldset>
-          </div> -->
         </div>
       </div>
     </div>
@@ -114,6 +85,5 @@ Register -->
 </section>
 <!--=================================
 Register --> 
-
 
 @endsection

@@ -1,12 +1,8 @@
 <?php
 
 namespace App\Http\Controllers\FrontOffice;
+
 use App\Http\Controllers\Controller;
-
-use Illuminate\Http\Request;
-
-use App\Models\Jobseeker;
-use App\User;
 
 class WelcomeController extends Controller
 {
@@ -27,8 +23,6 @@ class WelcomeController extends Controller
      */
     public function index()
     {
-        // $job = Jobseeker::with(['user', 'links', 'skills'])->get();
-        // dd($job);
         return view('front_office.home');
     } 
 }

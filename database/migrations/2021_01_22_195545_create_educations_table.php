@@ -18,7 +18,7 @@ class CreateEducationsTable extends Migration
             $table->string('title');
             $table->string('year');
             $table->string('institute');
-            $table->string('description');
+            $table->string('description')->nullable();
             $table->bigInteger('user_id')->unsigned()->index();
             $table->foreign('user_id')->references('id')->on('jobseekers')->onDelete('cascade');
             $table->timestamps();

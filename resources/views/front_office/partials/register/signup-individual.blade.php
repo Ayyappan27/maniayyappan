@@ -10,9 +10,9 @@
       @enderror
     </div>
     <div class="form-group col-md-6">
-      <label>Email Address *</label>
-      <input type="text" name="email" id="email" class="form-control mb-2" value="{{ old('email') }}">
-      @error('email')
+      <label for="lastname">Last Name *</label>
+      <input type="text" name="lastname" id="lastname" class="form-control mb-2" value="{{ old('lastname') }}">
+      @error('lastname')
         <span class="require-input">{{ $message }}</span>
       @enderror
     </div>
@@ -27,6 +27,13 @@
       <label>Nationality *</label>
       <input type="text" name="nationality" class="form-control mb-2" value="{{ old('nationality') }}">
       @error('nationality')
+        <span class="require-input">{{ $message }}</span>
+      @enderror
+    </div>
+    <div class="form-group col-md-12">
+      <label>Email Address *</label>
+      <input type="text" name="email" id="email" class="form-control mb-2" value="{{ old('email') }}">
+      @error('email')
         <span class="require-input">{{ $message }}</span>
       @enderror
     </div>
@@ -52,10 +59,10 @@
     </div>
   </div>
   <div class="form-row">
-    <div class="col-md-6">
+    <div class="col-md-12">
       <button class="btn btn-primary d-block" id="individual-reg-form" type="submit">Sign Up</button>
     </div>
-    <div class="col-md-6 text-md-right mt-2 text-center">
+    <div class="col-md-12 mt-2">
       <p>Already registered? <a href=""  data-toggle="modal" data-target="#exampleModalCenter"> Sign in here</a></p>
     </div>
   </div>

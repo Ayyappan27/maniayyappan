@@ -4,17 +4,17 @@ namespace App\Http\Controllers\FrontOffice\Auth;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use Request as URLRequest;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Hash;
 use App\Models\Company;
-use DB;
+use App\User;
+use Exception;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class CompanyController extends Controller
 {
-    
-    public function index(){
+    public function index(Request $request){
         $lang = $request->segment(1);
         if (Auth::check()) {
             return redirect($lang.'/company');
@@ -24,6 +24,11 @@ class CompanyController extends Controller
     
     public function login(Request $request)
     {
+        $request->validate([
+            'email'           => 'required|string|email',
+            'password'        => 'required|min:8',
+        ]);
+
         $lang = $request->segment(1);
         if(auth()->attempt([
             'email'    => $request->email,
@@ -36,48 +41,36 @@ class CompanyController extends Controller
     }
 
     public function registration(Request $request){
-        // return $request;
-        $validator = Validator::make($request->all(), [
-            'firstname' => 'required|string|max:255',
-            'company_name' => 'required|string|max:255',
-            'email' => 'required|string|email|max:255|unique:users',
-            'phone_number' => 'required|string|max:15|unique:users',
-            'password' => 'required|min:8|required_with:confirmpassword|same:confirmpassword',
+        $request->validate([
+            'firstname'       => 'required|string|max:50',
+            'lastname'        => 'required|string|max:50',
+            'company_name'    => 'required|string|max:60',
+            'email'           => 'required|string|email|max:60|unique:users',
+            'phone_number'    => 'required|string|max:15|unique:users',
+            'password'        => 'required|min:8|required_with:confirmpassword|same:confirmpassword',
             'confirmpassword' => 'required|min:8',
+            'company_name'    => 'required|min:3'
         ]);
-        if($validator->fails()){
-            return back()->withErrors($validator)
-            ->withInput();
+
+        DB::beginTransaction();
+        try {
+            $company = Company::create([
+                'company_name' => $request->company_name,
+            ]);
+            $account = new User();
+            $account->first_name    = $request->firstname;
+            $account->last_name     = $request->lastname;
+            $account->phone_number  = $request->phone_number;
+            $account->email         = $request->email;
+            $account->password      = Hash::make($request->password);
+            $account->userable_id   = $company->id;
+            $account->userable_type = 'App\Models\Company';
+            $account->save();
+            DB::commit();
+        } catch(Exception $ex) {
+            DB::rollBack();
+            throw $ex;
         }
-        
-        $company = Company::create([
-            'company_name' => $request->company_name,
-            'website' => '',
-            'description' => '',
-            'address' => '',
-            'country' => '',
-            'city' => '',
-            'founded_date' => now(),
-            'sector' => '',
-            'number_employees' => 5,
-            'created_at' => now(),
-            'updated_at'=> now()
-        ]);
-        DB::table('users')->insert(
-            [
-                'first_name' => $request->firstname,
-                'last_name' => '',
-                'status' => 'active',
-                'phone_number' => $request->phone_number,
-                'email' => $request->email,
-                'gender' => '',
-                'password' => Hash::make($request->password),
-                'userable_id' => $company->id,
-                'userable_type' => 'App\Models\Company',
-                'created_at' => now(),
-                'updated_at'=> now()
-            ]
-        );
         return redirect()->route('front.registration', app()->getLocale())->with('toast_success', 'User was Created!');
     }
 }

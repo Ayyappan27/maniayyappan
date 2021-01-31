@@ -1,14 +1,16 @@
 <?php
 use Illuminate\Support\Facades\Route;
-use RealRashid\SweetAlert\Facades\Alert;
+
 Route::get('/admin', 'LoginController@index');
 Route::redirect('/', '/en');
+
 Route::group(['prefix' => '{language}', 'namespace' => 'FrontOffice'], function() {
     Route::get('/', 'WelcomeController@index')->name('front.home');
     Route::get('/about', 'AboutController@index')->name('front.about');
     Route::get('/contact', 'ContactController@index')->name('front.contact');
     Route::get('/registration', 'RegistrationController@index')->name('front.registration');
     Route::get('/privacypolicy', 'PrivacyPolicyController@index')->name('front.privacypolicy');
+    
     Route::get('/jobseeker', 'Auth\JobSeekerController@index');
     Route::post('/jobseekerlogin', 'Auth\JobSeekerController@login')->name('front.jobseekerlogin');
     Route::group(['middleware' => 'auth', 'jobseeker'], function () {
@@ -33,10 +35,11 @@ Route::group(['prefix' => '{language}', 'namespace' => 'FrontOffice'], function(
         });
     });
 
-    Route::any('/logout', 'Auth\JobSeekerController@logout')->name('front.logout');
+    Route::any('/logout', 'HomeController@logout')->name('front.logout');
+
+    Route::post('/jobseeker', 'Auth\JobSeekerController@registration');
+    Route::post('/individual', 'Auth\IndividualController@registration');
+    Route::post('/company', 'Auth\CompanyController@registration');
 });
 
-Route::post('{language}/jobseeker', 'FrontOffice\Auth\JobSeekerController@registration');
-Route::post('{language}/individual', 'FrontOffice\Auth\IndividualController@registration');
-Route::post('{language}/company', 'FrontOffice\Auth\CompanyController@registration');
 Auth::routes();

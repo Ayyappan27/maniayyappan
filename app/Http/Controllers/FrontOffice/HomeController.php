@@ -25,4 +25,9 @@ class HomeController extends Controller
     {
         return view('front_office.home'); 
     }
+
+    public function logout() {
+        Auth::logout();
+        return redirect('/');
+    }
 }

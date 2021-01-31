@@ -15,10 +15,10 @@ class CreateIndividualsTable extends Migration
     {
         Schema::create('individuals', function (Blueprint $table) {
             $table->id();
-            $table->string('address');
-            $table->string('country');
-            $table->string('city');
-            $table->string('nationality');
+            $table->string('address')->nullable();
+            $table->string('country')->nullable();
+            $table->string('city')->nullable();
+            $table->string('nationality')->nullable();
             $table->timestamps();
         });
     }

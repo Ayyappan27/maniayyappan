@@ -15,11 +15,11 @@ class CreateJobseekersTable extends Migration
     {
         Schema::create('jobseekers', function (Blueprint $table) {
             $table->id();
-            $table->string('address');
-            $table->string('country');
-            $table->string('city');
+            $table->string('address')->nullable();
+            $table->string('country')->nullable();
+            $table->string('city')->nullable();
             $table->string('education_level');
-            $table->string('nationality');
+            $table->string('nationality')->nullable();
             $table->timestamps();
         });
     }

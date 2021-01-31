@@ -9,7 +9,7 @@
     <meta name="description" content="Modern admin is super flexible, powerful, clean &amp; modern responsive bootstrap 4 admin template with unlimited possibilities with bitcoin dashboard.">
     <meta name="keywords" content="admin template, modern admin template, dashboard template, flat admin template, responsive admin template, web app, crypto dashboard, bitcoin dashboard">
     <meta name="author" content="PIXINVENT">
-    <title> :: wize genie ::</title>
+    <title> :: Wize Genie | Admin ::</title>
     <link rel="apple-touch-icon" href="{{ asset('/dashboard/app-assets/images/ico/apple-icon-120.png')}}">
     <link rel="shortcut icon" type="image/x-icon" href="{{ asset('/dashboard/app-assets/images/logo/logo.png')}}">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i%7CQuicksand:300,400,500,700" rel="stylesheet">
@@ -84,11 +84,11 @@
 <div class="sidenav-overlay"></div>
 <div class="drag-target"></div>
 
-<!-- BEGIN: Footer-->
-<!-- <footer class="footer footer-static footer-light navbar-border navbar-shadow">
-    <p class="clearfix blue-grey lighten-2 text-sm-center mb-0 px-2"><span class="float-md-left d-block d-md-inline-block">Copyright &copy; 2021 <a class="text-bold-800 grey darken-2" href="https://1.envato.market/modern_admin" target="_blank">PIXINVENT</a></span><span class="float-md-right d-none d-lg-block">Hand-crafted & Made with<i class="ft-heart pink"></i><span id="scroll-top"></span></span></p>
-</footer> -->
-<!-- END: Footer-->
+
+<footer class="footer footer-static footer-light navbar-border navbar-shadow">
+    <p class="clearfix blue-grey lighten-2 text-sm-center mb-0 px-2"><span class="float-md-left d-block d-md-inline-block">Copyright &copy; 2021 <a class="text-bold-800 grey darken-2" href="https://linkia.qa" target="_blank">Linkia</a></span><span class="float-md-right d-none d-lg-block">Made with<i class="ft-heart pink"></i><span id="scroll-top"></span></span></p>
+</footer>
+
 
 <script type="text/javascript">
     document.onreadystatechange = function() { 
