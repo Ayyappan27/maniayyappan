@@ -31,6 +31,12 @@
 
 </head>
 <body>
+
+  <div class="preloadersection">
+         <img class="preloaderinnersection" src="https://i.pinimg.com/originals/42/f2/f6/42f2f683c016ce18eba9971c37c756ce.gif" />
+    </div>
+
+
   @include('front_office.partials.header')
 
   @yield('content')
@@ -188,6 +194,8 @@ feature info section -->
    </div>
   <!--=================================
   Back To Top-->
+
+ 
 
     <!--================================= Javascript -->
 

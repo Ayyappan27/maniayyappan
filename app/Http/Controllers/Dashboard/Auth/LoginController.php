@@ -12,8 +12,7 @@ class LoginController extends Controller
     {
         if (Auth::guard('admin')->check()) {
             return redirect('admin');
-        }
-        // return view('dashboard.pages.dashboard.index');
+        } 
         return view('dashboard.auth.login');
     }
 
@@ -24,7 +23,7 @@ class LoginController extends Controller
             'email'    => $request->email,
             'password' => $request->password
         ], $rememberme)) {
-            return redirect('admin');
+            return redirect('admin/dashboard');
         } else {
             session()->flash('error', 'Incorrect email or password !');
             return redirect('admin');

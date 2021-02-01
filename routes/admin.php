@@ -13,11 +13,14 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Dashboard'], function() {
         });
     });
 
-    
     Route::get('/dashboard', 'DashboardController@index');
     Route::get('/userlist', 'UserlistController@index');
     Route::get('/helpandinfo', 'HelpandinfoController@index');
     Route::get('/aboutus', 'AboutusController@index');
     Route::get('/contactus', 'ContactusController@index');
     Route::get('/termsandcondition', 'TermsandconditionController@index');
+
+    Route::post('/update_about', 'AboutusController@update_about');
+    Route::post('/update_contact', 'ContactusController@update_contact');
+    Route::post('/update_termsandcondition', 'TermsandconditionController@update_termsandcondition');
 });

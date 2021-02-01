@@ -17,18 +17,18 @@
     }
 }
 /*********** Loder Start ****************/
-.loading {
+.preloadersection {
     position: fixed;
     top: 0; 
     right: 0;
     bottom: 0;
     left: 0;
     background: #ffffff;
-    z-index:99999999999;
+    z-index:99999999999999;
     height: 100vh;
-    display:none;
+    display: none;
 }
-.loader {
+.preloaderinnersection {
     width:250px;
     height: auto;
     display: block;
@@ -37,8 +37,6 @@
     left: 50%;
     transform: translate(-50%, -50%);
 }
-
-
 /*********** Loder End   ****************/
 
 

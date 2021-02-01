@@ -34,7 +34,7 @@ class JobSeekerController extends Controller
         ])) {
             return redirect($lang.'/jobseeker');
         } else {
-            return redirect('/')->with('toast_error', 'Incorrect email and password !');
+            return redirect('/')->with('toast_error', 'Incorrect email and password!');
         }
     }
 
