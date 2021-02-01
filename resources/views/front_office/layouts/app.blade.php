@@ -31,12 +31,6 @@
 
 </head>
 <body>
-
-  <div class="preloadersection">
-         <img class="preloaderinnersection" src="https://i.pinimg.com/originals/42/f2/f6/42f2f683c016ce18eba9971c37c756ce.gif" />
-    </div>
-
-
   @include('front_office.partials.header')
 
   @yield('content')
@@ -194,8 +188,8 @@ feature info section -->
    </div>
   <!--=================================
   Back To Top-->
-
- 
+  <input type="hidden" id="signinmodal" value="{{ Session::get('SigninModal') }}" />
+  <input type="hidden" id="weblang" value="{{ app()->getLocale() }}" />
 
     <!--================================= Javascript -->
 
@@ -216,5 +210,37 @@ feature info section -->
     <!-- Template Scripts (Do not remove)-->
     <script src="{{ asset('front_office/js/custom.js') }}"></script>
     @include('sweetalert::alert')
+    <script type="text/javascript">
+      $(document).ready(function(){
+        var modalshow = $('#signinmodal').val();
+        var weblang = $('#weblang').val();
+        if(modalshow == 'show')
+        {
+          $('#exampleModalCenter').modal({show: true});
+        }
+
+        $('#signinmodalclose').click(function (e) {
+          e.preventDefault();
+          $.ajax({
+              type   : 'post',
+              url    : weblang + '/closesigninmodal',
+              data   : {_token: "{{ csrf_token() }}"},
+              success: function (data) {
+                  //
+              }
+          });
+        });
+
+        setTimeout(function(){
+            $('.swal2-container').remove();
+        },3000);
+
+        $("form").on("submit", function(){
+          $(".preloadersection").show();
+          $("header").fadeOut();
+        });
+
+      });
+    </script>
 </body>
 </html>

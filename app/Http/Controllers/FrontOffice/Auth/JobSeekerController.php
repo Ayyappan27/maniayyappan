@@ -7,8 +7,11 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Hash;
 use App\Models\JobSeeker;
+use App\User;
+use Exception;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Session;
 
 class JobSeekerController extends Controller
 {
@@ -22,33 +25,59 @@ class JobSeekerController extends Controller
     
     public function login(Request $request)
     {
+        $request->session()->put('signinTab', '');
+        $request->session()->put('SigninModal', 'show');
         $request->validate([
-            'email'           => 'required|string|email',
-            'password'        => 'required|min:8',
-        ]);
+                'signinjobemail'           => 'required|string|email',
+                'signinjobpassword'        => 'required|min:8',
+            ],
+            [
+                'signinjobemail.required' => 'The email field is required.',
+                'signinjobemail.email' => 'The email must be a valid email address.',
+                'signinjobpassword.required' => 'The password field is required.',
+                'signinjobpassword.min' => 'The password must be at least 8 characters.',
+            ]
+        );
         
         $lang = $request->segment(1);
         if(auth()->attempt([
-            'email'    => $request->email,
-            'password' => $request->password
+            'email'    => $request->signinjobemail,
+            'password' => $request->signinjobpassword
         ])) {
+            $request->session()->put('SigninModal', '');
             return redirect($lang.'/jobseeker');
         } else {
-            return redirect('/')->with('toast_error', 'Incorrect email and password!');
+            $request->session()->put('SigninModal', 'show');
+            return redirect('/')->with('toast_error', 'Incorrect email and password !');
         }
     }
 
     public function registration(Request $request){
+        $request->session()->put('signupTab', 'jobseeker');
         $request->validate([
-            'firstname'       => 'required|string|max:50',
-            'lastname'        => 'required|string|max:50',
-            'company_name'    => 'required|string|max:60',
-            'email'           => 'required|string|email|max:60|unique:users',
-            'phone_number'    => 'required|string|max:15|unique:users',
-            'password'        => 'required|min:8|required_with:confirmpassword|same:confirmpassword',
-            'confirmpassword' => 'required|min:8',
+            'jobfirstname'       => 'required|string|max:50',
+            'jobemail'           => 'required|string|email|max:60|unique:users,email',
+            'jobphone_number'    => 'required|string|max:15|unique:users,phone_number',
+            'jobpassword'        => 'required|min:8|required_with:jobconfirmpassword|same:jobconfirmpassword',
+            'jobconfirmpassword' => 'required|min:8',
             'education_level' => 'required'
-        ]);
+            ],
+            [
+                'jobfirstname.required' => 'The first name field is required.',
+                'jobemail.required' => 'The email field is required.',
+                'jobpassword.required' => 'The password field is required.',
+                'jobconfirmpassword.required' => 'The confirm password field is required.',
+                'jobphone_number.required' => 'The phone number field is required.',
+                'jobphone_number.max' => 'The phone number may not be greater than 15 characters.',
+                'jobemail.unique' => 'The email has already been taken.',
+                'jobemail.email' => 'The email must be a valid email address.',
+                'jobphone_number.unique' => 'The phone number has already been taken.',
+                'jobpassword.min' => 'The password must be at least 8 characters.',
+                'jobpassword.required_with' => 'The password and confirmpassword must match.',
+                'jobpassword.same' => 'The password and confirmpassword must match.',
+                'jobconfirmpassword.min' => 'The confirm password must be at least 8 characters.',
+            ]
+        );
 
         DB::beginTransaction();
         try {
@@ -56,11 +85,10 @@ class JobSeekerController extends Controller
                 'education_level' => $request->education_level,
             ]);
             $account = new User();
-            $account->first_name    = $request->firstname;
-            $account->last_name     = $request->lastname;
-            $account->phone_number  = $request->phone_number;
-            $account->email         = $request->email;
-            $account->password      = Hash::make($request->password);
+            $account->first_name    = $request->jobfirstname;
+            $account->phone_number  = $request->jobphone_number;
+            $account->email         = $request->jobemail;
+            $account->password      = Hash::make($request->jobpassword);
             $account->userable_id   = $jobseeker->id;
             $account->userable_type = 'App\Models\Jobseeker';
             $account->save();

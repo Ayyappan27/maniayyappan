@@ -35,11 +35,17 @@ Route::group(['prefix' => '{language}', 'namespace' => 'FrontOffice'], function(
         });
     });
 
-    Route::any('/logout', 'HomeController@logout')->name('front.logout');
+    Route::any('/logout', function(){
+        Auth::logout();
+        return redirect('/');
+    })->name('front.logout');
 
     Route::post('/jobseeker', 'Auth\JobSeekerController@registration');
     Route::post('/individual', 'Auth\IndividualController@registration');
     Route::post('/company', 'Auth\CompanyController@registration');
+    Route::post('/closesigninmodal', function(){
+        Session::forget('SigninModal');
+    });
 });
 
 Auth::routes();

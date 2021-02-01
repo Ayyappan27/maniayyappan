@@ -1,14 +1,20 @@
-<div class="tab-pane fade" id="individual" role="tabpanel">
+<div class="tab-pane {{ Session::get('signinTab') == 'individual' ? 'active' : 'fade' }}" id="individual" role="tabpanel">
     <form class="mt-4" action="{{ route('front.individuallogin', app()->getLocale()) }}" method="POST">
         {{ csrf_field() }}
         <div class="form-row">
             <div class="form-group col-12">
-            <label for="email">Username / Email Address 2:</label>
-            <input type="text" class="form-control" name="email" id="email">
+                <label for="signinindemail">Username / Email Address 2 *</label>
+                <input type="text" class="form-control" name="signinindemail" id="signinindemail">
+                @error('signinindemail')
+                    <span class="require-input">{{ $message }}</span>
+                @enderror
             </div>
             <div class="form-group col-12">
-                <label for="password">Password*</label>
-                <input type="password" class="form-control" name="password" id="password">
+                <label for="signinindpassword">Password *</label>
+                <input type="password" class="form-control" name="signinindpassword" id="signinindpassword"> 
+                @error('signinindpassword')
+                    <span class="require-input">{{ $message }}</span>
+                @enderror
             </div>
         </div>
         <div class="form-row">

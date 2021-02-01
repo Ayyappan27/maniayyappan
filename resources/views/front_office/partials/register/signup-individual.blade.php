@@ -1,25 +1,25 @@
- <div class="tab-pane active" id="reg-individual" role="tabpanel">
+ <div class="tab-pane {{ Session::get('signupTab') == '' ? 'active' : 'fade' }}" id="reg-individual" role="tabpanel">
   <form class="mt-4" method="POST" action="individual">
   {{ csrf_field() }}
   <div class="form-row">
     <div class="form-group col-md-6">
-      <label for="firstname">First Name *</label>
-      <input type="text" name="firstname" id="firstname" class="form-control mb-2" value="{{ old('firstname') }}">
-      @error('firstname')
+      <label for="indfirstname">First Name *</label>
+      <input type="text" name="indfirstname" class="form-control mb-2" value="{{ old('indfirstname') }}">
+      @error('indfirstname')
         <span class="require-input">{{ $message }}</span>
       @enderror
     </div>
     <div class="form-group col-md-6">
-      <label for="lastname">Last Name *</label>
-      <input type="text" name="lastname" id="lastname" class="form-control mb-2" value="{{ old('lastname') }}">
-      @error('lastname')
+      <label for="indlastname">Last Name *</label>
+      <input type="text" name="indlastname" class="form-control mb-2" value="{{ old('indlastname') }}">
+      @error('indlastname')
         <span class="require-input">{{ $message }}</span>
       @enderror
     </div>
     <div class="form-group col-md-6">
       <label>Phone Number *</label>
-      <input type="text" name="phone_number" class="form-control mb-2" value="{{ old('phone_number') }}">
-      @error('phone_number')
+      <input type="text" name="indphone_number" class="form-control mb-2" value="{{ old('indphone_number') }}">
+      @error('indphone_number')
         <span class="require-input">{{ $message }}</span>
       @enderror
     </div>
@@ -32,22 +32,22 @@
     </div>
     <div class="form-group col-md-12">
       <label>Email Address *</label>
-      <input type="text" name="email" id="email" class="form-control mb-2" value="{{ old('email') }}">
-      @error('email')
+      <input type="text" name="indemail" class="form-control mb-2" value="{{ old('indemail') }}">
+      @error('indemail')
         <span class="require-input">{{ $message }}</span>
       @enderror
     </div>
     <div class="form-group col-md-6">
       <label>Password *</label>
-      <input type="password" name="password" class="form-control mb-2">
-      @error('password')
+      <input type="password" name="indpassword" class="form-control mb-2">
+      @error('indpassword')
         <span class="require-input">{{ $message }}</span>
       @enderror
     </div>
     <div class="form-group col-md-6">
-      <label for="password2">Confirm Password *</label>
-      <input type="password" name="confirmpassword" class="form-control mb-2">
-      @error('confirmpassword')
+      <label for="indconfirmpassword">Confirm Password *</label>
+      <input type="password" name="indconfirmpassword" class="form-control mb-2">
+      @error('indconfirmpassword')
         <span class="require-input">{{ $message }}</span>
       @enderror
     </div> 
@@ -63,7 +63,7 @@
       <button class="btn btn-primary d-block" id="individual-reg-form" type="submit">Sign Up</button>
     </div>
     <div class="col-md-12 mt-2">
-      <p>Already registered? <a href=""  data-toggle="modal" data-target="#exampleModalCenter"> Sign in here</a></p>
+      <p>Already registered? <a href="javascript:void(0);" data-toggle="modal" data-target="#exampleModalCenter"> Sign in here</a></p>
     </div>
   </div>
   @if(session()->has('message'))
