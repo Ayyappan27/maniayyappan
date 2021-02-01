@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::redirect('/', '/en');
+Route::redirect('/', '/hi');
 
 Route::group(['prefix' => '{language}', 'namespace' => 'FrontOffice'], function() {
     Route::get('/', 'WelcomeController@index')->name('front.home');
