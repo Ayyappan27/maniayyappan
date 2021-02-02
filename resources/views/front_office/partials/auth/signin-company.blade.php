@@ -3,7 +3,7 @@
         {{ csrf_field() }}
         <div class="form-row">
             <div class="form-group col-12">
-                <label for="signincomemail">Username / Email Address 3:</label>
+                <label for="signincomemail">Username / Email Address 3 *</label>
                 <input type="text" class="form-control" name="signincomemail" id="signincomemail">
                 @error('signincomemail')
                     <span class="require-input">{{ $message }}</span>

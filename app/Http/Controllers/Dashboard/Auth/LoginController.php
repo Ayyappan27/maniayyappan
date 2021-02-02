@@ -18,15 +18,18 @@ class LoginController extends Controller
 
     public function login(Request $request)
     {
+        $request->validate([
+            'email'       => 'required|string|email',
+            'password'    => 'required|string'
+        ]);
         $rememberme = $request->rememberme == 'on' ? true : false;
         if(auth()->guard('admin')->attempt([
             'email'    => $request->email,
             'password' => $request->password
         ], $rememberme)) {
-            return redirect('admin/dashboard');
+            return redirect('admin/dashboard')->with('success', 'Login Succesfully!');
         } else {
-            session()->flash('error', 'Incorrect email or password !');
-            return redirect('admin');
+            return redirect()->back()->with('info', 'Incorrect email or password!');
         }
     }
 

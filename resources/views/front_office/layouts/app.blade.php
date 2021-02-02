@@ -31,6 +31,10 @@
 
 </head>
 <body>
+  <div class="preloadersection ">
+	  <img class="preloaderinnersection " src="{{ asset('front_office/images/formloder.gif') }}" />
+  </div>
+
   @include('front_office.partials.header')
 
   @yield('content')
@@ -214,28 +218,33 @@ feature info section -->
       $(document).ready(function(){
         var modalshow = $('#signinmodal').val();
         var weblang = $('#weblang').val();
+        // console.log(weblang)
         if(modalshow == 'show')
         {
           $('#exampleModalCenter').modal({show: true});
         }
+
         $('#signinmodalclose').click(function (e) {
           e.preventDefault();
           $.ajax({
               type   : 'post',
-              url    : weblang + '/closesigninmodal',
+              url    : 'closesigninmodal',
               data   : {_token: "{{ csrf_token() }}"},
               success: function (data) {
                   //
               }
           });
         });
+
         setTimeout(function(){
             $('.swal2-container').remove();
         },3000);
+
         $("form").on("submit", function(){
           $(".preloadersection").show();
           $("header").fadeOut();
         });
+
       });
     </script>
 </body>

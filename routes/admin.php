@@ -23,4 +23,8 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Dashboard'], function() {
     Route::post('/update_about', 'AboutusController@update_about');
     Route::post('/update_contact', 'ContactusController@update_contact');
     Route::post('/update_termsandcondition', 'TermsandconditionController@update_termsandcondition');
+
+    Route::post('/updateuserstatus', 'UserlistController@updatestatus');
+    Route::get('/getuser', 'UserlistController@getuser');
+
 });

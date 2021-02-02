@@ -55,3 +55,40 @@ table tbody td{
 .mb0{
     margin-bottom: 0px;
 }
+
+.ajaxloader {
+    position: fixed;
+    top: 0; 
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #0000008a;
+    z-index:9999;
+    height: 100vh; 
+    display:none;
+}
+.ajaxinnerloader {
+  width: 90px;
+  height: auto;
+  animation: spin 2s  linear infinite; 
+  z-index: 99999999999999999; 
+  display: block;
+  position: absolute;
+  top: 45%;
+  left: 45%; 
+}
+@keyframes spin {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+.switchery{
+  width: 38px;
+  height: 20px;
+}
+
+.switchery>small{
+  width: 20px;
+  height:20px;
+}

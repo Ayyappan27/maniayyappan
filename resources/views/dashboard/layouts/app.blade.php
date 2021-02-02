@@ -9,6 +9,7 @@
     <meta name="description" content="Modern admin is super flexible, powerful, clean &amp; modern responsive bootstrap 4 admin template with unlimited possibilities with bitcoin dashboard.">
     <meta name="keywords" content="admin template, modern admin template, dashboard template, flat admin template, responsive admin template, web app, crypto dashboard, bitcoin dashboard">
     <meta name="author" content="PIXINVENT">
+    <meta name="csrf-token" content="{{ csrf_token() }}" />
     <title> :: Wize Genie | Admin ::</title>
     <link rel="apple-touch-icon" href="{{ asset('/dashboard/app-assets/images/ico/apple-icon-120.png')}}">
     <link rel="shortcut icon" type="image/x-icon" href="{{ asset('/dashboard/app-assets/images/logo/logo.png')}}">
@@ -57,6 +58,7 @@
     <!-- BEGIN: Custom CSS-->
     <link rel="stylesheet" type="text/css" href="{{ asset('/dashboard/assets/css/style.css')}}">
     <!-- END: Custom CSS-->
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
 
   
 
@@ -69,6 +71,10 @@
 
     <div class="preloadersection">
          <img class="preloaderinnersection" src="https://miro.medium.com/max/1600/1*CsJ05WEGfunYMLGfsT2sXA.gif" />
+    </div>
+
+    <div class="ajaxloader">
+        <img class="ajaxinnerloader" src="http://www.clker.com/cliparts/G/R/j/C/W/I/loader.svg.med.png">
     </div>
 
 @include('dashboard.layouts.navbar')
@@ -131,10 +137,18 @@
 <script src="{{ asset('/dashboard/app-assets/vendors/js/forms/toggle/switchery.min.js')}}"></script>
 <script src="{{ asset('/dashboard/app-assets/js/scripts/forms/switch.js')}}"></script>
 <!-- END: Page JS-->
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
 
 
 @include('sweetalert::alert')
+
+<script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+      $('.summernote').summernote();
+    });
+</script>
 
 </body>
 <!-- END: Body-->

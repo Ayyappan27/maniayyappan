@@ -15,12 +15,7 @@
                             <div class="card-content">
                                 <div class="card-body">
                                     <!-- datatable start -->
-
-              
-          
-
-
-                                    <table id="userlist" class="display w100">
+                                        <table id="userlist" class="display w100">
                                             <thead>
                                                 <tr>
                                                     <th>S.No</th>
@@ -32,158 +27,37 @@
                                                 </tr>
                                             </thead> 
                                             <tbody>
-                                                <tr>
-                                                    <td>1</td>
-                                                    <td>Mani </td>
-                                                    <td>Mani@appteq.in</td>
-                                                    <td>Jobseeker</td>
-                                                    <td><span class="badge badge-success">Active</span></td>
-                                                    <td>
-                                                       <input type="checkbox"  class="switchery" data-size="xs" data-color="warning" checked /> 
-                                                       <a class="edit_btn ml5"><i class="ft-edit-1"></i></a>
-                                                    </td>
-                                                </tr>
-
-                                                <tr>
-                                                    <td>2</td>
-                                                    <td>Karthik </td>
-                                                    <td>Karthik@appteq.in</td>
-                                                    <td>Jobseeker</td>
-                                                    <td><span class="badge badge-success">Active</span></td>
-                                                    <td>
-                                                       <input type="checkbox"  class="switchery" data-size="xs" data-color="warning" checked /> 
-                                                       <a class="edit_btn ml5"><i class="ft-edit-1"></i></a>
-                                                    </td>
-                                                </tr>
-
-
-                                                <tr>
-                                                    <td>3</td>
-                                                    <td>Dev </td>
-                                                    <td>Dev@appteq.in</td>
-                                                    <td>Jobseeker</td>
-                                                    <td><span class="badge badge-success">Active</span></td>
-                                                    <td>
-                                                       <input type="checkbox"  class="switchery" data-size="xs" data-color="warning" checked /> 
-                                                       <a class="edit_btn ml5"><i class="ft-edit-1"></i></a>
-                                                    </td>
-                                                </tr>
-
-
-                                                <tr>
-                                                    <td>4</td>
-                                                    <td>Appteq </td>
-                                                    <td>info@appteq.in</td>
-                                                    <td>Company</td>
-                                                    <td><span class="badge badge-success">Active</span></td>
-                                                    <td>
-                                                       <input type="checkbox"  class="switchery" data-size="xs" data-color="warning" checked /> 
-                                                       <a class="edit_btn ml5"><i class="ft-edit-1"></i></a>
-                                                    </td>
-                                                </tr>
-
-
-                                                <tr>
-                                                    <td>5</td>
-                                                    <td>ManiDev </td>
-                                                    <td>Mani2000@appteq.in</td>
-                                                    <td>Jobseeker</td>
-                                                    <td><span class="badge badge-danger">Disable</span></td>
-                                                    <td>
-                                                       <input type="checkbox"  class="switchery" data-size="xs" data-color="warning"  /> 
-                                                       <a class="edit_btn ml5"><i class="ft-edit-1"></i></a>
-                                                    </td>
-                                                </tr>
-
-
-                                                <tr>
-                                                    <td>6</td>
-                                                    <td>Karthik </td>
-                                                    <td>KarthikDev@appteq.in</td>
-                                                    <td>Jobseeker</td>
-                                                    <td><span class="badge badge-success">Active</span></td>
-                                                    <td>
-                                                       <input type="checkbox"  class="switchery" data-size="xs" data-color="warning" checked /> 
-                                                       <a class="edit_btn ml5"><i class="ft-edit-1"></i></a>
-                                                    </td>
-                                                </tr>
-
-
-                                                <tr>
-                                                    <td>7</td>
-                                                    <td>TestCompany </td>
-                                                    <td>TestCompany@appteq.in</td>
-                                                    <td>Company</td>
-                                                    <td><span class="badge badge-success">Active</span></td>
-                                                    <td>
-                                                       <input type="checkbox"  class="switchery" data-size="xs" data-color="warning" checked /> 
-                                                       <a class="edit_btn ml5"><i class="ft-edit-1"></i></a>
-                                                    </td>
-                                                </tr>
-
-                                                <tr>
-                                                    <td>8</td>
-                                                    <td>Karthik </td>
-                                                    <td>Karthik@appteq.in</td>
-                                                    <td>Jobseeker</td>
-                                                    <td><span class="badge badge-danger">Disable</span></td>
-                                                    <td>
-                                                       <input type="checkbox"  class="switchery" data-size="xs" data-color="warning"  /> 
-                                                       <a class="edit_btn ml5"><i class="ft-edit-1"></i></a>
-                                                    </td>
-                                                </tr>
-
-
-                                                <tr>
-                                                    <td>9</td>
-                                                    <td>Dev </td>
-                                                    <td>Dev@appteq.in</td>
-                                                    <td>Jobseeker</td>
-                                                    <td><span class="badge badge-success">Active</span></td>
-                                                    <td>
-                                                       <input type="checkbox"  class="switchery" data-size="xs" data-color="warning" checked /> 
-                                                       <a class="edit_btn ml5"><i class="ft-edit-1"></i></a>
-                                                    </td>
-                                                </tr>
-
-
-                                                <tr>
-                                                    <td>10</td>
-                                                    <td>Appteq </td>
-                                                    <td>info@appteq.in</td>
-                                                    <td>Company</td>
-                                                    <td><span class="badge badge-success">Active</span></td>
-                                                    <td>
-                                                       <input type="checkbox"  class="switchery" data-size="xs" data-color="warning" checked /> 
-                                                       <a class="edit_btn ml5"><i class="ft-edit-1"></i></a>
-                                                    </td>
-                                                </tr>
-
-
-                                                <tr>
-                                                    <td>11</td>
-                                                    <td>ManiDev </td>
-                                                    <td>Mani2000@appteq.in</td>
-                                                    <td>Jobseeker</td>
-                                                    <td><span class="badge badge-danger">Disable</span></td>
-                                                    <td>
-                                                       <input type="checkbox"  class="switchery" data-size="xs" data-color="warning" /> 
-                                                       <a class="edit_btn ml5"><i class="ft-edit-1"></i></a>
-                                                    </td>
-                                                </tr>
-
-
-                                                <tr>
-                                                    <td>12</td>
-                                                    <td>Karthik </td>
-                                                    <td>KarthikDev@appteq.in</td>
-                                                    <td>Jobseeker</td>
-                                                    <td><span class="badge badge-success">Active</span></td>
-                                                    <td>
-                                                       <input type="checkbox"  class="switchery" data-size="xs" data-color="warning" checked /> 
-                                                       <a class="edit_btn ml5"><i class="ft-edit-1"></i></a>
-                                                    </td>
-                                                </tr>
+                                                @foreach($users as $index => $user )
+                                                    <tr>
+                                                        <td>{{ $index + 1 }}</td>
+                                                        <td>{{ $user['first_name'] }}</td>
+                                                        <td>{{ $user['email'] }}</td>
+                                                        @if($user['userable_type'] == 'App\Models\Jobseeker')
+                                                            <td>Jobseeker</td>
+                                                        @elseif($user['userable_type'] == 'App\Models\Company')
+                                                            <td>Company</td>
+                                                        @elseif($user['userable_type'] == 'App\Models\Individual')
+                                                            <td>Individual</td>
+                                                        @endif
+                                                        <td>
+                                                            @if($user['status'] == 'new')
+                                                                <span class="badge badge-info">{{ $user['status'] }}</span>
+                                                            @elseif($user['status'] == 'active')
+                                                                <span class="badge badge-success">{{ $user['status'] }}</span>
+                                                            @elseif($user['status'] == 'deactive')
+                                                                <span class="badge badge-danger">{{ $user['status'] }}</span>
+                                                            @endif
+                                                        </td>
+                                                        <td>
+                                                            @if( $user['status'] == 'new' || $user['status'] == 'active' )
+                                                                <input type="checkbox" class="form-check-input-switchery-primary updateStatus user{{ $user['id'] }}" checked="" data-fouc="" data-switchery="true" style="display: none;"><span data-id="{{ $user['id'] }}" data-color="warning" class="updateStatus switchery switchery-default" style="background-color: rgb(252 207 23); border-color: rgb(252 207 23); box-shadow: rgb(252 207 23) 0px 0px 0px 10px inset; transition: border 0.4s ease 0s, box-shadow 0.4s ease 0s, background-color 1.2s ease 0s;"><small style="left: 18px; background-color: rgb(255, 255, 255); transition: background-color 0.4s ease 0s, left 0.2s ease 0s;"></small></span>
+                                                            @elseif($user['status'] == 'deactive')
+                                                                <input type="checkbox" class="form-check-input-switchery-primary updateStatus" data-fouc="" data-switchery="true" style="display: none;"><span data-id="{{ $user['id'] }}" data-color="warning" class="updateStatus switchery switchery-default" style="background-color: rgb(255, 255, 255); border-color: rgb(223, 223, 223); box-shadow: rgb(223, 223, 223) 0px 0px 0px 0px inset; transition: border 0.4s ease 0s, box-shadow 0.4s ease 0s;"><small style="left: 0px; transition: background-color 0.4s ease 0s, left 0.2s ease 0s;"></small></span>
+                                                            @endif
+                                                            <!-- <a class="edit_btn ml5"><i class="ft-edit-1"></i></a> -->
+                                                        </td>
+                                                    </tr>
+                                                @endforeach
                                             </tbody>
                                         </table>
                                     <!-- datatable ends -->
