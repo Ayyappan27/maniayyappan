@@ -218,7 +218,6 @@ feature info section -->
         {
           $('#exampleModalCenter').modal({show: true});
         }
-
         $('#signinmodalclose').click(function (e) {
           e.preventDefault();
           $.ajax({
@@ -230,16 +229,13 @@ feature info section -->
               }
           });
         });
-
         setTimeout(function(){
             $('.swal2-container').remove();
         },3000);
-
         $("form").on("submit", function(){
           $(".preloadersection").show();
           $("header").fadeOut();
         });
-
       });
     </script>
 </body>

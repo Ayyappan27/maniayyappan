@@ -37,9 +37,9 @@
                                         <div class="form-body">
                                             <h4 class="form-section text-uppercase"><i class="la la-language font-large-1"></i> {{  $content->language }}</h4>
                                             <div class="form-group row">
-                                                <label class="col-md-3 label-control" for="projectinput9">Content in {{  $content->language }}</label>
-                                                <div class="col-md-9 mx-auto">
-                                                    <textarea id="projectinput9" rows="6" class="form-control" name="contents[]" placeholder="Type here..." required>
+                                                <label class="col-md-2 label-control" for="projectinput9">Content in {{  $content->language }}</label>
+                                                <div class="col-md-10 mx-auto">
+                                                    <textarea id="projectinput9" rows="6" class="summernote" name="contents[]" placeholder="Type here..." required>
                                                         {{  $content->content }}
                                                     </textarea>
                                                 </div> 

@@ -41,7 +41,7 @@
                                     @csrf
                                     <fieldset class="form-group floating-label-form-group">
                                        <label for="user-name">{{ __('E-Mail Address') }}</label>
-                                       <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus >
+                                       <input id="email"  class="form-control @error('email') is-invalid @enderror" name="email"  autocomplete="email" autofocus value="{{ old('email') }}" >
                                         @error('email')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
@@ -50,7 +50,7 @@
                                     </fieldset>
                                     <fieldset class="form-group floating-label-form-group mb-1">
                                        <label for="user-password">{{ __('Password') }}</label>
-                                       <input  id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
+                                       <input  id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password"  autocomplete="current-password">
 
                                        @error('password')
                                         <span class="invalid-feedback" role="alert">
@@ -86,5 +86,10 @@
             </div>
          </div>
       </div>
+
+
+    @include('sweetalert::alert')
+
+    
    </body>
 </html>

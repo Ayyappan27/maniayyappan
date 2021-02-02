@@ -15,7 +15,6 @@ class AboutusController extends Controller
     	return view('dashboard.pages.aboutus', [ 'data'=> $data ]);
     }
     public function update_about(Request $request){ 
-
     	$validator = Validator::make($request->all(), [
 		    "contents"    => "required|array",
 		    "contents.*"  => "required",
@@ -25,7 +24,7 @@ class AboutusController extends Controller
         }
         DB::beginTransaction();
         try {
-            $length = count($request->input());
+            $length = count($request->input('language'));;
 	         for ($i=0; $i < $length; $i++) { 
 	         	 $language = $request->input('language')[$i];
 	             $content  = $request->input('contents')[$i];

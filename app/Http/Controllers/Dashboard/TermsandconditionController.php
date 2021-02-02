@@ -25,7 +25,7 @@ class TermsandconditionController extends Controller
         }
         DB::beginTransaction();
         try {
-            $length = count($request->input());
+            $length = count($request->input('language'));
 	         for ($i=0; $i < $length; $i++) { 
 	         	 $language = $request->input('language')[$i];
 	             $content  = $request->input('contents')[$i];
