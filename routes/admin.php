@@ -14,7 +14,7 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Dashboard'], function() {
     });
 
     Route::get('/dashboard', 'DashboardController@index');
-    Route::get('/userlist', 'UserlistController@index');
+    Route::get('/users', 'UserlistController@index');
     Route::get('/helpandinfo', 'HelpandinfoController@index');
     Route::get('/aboutus', 'AboutusController@index');
     Route::get('/contactus', 'ContactusController@index');

@@ -43,9 +43,13 @@ Route::group(['prefix' => '{language}', 'namespace' => 'FrontOffice'], function(
     Route::post('/jobseeker', 'Auth\JobSeekerController@registration');
     Route::post('/individual', 'Auth\IndividualController@registration');
     Route::post('/company', 'Auth\CompanyController@registration');
-    Route::post('/closesigninmodal', function(){
-        Session::forget('SigninModal');
-    });
+});
+Route::post('{language}/closesigninmodal', function(){
+    Session::forget('SigninModal');
+    $response = array(
+        'status' => 'success'
+    );
+    return $response;
 });
 
 Auth::routes();

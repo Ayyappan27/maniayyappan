@@ -223,13 +223,16 @@ feature info section -->
         }
 
         $('#signinmodalclose').click(function (e) {
+          $('.preloadersection').show();
           e.preventDefault();
           $.ajax({
               type   : 'post',
-              url    : 'closesigninmodal',
+              url    : weblang + '/closesigninmodal',
               data   : {_token: "{{ csrf_token() }}"},
               success: function (data) {
-                  //
+                if(data.status == 'success'){
+                  $('.preloadersection').hide();
+                }
               }
           });
         });

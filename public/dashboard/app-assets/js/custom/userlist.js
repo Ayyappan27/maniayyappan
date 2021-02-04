@@ -25,7 +25,7 @@ $(document).ready(function() {
         fixedHeader: true
     });
 
-    $('.updateStatus').on('click', function() {
+    $(document).on('click', '.updateStatus', function() {
         swal({
             title: "Are you sure?",
             text: "Do you want to update status for this user",
@@ -36,9 +36,9 @@ $(document).ready(function() {
           .then((willDelete) => {
             if (willDelete) {
                 $('.ajaxloader').show();
-                    if($(".updateStatus").prop('checked') == true){
-
-                        var user_id = $(this).attr('data-id');
+                    var user_id = $(this).attr('data-id');
+                    if($('.updatechecked'+user_id).prop('checked')){
+                        var index = $(this).attr('data-index');
                         var data = {"user_id":user_id, "status": 'deactive'};
                         $.ajaxSetup({
                             headers: {
@@ -52,14 +52,16 @@ $(document).ready(function() {
                             datatype: 'JSON',
                             success:function(data){
                                 if(data.status == 'success'){
-                                    $('.ajaxloader').hide();
-                                    // location.reload();
                                     $.ajax({
                                         url: '/admin/getuser',
                                         type:'GET',
-                                        success: function (data) {
-                                            $('.ajaxloader').hide();
-                                            location.reload();
+                                        success: function () {
+                                            var table = $('#userlist').DataTable();
+                                            var statusId = $(".status"+user_id).parent('td');
+                                            var updatestatusId = $(".updatechecked"+user_id).parent('td');
+                                            table.cell( statusId ).data('<span class="badge badge-danger status'+user_id+'">deactive</span>').draw();
+                                            table.cell( updatestatusId ).data('<input type="checkbox" class="form-check-input-switchery-primary updatechecked'+user_id+'" data-fouc="" data-switchery="true" style="display: none;"><span data-index="'+index+'" data-id="'+user_id+'" data-color="warning" class="updateStatus switchery switchery-default" style="background-color: rgb(255, 255, 255); border-color: rgb(223, 223, 223); box-shadow: rgb(223, 223, 223) 0px 0px 0px 0px inset; transition: border 0.4s ease 0s, box-shadow 0.4s ease 0s;"><small style="left: 0px; transition: background-color 0.4s ease 0s, left 0.2s ease 0s;"></small></span>').draw();
+                                            $('.ajaxloader').hide();  
                                         }
                                     });
                                 }
@@ -71,7 +73,7 @@ $(document).ready(function() {
 
                     }
                     else{
-                        var user_id = $(this).attr('data-id');
+                        var index = $(this).attr('data-index');
                         var data = {"user_id":user_id, "status": 'active'};
                         $.ajaxSetup({
                             headers: {
@@ -85,17 +87,20 @@ $(document).ready(function() {
                             datatype: 'JSON',
                             success:function(data){
                                 if(data.status == 'success'){
-                                    // location.reload();
                                     $.ajax({
                                         url: '/admin/getuser',
                                         type:'GET',
-                                        success: function (data) {
+                                        success: function () {
+                                            var table = $('#userlist').DataTable();
+                                            var statusId = $(".status"+user_id).parent('td');
+                                            var updatestatusId = $(".updatechecked"+user_id).parent('td');
+                                            table.cell( statusId ).data('<span class="badge badge-success status'+user_id+'">active</span>').draw();
+                                            table.cell( updatestatusId ).data('<input type="checkbox" class="form-check-input-switchery-primary updatechecked'+user_id+'" checked="" data-fouc="" data-switchery="true" style="display: none;"><span data-index="'+index+'" data-id="'+user_id+'" data-color="warning" class="updateStatus switchery switchery-default" style="background-color: rgb(252 207 23); border-color: rgb(252 207 23); box-shadow: rgb(252 207 23) 0px 0px 0px 10px inset; transition: border 0.4s ease 0s, box-shadow 0.4s ease 0s, background-color 1.2s ease 0s;"><small style="left: 18px; background-color: rgb(255, 255, 255); transition: background-color 0.4s ease 0s, left 0.2s ease 0s;"></small></span>').draw();
                                             $('.ajaxloader').hide();
-                                            location.reload();
                                         }
-                                    });
+                                    })
                                 }
-                            },		
+                            },
                             error: function() {
                                 $('.ajaxloader').hide();
                             }

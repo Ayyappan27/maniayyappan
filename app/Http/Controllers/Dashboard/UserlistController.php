@@ -31,8 +31,7 @@ class UserlistController extends Controller
             throw $ex;
         }
         $response = array(
-            'status' => 'success',
-            'user'   => $user_id,
+            'status' => 'success'
         );
         return $response;
     }
