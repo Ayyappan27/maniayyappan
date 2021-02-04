@@ -55,7 +55,7 @@
                   <div class="dropdown-menu dropdown-menu-right">
                      <a class="dropdown-item" href="user-profile.html"><i class="ft-user"></i> Edit Profile</a>
                      <div class="dropdown-divider"></div>
-                     <a class="dropdown-item" href="admin/signout"><i class="ft-power"></i> Logout</a>
+                     <a class="dropdown-item" href="/admin/signout"><i class="ft-power"></i> Logout</a>
                   </div>
                </li>
             </ul>

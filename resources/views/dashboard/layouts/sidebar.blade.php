@@ -10,9 +10,9 @@
             	</a>
             </li>
 
-            <li class="nav-item {{ Request::segment(2) === 'userlist' ? 'active' : null }}">
-            	<a href="/admin/userlist"><i class="la la-user"></i>
-                	<span class="menu-title" data-i18n="Userlist">User List</span>
+            <li class="nav-item {{ Request::segment(2) === 'users' ? 'active' : null }}">
+            	<a href="/admin/users"><i class="la la-user"></i>
+                	<span class="menu-title" data-i18n="Userlist">Users</span>
             	</a>
             </li>
             

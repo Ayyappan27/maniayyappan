@@ -23,20 +23,12 @@ class TermsandconditionController extends Controller
 		if ($validator->fails()) {
             return redirect()->back()->with('error', 'please enter all fields!');
         }
-        DB::beginTransaction();
-        try {
             $length = count($request->input('language'));
 	         for ($i=0; $i < $length; $i++) { 
 	         	 $language = $request->input('language')[$i];
 	             $content  = $request->input('contents')[$i];
 	             $update = Privacy::where('language', $language)->update(['content' => $content]);
 	         }
-            DB::commit();
-        } 
-        catch(Exception $ex) {
-            DB::rollBack();
-            throw $ex;
-        }
-        return redirect()->back()->with('success', 'Language update successfully!');
+        return redirect()->back()->with('success', 'Terms and Conditon update successfully!');
     }
 }

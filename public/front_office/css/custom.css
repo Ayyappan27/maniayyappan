@@ -38,8 +38,6 @@
     transform: translate(-50%, -50%);
 }
 /*********** Loder End   ****************/
-
-
 .require-input{
     color: #d9534f;
   }
@@ -47,3 +45,77 @@
   .swal2-container{
     z-index: 999999!important;
 }
+
+/*========= dashboard ==============*/
+.job-list.job-grid{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.job-list.job-grid .job-list-logo{
+    margin: 0 auto 10px;
+    width: 100px;
+    height: auto;
+}
+.job-list-logo img{
+    width: 100%;
+    height:auto!important;
+    border-radius: 50%;
+}
+.user-detail-link{
+    color: #00848c;
+}
+.display-grid{
+    display: grid!important;
+}
+.cursor-pointer{
+    cursor: pointer;
+}
+.information-element{
+    position: absolute;
+    top: 10px;
+    width: 25px;
+    height: 25px;
+    border: 2px solid #00848c;
+    right: 10px;
+    font-size: 11px;
+    padding: 3px;
+    border-radius: 50%;
+    background: #ffffff;
+}
+/*========= dashboard ==============*/
+/*========= column 5  ==============*/
+.col-xs-15,
+.col-sm-15,
+.col-md-15,
+.col-lg-15 {
+    position: relative;
+    min-height: 1px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.col-xs-15 {
+    width: 20%;
+    float: left;
+}
+@media (min-width: 768px) {
+.col-sm-15 {
+        width: 20%;
+        float: left;
+    }
+}
+@media (min-width: 992px) {
+    .col-md-15 {
+        width: 20%;
+        float: left;
+    }
+}
+@media (min-width: 1200px) {
+    .col-lg-15 {
+        width: 20%;
+        float: left;
+    }
+}
+
+/*========= column 5  ==============*/
+

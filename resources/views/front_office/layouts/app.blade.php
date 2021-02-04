@@ -108,12 +108,11 @@ feature info section -->
           <div class="footer-link">
             <h5 class="text-dark mb-4">Trending Job</h5>
             <ul class="list-unstyled">
-              <li><a href="#">Browse Jobs</a></li>
-              <li><a href="#">Browse Categories</a></li>
-              <li><a href="#">Submit Resume</a></li>
-              <li><a href="#">Candidate Dashboard</a></li>
-              <li><a href="#">Job Alerts</a></li>
-              <li><a href="#">My Bookmarks</a></li>
+              <li><a href="#">IT Jobs</a></li>
+              <li><a href="#">Pharma Jobs</a></li>
+              <li><a href="#">Agriculture Jobs</a></li>
+              <li><a href="#">Oil and Gas jobs</a></li>
+              <li><a href="#">Bank Jobs</a></li>
             </ul>
           </div>
         </div>
@@ -121,12 +120,11 @@ feature info section -->
           <div class="footer-link">
             <h5 class="text-dark mb-4">Trending Companies</h5>
             <ul class="list-unstyled">
-              <li><a href="#">Shortcodes</a></li>
-              <li><a href="#">Job Page</a></li>
-              <li><a href="#">Job Page Alternative</a></li>
-              <li><a href="#">Resume Page</a></li>
-              <li><a href="#">Blog</a></li>
-              <li><a href="#">Contact</a></li>
+              <li><a href="#">Apple</a></li>
+              <li><a href="#">Microsoft</a></li>
+              <li><a href="#">TATA</a></li>
+              <li><a href="#">Larsen & Toubro</a></li>
+              <li><a href="#">HSBC </a></li>
             </ul>
           </div>
         </div>

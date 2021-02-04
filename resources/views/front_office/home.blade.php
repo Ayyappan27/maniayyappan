@@ -13,8 +13,7 @@ banner -->
     <div class="row justify-content-center">
       <div class=" col-lg-9 col-md-9 d-flex">
         <div class="content text-center">
-          <h1 class="text-white mb-2">Drop <span class="text-primary"> Resume &amp; Get </span> Your Desired Job</h1>
-          <p class="lead mb-4 font-weight-normal text-white">We've got monthly and daily plans that fit your needs. You can always exchange out jobs, upgrade or scale down when you need to.</p>
+          <h3 class="text-white mb-4">A <span class="text-primary"> Job Portal </span> with confidentiality at the core to enable <span class="text-primary"> your profile </span> visibility to the right  employer to maximize chances of getting <span class="text-primary"> your dream job.</span></h3> 
           <div class="job-search-field">
             <div class="job-search-item">
               <form>
@@ -43,11 +42,11 @@ Action-box -->
     <div class="row align-items-center">
       <div class="col-lg-9 mb-4 mb-sm-4 mb-lg-0">
         <div class="d-sm-flex">
-          <h4 class="text-white">Create free account to find thousands Jobs, Employment &amp; Career Opportunities around you!</h4>
+          <h4 class="text-white">Create your Account at affordable pricing plans to get noticed by thousands of Employers in your area of expertise.</h4>
         </div>
       </div>
       <div class="col-md-3 text-lg-right">
-        <a class="btn btn-dark" href="#">Post Job</a>
+        <a class="btn btn-white btn-md" href="{{ route('front.registration', app()->getLocale()) }}">Register</a>
       </div>
     </div>
   </div>
@@ -73,10 +72,10 @@ Browse listing -->
           <div class="style-01">
             <ul class="nav nav-tabs justify-content-center d-flex mt-0" id="myTab" role="tablist">
               <li class="nav-item">
-                <a class="nav-link  active" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Recent Jobs</a>
+                <a class="nav-link  active" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Recent Candidates </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Popular Jobs</a>
+                <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Popular Candidates</a>
               </li>
             </ul>
           </div>
@@ -86,250 +85,249 @@ Browse listing -->
           </div>
         </div>
         <div class="tab-content" id="myTabContent">
-          <div class="tab-pane fade " id="profile" role="tabpanel" aria-labelledby="profile-tab">
+          <div class="tab-pane fade active show " id="profile" role="tabpanel" aria-labelledby="profile-tab">
             <div class="row mt-4">
-              <div class="col-lg-6 col-sm-6">
-                <div class="job-list job-grid">
+              <div class="col-lg-4 col-sm-4 display-grid">
+                <div class="job-list job-grid cursor-pointer">
                   <div class="job-list-logo ">
-                    <img class="img-fluid" src="front_office/images/svg/10.svg" alt="">
+                    <img class="img-fluid" src="https://img.freepik.com/free-vector/businessman-character-avatar-isolated_24877-60111.jpg?size=338&ext=jpg" alt="">
                   </div>
                   <div class="job-list-details">
                     <div class="job-list-info">
                       <div class="job-list-title">
-                        <h6><a href="job-detail.html">Marketing and Communications</a></h6>
+                        <h6><a href="job-detail.html">Mani</a></h6>
                       </div>
                       <div class="job-list-option">
-                        <ul class="list-unstyled">
-                          <li>
-                            <span>via</span>
-                            <a href="employer-detail.html">Wight Sound Hearing LLC</a>
-                          </li>
-                          <li><i class="fas fa-map-marker-alt pr-1"></i>New Castle, PA</li>
-                          <li><i class="fas fa-filter pr-1"></i>Banking</li>
-                          <li><a class="temporary" href="#"><i class="fas fa-suitcase pr-1"></i>Temporary</a></li>
-                        </ul>
+                          <p class="mb-1"><i class="fas fa-map-marker-alt pr-1"></i>New Castle, PA,</p>
+                          <p class="mb-1"><i class="fas fa-filter pr-1"></i>Banking</p>
+                          <p class="mb-1 temporary"> <i class="fas fa-suitcase pr-1"></i>Temporary</p>
                       </div>
                     </div>
-                  </div>
-                  <div class="job-list-favourite-time">
-                    <a class="job-list-favourite order-2" href="#"><i class="far fa-heart"></i></a>
-                    <span class="job-list-time order-1"><i class="far fa-clock pr-1"></i>2W ago</span>
-                  </div>
+                  </div> 
                 </div>
               </div>
-              <div class="col-lg-6 col-sm-6">
-                <div class="job-list job-grid">
+              <div class="col-lg-4 col-sm-4 display-grid">
+                <div class="job-list job-grid cursor-pointer">
                   <div class="job-list-logo ">
-                    <img class="img-fluid" src="front_office/images/svg/11.svg" alt="">
+                    <img class="img-fluid" src="https://img.freepik.com/free-vector/businessman-character-avatar-isolated_24877-60111.jpg?size=338&ext=jpg" alt="">
                   </div>
                   <div class="job-list-details">
                     <div class="job-list-info">
                       <div class="job-list-title">
-                        <h6><a href="job-detail.html">Group Marketing Manager</a></h6>
+                        <h6><a href="job-detail.html">Mani</a></h6>
                       </div>
                       <div class="job-list-option">
-                        <ul class="list-unstyled">
-                          <li>
-                            <span class="job-list-via">via</span>
-                            <a class="job-list-company-name" href="#">Bright Sparks PLC</a>
-                          </li>
-                          <li><i class="fas fa-map-marker-alt pr-1"></i>Botchergate, Carlisle</li>
-                          <li><i class="fas fa-filter pr-1"></i>Customer Service</li>
-                          <li><a class="part-time" href="#"><i class="fas fa-suitcase pr-1"></i>Part-Time</a></li>
-                        </ul>
+                          <p class="mb-1"><i class="fas fa-map-marker-alt pr-1"></i>New Castle, PA</p>
+                          <p class="mb-1"><i class="fas fa-filter pr-1"></i>Banking</p>
+                          <p class="mb-1 temporary"> <i class="fas fa-suitcase pr-1"></i>Temporary</p>
                       </div>
                     </div>
-                  </div>
-                  <div class="job-list-favourite-time">
-                    <a class="job-list-favourite order-2" href="#"><i class="far fa-heart"></i></a>
-                    <span class="job-list-time order-1"><i class="far fa-clock pr-1"></i>2W ago</span>
-                  </div>
+                  </div> 
                 </div>
               </div>
-              <div class="col-lg-6 col-sm-6">
-                <div class="job-list job-grid">
+              <div class="col-lg-4 col-sm-4 display-grid">
+                <div class="job-list job-grid cursor-pointer">
                   <div class="job-list-logo ">
-                    <img class="img-fluid" src="front_office/images/svg/12.svg" alt="">
+                    <img class="img-fluid" src="https://img.freepik.com/free-vector/businessman-character-avatar-isolated_24877-60111.jpg?size=338&ext=jpg" alt="">
                   </div>
                   <div class="job-list-details">
                     <div class="job-list-info">
                       <div class="job-list-title">
-                        <h6><a href="job-detail.html">Senior rolling stock technician</a></h6>
+                        <h6><a href="job-detail.html">Mani</a></h6>
                       </div>
                       <div class="job-list-option">
-                        <ul class="list-unstyled">
-                          <li>
-                            <span>via</span>
-                            <a href="employer-detail.html">Carphone Warehouse</a>
-                          </li>
-                          <li><i class="fas fa-map-marker-alt pr-1"></i>Canyon Village, Ramon</li>
-                          <li><i class="fas fa-filter pr-1"></i>IT &amp; Telecoms</li>
-                          <li><a class="part-time" href="#"><i class="fas fa-suitcase pr-1"></i>Part-Time</a></li>
-                        </ul>
+                          <p class="mb-1"><i class="fas fa-map-marker-alt pr-1"></i>New Castle, PA</p>
+                          <p class="mb-1"><i class="fas fa-filter pr-1"></i>Banking</p>
+                          <p class="part-time" href="#"><i class="fas fa-suitcase pr-1"></i>Part-Time</p>
                       </div>
                     </div>
-                  </div>
-                  <div class="job-list-favourite-time">
-                    <a class="job-list-favourite order-2" href="#"><i class="far fa-heart"></i></a>
-                    <span class="job-list-time order-1"><i class="far fa-clock pr-1"></i>2W ago</span>
-                  </div>
+                  </div> 
                 </div>
               </div>
-              <div class="col-lg-6 col-sm-6">
-                <div class="job-list job-grid">
+              <div class="col-lg-4 col-sm-4 display-grid">
+                <div class="job-list job-grid cursor-pointer">
                   <div class="job-list-logo ">
-                    <img class="img-fluid" src="front_office/images/svg/17.svg" alt="">
+                    <img class="img-fluid" src="https://img.freepik.com/free-vector/businessman-character-avatar-isolated_24877-60111.jpg?size=338&ext=jpg" alt="">
                   </div>
                   <div class="job-list-details">
                     <div class="job-list-info">
                       <div class="job-list-title">
-                        <h6><a href="job-detail.html">Operational manager part-time</a></h6>
+                        <h6><a href="job-detail.html">Mani</a></h6>
                       </div>
                       <div class="job-list-option">
-                        <ul class="list-unstyled">
-                          <li>
-                            <span>via</span>
-                            <a href="employer-detail.html">Bright Sparks PLC</a>
-                          </li>
-                          <li><i class="fas fa-map-marker-alt pr-1"></i>Canyon Village, Ramon</li>
-                          <li><i class="fas fa-filter pr-1"></i>Financial Services</li>
-                          <li><a class="freelance" href="#"><i class="fas fa-suitcase pr-1"></i>Freelance</a></li>
-                        </ul>
+                          <p class="mb-1"><i class="fas fa-map-marker-alt pr-1"></i>New Castle, PA</p>
+                          <p class="mb-1"><i class="fas fa-filter pr-1"></i>Banking</p>
+                          <p class="part-time" href="#"><i class="fas fa-suitcase pr-1"></i>Part-Time</p>
                       </div>
                     </div>
-                  </div>
-                  <div class="job-list-favourite-time">
-                    <a class="job-list-favourite order-2" href="#"><i class="far fa-heart"></i></a>
-                    <span class="job-list-time order-1"><i class="far fa-clock pr-1"></i>2W ago</span>
-                  </div>
+                  </div> 
                 </div>
               </div>
+              <div class="col-lg-4 col-sm-4 display-grid">
+                <div class="job-list job-grid cursor-pointer">
+                  <div class="job-list-logo ">
+                    <img class="img-fluid" src="https://img.freepik.com/free-vector/businessman-character-avatar-isolated_24877-60111.jpg?size=338&ext=jpg" alt="">
+                  </div>
+                  <div class="job-list-details">
+                    <div class="job-list-info">
+                      <div class="job-list-title">
+                        <h6><a href="job-detail.html">Mani</a></h6>
+                      </div>
+                      <div class="job-list-option">
+                          <p class="mb-1"><i class="fas fa-map-marker-alt pr-1"></i>New Castle, PA,</p>
+                          <p class="mb-1"><i class="fas fa-filter pr-1"></i>Banking</p>
+                          <p class="mb-1 temporary"> <i class="fas fa-suitcase pr-1"></i>Temporary</p>
+                      </div>
+                    </div>
+                  </div> 
+                </div>
+              </div>
+              <div class="col-lg-4 col-sm-4 display-grid">
+                <div class="job-list job-grid cursor-pointer">
+                  <div class="job-list-logo ">
+                    <img class="img-fluid" src="https://img.freepik.com/free-vector/businessman-character-avatar-isolated_24877-60111.jpg?size=338&ext=jpg" alt="">
+                  </div>
+                  <div class="job-list-details">
+                    <div class="job-list-info">
+                      <div class="job-list-title">
+                        <h6><a href="job-detail.html">Mani</a></h6>
+                      </div>
+                      <div class="job-list-option">
+                          <p class="mb-1"><i class="fas fa-map-marker-alt pr-1"></i>New Castle, PA,</p>
+                          <p class="mb-1"><i class="fas fa-filter pr-1"></i>Banking</p>
+                          <p class="mb-1 temporary"> <i class="fas fa-suitcase pr-1"></i>Temporary</p>
+                      </div>
+                    </div>
+                  </div> 
+                </div>
+              </div>
+               
             </div>
             <div class="col-12 justify-content-center d-flex mt-4">
-              <a class="btn btn-white btn-lg" href="#">View More Jobs</a>
+              <a class="btn btn-white btn-lg" href="#">View More Candidates</a>
             </div>
           </div>
-          <div class="tab-pane fade active show" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+
+          <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
             <div class="row mt-4">
-              <div class="col-lg-6 col-sm-6">
-                <div class="job-list job-grid">
+              <div class="col-lg-4 col-sm-4 display-grid">
+                <div class="job-list job-grid cursor-pointer">
                   <div class="job-list-logo ">
-                    <img class="img-fluid" src="front_office/images/svg/13.svg" alt="">
+                    <img class="img-fluid" src="https://img.freepik.com/free-vector/businessman-character-avatar-isolated_24877-60111.jpg?size=338&ext=jpg" alt="">
                   </div>
                   <div class="job-list-details">
                     <div class="job-list-info">
                       <div class="job-list-title">
-                        <h6><a href="job-detail.html">Communications Trainee Scheme</a></h6>
+                        <h6><a href="job-detail.html">Mani</a></h6>
                       </div>
                       <div class="job-list-option">
-                        <ul class="list-unstyled">
-                          <li>
-                            <span class="job-list-via">via</span>
-                            <a class="job-list-company-name" href="#">Bright Sparks PLC</a>
-                          </li>
-                          <li><i class="fas fa-map-marker-alt pr-1"></i>Botchergate, Carlisle</li>
-                          <li><i class="fas fa-filter pr-1"></i>Customer Service</li>
-                          <li><a class="part-time" href="#"><i class="fas fa-suitcase pr-1"></i>Part-Time</a></li>
-                        </ul>
+                          <p class="mb-1"><i class="fas fa-map-marker-alt pr-1"></i>New Castle, PA,</p>
+                          <p class="mb-1"><i class="fas fa-filter pr-1"></i>Banking</p>
+                          <p class="mb-1 temporary"> <i class="fas fa-suitcase pr-1"></i>Temporary</p>
                       </div>
                     </div>
-                  </div>
-                  <div class="job-list-favourite-time">
-                    <a class="job-list-favourite order-2" href="#"><i class="far fa-heart"></i></a>
-                    <span class="job-list-time order-1"><i class="far fa-clock pr-1"></i>2W ago</span>
-                  </div>
+                  </div> 
                 </div>
               </div>
-              <div class="col-lg-6 col-sm-6">
-                <div class="job-list job-grid">
+              <div class="col-lg-4 col-sm-4 display-grid">
+                <div class="job-list job-grid cursor-pointer">
                   <div class="job-list-logo ">
-                    <img class="img-fluid" src="front_office/images/svg/14.svg" alt="">
+                    <img class="img-fluid" src="https://img.freepik.com/free-vector/businessman-character-avatar-isolated_24877-60111.jpg?size=338&ext=jpg" alt="">
                   </div>
                   <div class="job-list-details">
                     <div class="job-list-info">
                       <div class="job-list-title">
-                        <h6><a href="job-detail.html">Part-Time Sales Assistant</a></h6>
+                        <h6><a href="job-detail.html">Mani</a></h6>
                       </div>
                       <div class="job-list-option">
-                        <ul class="list-unstyled">
-                          <li>
-                            <span>via</span>
-                            <a href="employer-detail.html">Tan Electrics Ltd</a>
-                          </li>
-                          <li><i class="fas fa-map-marker-alt pr-1"></i>Park Avenue, Mumbai</li>
-                          <li><i class="fas fa-filter pr-1"></i>Charity &amp; Voluntary</li>
-                          <li><a class="full-time" href="#"><i class="fas fa-suitcase pr-1"></i>Full-time</a></li>
-                        </ul>
+                          <p class="mb-1"><i class="fas fa-map-marker-alt pr-1"></i>New Castle, PA</p>
+                          <p class="mb-1"><i class="fas fa-filter pr-1"></i>Banking</p>
+                          <p class="mb-1 temporary"> <i class="fas fa-suitcase pr-1"></i>Temporary</p>
                       </div>
                     </div>
-                  </div>
-                  <div class="job-list-favourite-time">
-                    <a class="job-list-favourite order-2" href="#"><i class="far fa-heart"></i></a>
-                    <span class="job-list-time order-1"><i class="far fa-clock pr-1"></i>2W ago</span>
-                  </div>
+                  </div> 
                 </div>
               </div>
-              <div class="col-lg-6 col-sm-6">
-                <div class="job-list job-grid">
+              <div class="col-lg-4 col-sm-4 display-grid">
+                <div class="job-list job-grid cursor-pointer">
                   <div class="job-list-logo ">
-                    <img class="img-fluid" src="front_office/images/svg/15.svg" alt="">
+                    <img class="img-fluid" src="https://img.freepik.com/free-vector/businessman-character-avatar-isolated_24877-60111.jpg?size=338&ext=jpg" alt="">
                   </div>
                   <div class="job-list-details">
                     <div class="job-list-info">
                       <div class="job-list-title">
-                        <h6><a href="job-detail.html">Customer Service Assistant</a></h6>
+                        <h6><a href="job-detail.html">Mani</a></h6>
                       </div>
                       <div class="job-list-option">
-                        <ul class="list-unstyled">
-                          <li>
-                            <span>via</span>
-                            <a href="employer-detail.html">Wight Sound Hearing LLC</a>
-                          </li>
-                          <li><i class="fas fa-map-marker-alt pr-1"></i>New Castle, PA</li>
-                          <li><i class="fas fa-filter pr-1"></i>Banking</li>
-                          <li><a class="temporary" href="#"><i class="fas fa-suitcase pr-1"></i>Temporary</a></li>
-                        </ul>
+                          <p class="mb-1"><i class="fas fa-map-marker-alt pr-1"></i>New Castle, PA</p>
+                          <p class="mb-1"><i class="fas fa-filter pr-1"></i>Banking</p>
+                          <p class="part-time" href="#"><i class="fas fa-suitcase pr-1"></i>Part-Time</p>
                       </div>
                     </div>
-                  </div>
-                  <div class="job-list-favourite-time">
-                    <a class="job-list-favourite order-2" href="#"><i class="far fa-heart"></i></a>
-                    <span class="job-list-time order-1"><i class="far fa-clock pr-1"></i>2W ago</span>
-                  </div>
+                  </div> 
                 </div>
               </div>
-              <div class="col-lg-6 col-sm-6">
-                <div class="job-list job-grid">
+              <div class="col-lg-4 col-sm-4 display-grid">
+                <div class="job-list job-grid cursor-pointer">
                   <div class="job-list-logo ">
-                    <img class="img-fluid" src="front_office/images/svg/16.svg" alt="">
+                    <img class="img-fluid" src="https://img.freepik.com/free-vector/businessman-character-avatar-isolated_24877-60111.jpg?size=338&ext=jpg" alt="">
                   </div>
                   <div class="job-list-details">
                     <div class="job-list-info">
                       <div class="job-list-title">
-                        <h6><a href="job-detail.html">Data Entry Administrator</a></h6>
+                        <h6><a href="job-detail.html">Mani</a></h6>
                       </div>
                       <div class="job-list-option">
-                        <ul class="list-unstyled">
-                          <li>
-                            <span>via</span>
-                            <a href="employer-detail.html">Fast Systems Consultants</a>
-                          </li>
-                          <li><i class="fas fa-map-marker-alt pr-1"></i>Wellesley Rd, London</li>
-                          <li><i class="fas fa-filter pr-1"></i>Automotive Jobs</li>
-                          <li><a class="freelance" href="#"><i class="fas fa-suitcase pr-1"></i>Freelance</a></li>
-                        </ul>
+                          <p class="mb-1"><i class="fas fa-map-marker-alt pr-1"></i>New Castle, PA</p>
+                          <p class="mb-1"><i class="fas fa-filter pr-1"></i>Banking</p>
+                          <p class="part-time" href="#"><i class="fas fa-suitcase pr-1"></i>Part-Time</p>
                       </div>
                     </div>
-                  </div>
-                  <div class="job-list-favourite-time">
-                    <a class="job-list-favourite order-2" href="#"><i class="far fa-heart"></i></a>
-                    <span class="job-list-time order-1"><i class="far fa-clock pr-1"></i>2W ago</span>
-                  </div>
+                  </div> 
                 </div>
               </div>
+              <div class="col-lg-4 col-sm-4 display-grid">
+                <div class="job-list job-grid cursor-pointer">
+                  <div class="job-list-logo ">
+                    <img class="img-fluid" src="https://img.freepik.com/free-vector/businessman-character-avatar-isolated_24877-60111.jpg?size=338&ext=jpg" alt="">
+                  </div>
+                  <div class="job-list-details">
+                    <div class="job-list-info">
+                      <div class="job-list-title">
+                        <h6><a href="job-detail.html">Mani</a></h6>
+                      </div>
+                      <div class="job-list-option">
+                          <p class="mb-1"><i class="fas fa-map-marker-alt pr-1"></i>New Castle, PA,</p>
+                          <p class="mb-1"><i class="fas fa-filter pr-1"></i>Banking</p>
+                          <p class="mb-1 temporary"> <i class="fas fa-suitcase pr-1"></i>Temporary</p>
+                      </div>
+                    </div>
+                  </div> 
+                </div>
+              </div>
+              <div class="col-lg-4 col-sm-4 display-grid">
+                <div class="job-list job-grid cursor-pointer">
+                  <div class="job-list-logo ">
+                    <img class="img-fluid" src="https://img.freepik.com/free-vector/businessman-character-avatar-isolated_24877-60111.jpg?size=338&ext=jpg" alt="">
+                  </div>
+                  <div class="job-list-details">
+                    <div class="job-list-info">
+                      <div class="job-list-title">
+                        <h6><a href="job-detail.html">Mani</a></h6>
+                      </div>
+                      <div class="job-list-option">
+                          <p class="mb-1"><i class="fas fa-map-marker-alt pr-1"></i>New Castle, PA,</p>
+                          <p class="mb-1"><i class="fas fa-filter pr-1"></i>Banking</p>
+                          <p class="mb-1 temporary"> <i class="fas fa-suitcase pr-1"></i>Temporary</p>
+                      </div>
+                    </div>
+                  </div> 
+                </div>
+              </div>
+               
             </div>
-            <div class="col-12 justify-content-center d-flex mb-4">
-              <a class="btn btn-white btn-lg" href="#">View More Jobs</a>
+            <div class="col-12 justify-content-center d-flex mt-4">
+              <a class="btn btn-white btn-lg" href="#">View More Candidates</a>
             </div>
           </div>
         </div>
@@ -338,7 +336,7 @@ Browse listing -->
         <div class="sidebar mb-0">
           <div class="widget bg-white p-4">
             <div class="widget-title widget-collapse">
-              <h5>Specialism</h5>
+              <h5>Search</h5>
             </div>
             <div class="collapse show" id="specialism">
               <div class="widget-content">
@@ -365,97 +363,8 @@ Browse listing -->
               </div>
             </div>
           </div>
-          <div class="employers-grid bg-white mt-4 py-4">
-            <div class="widget-title widget-collapse mb-3">
-              <h5>Featured Company</h5>
-            </div>
-            <div class="mb-3">
-              <img class="img-fluid" src="front_office/images/bg/bg-01.jpg" alt="">
-            </div>
-            <div class="employers-list-details">
-              <div class="employers-list-info">
-                <div class="employers-list-title">
-                  <h5 class="mb-0"><a href="employer-detail.html">Bright Sparks PLC</a></h5>
-                </div>
-                <div class="employers-list-option">
-                  <ul class="list-unstyled">
-                    <li><i class="fas fa-map-marker-alt pr-1"></i>Botchergate, Carlisle</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="employers-list-position">
-              <a class="btn btn-sm btn-primary" href="#">Part-Time</a>
-            </div>
-          </div>
-          <div class="owl-carousel owl-nav-bottom-center mt-4" data-nav-arrow="false" data-nav-dots="true" data-items="1" data-md-items="1" data-sm-items="1" data-xs-items="1" data-xx-items="1" data-space="15" data-autoheight="true">
-            <div class="item">
-              <div class="employers-grid bg-white py-4">
-                <div class="employers-list-logo pt-0">
-                  <img class="img-fluid" src="front_office/images/svg/09.svg" alt="">
-                </div>
-                <div class="employers-list-details">
-                  <div class="employers-list-info">
-                    <div class="employers-list-title">
-                      <h5 class="mb-0"><a href="employer-detail.html">Bright Sparks PLC</a></h5>
-                    </div>
-                    <div class="employers-list-option">
-                      <ul class="list-unstyled">
-                        <li><i class="fas fa-map-marker-alt pr-1"></i>Botchergate, Carlisle</li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-                <div class="employers-list-position">
-                  <a class="btn btn-sm btn-dark" href="#">25 Open position</a>
-                </div>
-              </div>
-            </div>
-            <div class="item">
-              <div class="employers-grid bg-white py-4">
-                <div class="employers-list-logo pt-0">
-                  <img class="img-fluid" src="front_office/images/svg/08.svg" alt="">
-                </div>
-                <div class="employers-list-details">
-                  <div class="employers-list-info">
-                    <div class="employers-list-title">
-                      <h5 class="mb-0"><a href="employer-detail.html">Suttons Financial Ltd</a></h5>
-                    </div>
-                    <div class="employers-list-option">
-                      <ul class="list-unstyled">
-                        <li><i class="fas fa-map-marker-alt pr-1"></i>Paris, Île-de-France</li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-                <div class="employers-list-position">
-                  <a class="btn btn-sm btn-dark" href="#">23 Open position</a>
-                </div>
-              </div>
-            </div>
-            <div class="item">
-              <div class="employers-grid bg-white py-4">
-                <div class="employers-list-logo pt-0">
-                  <img class="img-fluid" src="front_office/images/svg/06.svg" alt="">
-                </div>
-                <div class="employers-list-details">
-                  <div class="employers-list-info">
-                    <div class="employers-list-title">
-                      <h5 class="mb-0"><a href="employer-detail.html">Altenwerth and Hamill</a></h5>
-                    </div>
-                    <div class="employers-list-option">
-                      <ul class="list-unstyled">
-                        <li><i class="fas fa-map-marker-alt pr-1"></i>Taunton, London</li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-                <div class="employers-list-position">
-                  <a class="btn btn-sm btn-dark" href="#">35 Open position</a>
-                </div>
-              </div>
-            </div>
-          </div>
+          
+         
         </div>
       </div>
     </div>
@@ -533,6 +442,10 @@ Category-style -->
           </a>
         </div>
       </div>
+      <div class="col-12 justify-content-center d-flex mt-4">
+        <a class="btn btn-white btn-lg" href="#">View More Sector</a>
+      </div>
+
     </div>
   </div>
 </section>
@@ -551,7 +464,7 @@ Why You Choose -->
           <div class="row">
             <div class="col-xl-10 col-lg-12">
               <div class="section-title-02">
-                <h2>Why You Choose Job Among Other Job Site?</h2>
+                <h2 class="text-capitalize" >we should mention about Referral System</h2>
                 <p>We know this in our gut, but what can we do about it? How can we motivate ourselves? One of the most difficult aspects of achieving success is staying motivated over the long haul.</p>
               </div>
             </div>
@@ -825,42 +738,58 @@ Easiest Way to Use -->
     <div class="row justify-content-center">
       <div class="col-lg-8 col-md-10">
         <div class="section-title-02 text-center text-white">
-          <h2 class="text-white">Easiest Way to Use</h2>
-          <p>Positive pleasure-oriented goals are much more powerful motivators than negative fear-based ones.</p>
+          <h2 class="text-white">Job seeker Perspective</h2>
         </div>
       </div>
     </div>
     <div class="row bg-holder-pattern mr-md-0 ml-md-0" style="background-image: url('front_office/images/step/pattern-01.png');">
-      <div class="col-md-4 mb-4 mb-md-0">
+      <div class="col-lg-15 mb-4 mb-md-0">
+        <div class="feature-step text-center">
+          <div class="feature-info-icon">
+            <i class="flaticon-account"></i>
+          </div>
+          <div class=" text-white">
+            <h5>Create Account</h5>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-15 mb-4 mb-md-0">
         <div class="feature-step text-center">
           <div class="feature-info-icon">
             <i class="flaticon-resume"></i>
           </div>
-          <div class=" text-white">
-            <h5>Create Account</h5>
-            <p class="mb-0">Create an account and access your saved settings on any device.</p>
+          <div class="text-white">
+            <h5>Prepare your Resume</h5>
           </div>
         </div>
       </div>
-      <div class="col-md-4 mb-4 mb-md-0">
+      <div class="col-lg-15 mb-0">
         <div class="feature-step text-center">
           <div class="feature-info-icon">
-            <i class="flaticon-recruitment"></i>
+            <i class="flaticon-money"></i>
           </div>
           <div class=" text-white">
-            <h5>Find your Vacancy</h5>
-            <p class="mb-0">Don't just find. Be found. Put your CV in front of great employers.</p>
+            <h5>Refer your Friend and Earn Bonus</h5>
           </div>
         </div>
       </div>
-      <div class="col-md-4 mb-0">
+      <div class="col-lg-15 mb-4 mb-md-0">
         <div class="feature-step text-center">
           <div class="feature-info-icon">
-            <i class="flaticon-position"></i>
+            <i class="flaticon-notification"></i>
           </div>
           <div class=" text-white">
-            <h5>Get a Job</h5>
-            <p class="mb-0">Your next career move starts here. Choose Job from thousands of companies</p>
+            <h5>Get Noticed</h5>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-15 mb-0">
+        <div class="feature-step text-center">
+          <div class="feature-info-icon">
+            <i class="flaticon-job-1"></i>
+          </div>
+          <div class=" text-white">
+            <h5>Get Job</h5>
           </div>
         </div>
       </div>
@@ -871,204 +800,27 @@ Easiest Way to Use -->
 Easiest Way to Use -->
 
 <!--=================================
-Candidate post-box list -->
-<section class="mt-4 pt-4 mb-4 pb-4">
-  <div class="container">
-    <div class="row">
-      <div class="col-12">
-        <div class="section-title center">
-          <h2 class="title">Featured Candidates</h2>
-          <p>Reflect and experiment until you find the right combination of motivators for your personality and your personal goals.</p>
-        </div>
-      </div>
-      <div class="col-12">
-      <div class="owl-carousel owl-nav-bottom-center" data-nav-arrow="false" data-nav-dots="true" data-items="4" data-md-items="3" data-sm-items="2" data-xs-items="1" data-xx-items="1" data-space="15" data-autoheight="true">
-        <div class="item">
-          <div class="candidate-list candidate-grid">
-            <div class="candidate-list-image">
-              <img class="img-fluid" src="front_office/images/avatar/06.jpg" alt="" >
-            </div>
-            <div class="candidate-list-details">
-              <div class="candidate-list-info">
-                <div class="candidate-list-title">
-                  <h5><a href="candidate-detail.html">Paul Flavius</a></h5>
-                </div>
-                <div class="candidate-list-option">
-                  <ul class="list-unstyled">
-                    <li><i class="fas fa-filter pr-1"></i>General Insurance</li>
-                    <li><i class="fas fa-map-marker-alt pr-1"></i>Ormskirk Rd, Wigan</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="candidate-list-favourite-time">
-              <a class="candidate-list-favourite order-2" href="#"><i class="far fa-heart"></i></a>
-              <span class="candidate-list-time order-1"><i class="far fa-clock pr-1"></i>3D ago</span>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <div class="candidate-list candidate-grid">
-            <div class="candidate-list-image">
-              <img class="img-fluid" src="front_office/images/avatar/02.jpg" alt="" >
-            </div>
-            <div class="candidate-list-details">
-              <div class="candidate-list-info">
-                <div class="candidate-list-title">
-                  <h5><a href="candidate-detail.html">John Doe</a></h5>
-                </div>
-                <div class="candidate-list-option">
-                  <ul class="list-unstyled">
-                    <li><i class="fas fa-filter pr-1"></i>Strategy & Consultancy</li>
-                    <li><i class="fas fa-map-marker-alt pr-1"></i>Lynch Lane, Weymouth</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="candidate-list-favourite-time">
-              <a class="candidate-list-favourite order-2" href="#"><i class="far fa-heart"></i></a>
-              <span class="candidate-list-time order-1"><i class="far fa-clock pr-1"></i>3M ago</span>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <div class="candidate-list candidate-grid">
-            <div class="candidate-list-image">
-              <img class="img-fluid" src="front_office/images/avatar/01.jpg" alt="" >
-            </div>
-            <div class="candidate-list-details">
-              <div class="candidate-list-info">
-                <div class="candidate-list-title">
-                  <h5><a href="candidate-detail.html">Carolyn & Dan</a></h5>
-                </div>
-                <div class="candidate-list-option">
-                  <ul class="list-unstyled">
-                    <li><i class="fas fa-filter pr-1"></i>Recruitment Consultancy</li>
-                    <li><i class="fas fa-map-marker-alt pr-1"></i>Paris, Île-de-France</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="candidate-list-favourite-time">
-              <a class="candidate-list-favourite order-2" href="#"><i class="far fa-heart"></i></a>
-              <span class="candidate-list-time order-1"><i class="far fa-clock pr-1"></i>1M ago</span>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <div class="candidate-list candidate-grid">
-            <div class="candidate-list-image">
-              <img class="img-fluid" src="front_office/images/avatar/03.jpg" alt="" >
-            </div>
-            <div class="candidate-list-details">
-              <div class="candidate-list-info">
-                <div class="candidate-list-title">
-                  <h5><a href="candidate-detail.html">Paul Flavius</a></h5>
-                </div>
-                <div class="candidate-list-option">
-                  <ul class="list-unstyled">
-                    <li><i class="fas fa-filter pr-1"></i>General Insurance</li>
-                    <li><i class="fas fa-map-marker-alt pr-1"></i>Ormskirk Rd, Wigan</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="candidate-list-favourite-time">
-              <a class="candidate-list-favourite order-2" href="#"><i class="far fa-heart"></i></a>
-              <span class="candidate-list-time order-1"><i class="far fa-clock pr-1"></i>3D ago</span>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <div class="candidate-list candidate-grid">
-            <div class="candidate-list-image">
-              <img class="img-fluid" src="front_office/images/avatar/04.jpg" alt="" >
-            </div>
-            <div class="candidate-list-details">
-              <div class="candidate-list-info">
-                <div class="candidate-list-title">
-                  <h5><a href="candidate-detail.html">Melissa Doe</a></h5>
-                </div>
-                <div class="candidate-list-option">
-                  <ul class="list-unstyled">
-                    <li><i class="fas fa-filter pr-1"></i>Construction & Property</li>
-                    <li><i class="fas fa-map-marker-alt pr-1"></i>Botchergate, Carlisle</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="candidate-list-favourite-time">
-              <a class="candidate-list-favourite order-2" href="#"><i class="far fa-heart"></i></a>
-              <span class="candidate-list-time order-1"><i class="far fa-clock pr-1"></i>6D ago</span>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <div class="candidate-list candidate-grid">
-            <div class="candidate-list-image">
-              <img class="img-fluid" src="front_office/images/avatar/05.jpg" alt="" >
-            </div>
-            <div class="candidate-list-details">
-              <div class="candidate-list-info">
-                <div class="candidate-list-title">
-                  <h5><a href="candidate-detail.html">Felica Queen</a></h5>
-                </div>
-                <div class="candidate-list-option">
-                  <ul class="list-unstyled">
-                    <li><i class="fas fa-filter pr-1"></i>General Insurance</li>
-                    <li><i class="fas fa-map-marker-alt pr-1"></i>Union St, New Delhi</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="candidate-list-favourite-time">
-              <a class="candidate-list-favourite order-2" href="#"><i class="far fa-heart"></i></a>
-              <span class="candidate-list-time order-1"><i class="far fa-clock pr-1"></i>2D ago</span>
-            </div>
-          </div>
-        </div>
-      </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!--=================================
-Candidate post-box list -->
-
-<!--=================================
-Action box -->
-<!-- <section class="space-ptb bg-holder bg-overlay-black-60" style="background-image: url(images/slider/banner-02.jpg);">
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-lg-8 text-center">
-        <div class="section-title">
-          <span class="text-primary lead font-weight-bold d-block mb-3">Post OR Get a job</span>
-          <h2 class="text-white">Looking for Post OR Get a job? We have end-to-end solutions that can keep up with your criteria.</h2>
-        </div>
-        <a class="btn btn-primary mb-2 mb-sm-0" href="#">Post a job</a>
-        <a class="btn btn-white mb-2 mb-sm-0" href="#">Browse jobs</a>
-      </div>
-    </div>
-  </div>
-</section> -->
-<!--=================================
-Action box -->
-
-<!--=================================
 Plans&and Packages -->
-<section class="mt-4 mb-4 pb-4">
+<section class="mt-4 pt-4 mb-4 pb-4">
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-md-10 col-lg-8">
+
+
         <div class="section-title center">
-          <h2 class="title">Buy Our Plans and Packages</h2>
-          <p>We've got monthly and daily plans that fit your needs. You can always exchange out jobs, upgrade or scale down when you need to.</p>
+          <h2 class="title">Subscribe to Your Plans and Referral Scheme</h2>
         </div>
       </div>
     </div>
     <div class="row">
       <div class="col-md-4 text-center">
         <div class="pricing-plan pricing-plan-02 mt-md-3 mt-0 free">
+
+
+        <div class="information-element">
+          <a href="#" data-toggle="tooltip" title="Subscription plan"> <i class="fa fa-question"></i> </a>
+        </div>
+
           <div class="pricing-price">
             <span>$3.99 </span>
           </div>
@@ -1080,16 +832,26 @@ Plans&and Packages -->
       </div>
       <div class="col-md-4 text-center">
         <div class="pricing-plan pricing-plan-02 sponsor active">
+
+           <div class="information-element">
+          <a href="#" data-toggle="tooltip" title="Subscription plan!"> <i class="fa fa-question"></i> </a>
+        </div>
+
           <div class="pricing-price">
             <span>$12.99 </span>
           </div>
           <ul class="list-unstyled pricing-list">
-            <li>Subscription for one year</li>          </ul>
+            <li>Subscription for one year</li></ul>
           <a class="btn btn-outline" href="#">Get Started</a>
         </div>
       </div>
       <div class="col-md-4 text-center">
         <div class="pricing-plan pricing-plan-02 mt-md-3 mt-0 free">
+
+           <div class="information-element">
+          <a href="#" data-toggle="tooltip" title="Subscription plan!"> <i class="fa fa-question"></i> </a>
+        </div>
+
           <div class="pricing-price">
             <span>$8.99</span>
           </div>
@@ -1104,5 +866,7 @@ Plans&and Packages -->
 </section>
 <!--=================================
 Plans&and Packages -->
+
+ 
 
 @endsection

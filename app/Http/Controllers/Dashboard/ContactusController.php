@@ -25,8 +25,6 @@ class ContactusController extends Controller
             'twitter_link'       => 'required|string',
             'website_link'       => 'required|string'
         ]);
-        DB::beginTransaction();
-        try {
 	         	 $phone_number = $request->input('phone_number');
 	             $email  = $request->input('email');
                  $whatsapp_number  = $request->input('whatsapp_number');
@@ -36,12 +34,6 @@ class ContactusController extends Controller
                  $twitter_link  = $request->input('twitter_link');
                  $website_link  = $request->input('website_link'); 
 	             $update = Contact::where('id', 1)->update(['phone_number' => $phone_number,'email' => $email,'whatsapp_number' => $whatsapp_number,'facebook_link' => $facebook_link,'instagram_link' => $instagram_link,'linkedin_link' => $linkedin_link,'twitter_link' => $twitter_link,'website_link' => $website_link]);
-            DB::commit();
-        } 
-        catch(Exception $ex) {
-            DB::rollBack();
-            throw $ex;
-        }
-        return redirect()->back()->with('success', 'Contact update successfully!');
+                 return redirect()->back()->with('success', 'Contact us update successfully!');
     }
 }
