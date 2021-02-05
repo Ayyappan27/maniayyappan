@@ -30,7 +30,6 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('/dashboard/app-assets/css/colors.css')}}">
     <link rel="stylesheet" type="text/css" href="{{ asset('/dashboard/app-assets/css/components.css')}}">
     <!-- END: Theme CSS-->
-
     <!-- BEGIN: Page CSS-->
     <link rel="stylesheet" type="text/css" href="{{ asset('/dashboard/app-assets/css/core/menu/menu-types/vertical-menu.css')}}">
     <link rel="stylesheet" type="text/css" href="{{ asset('/dashboard/app-assets/css/core/colors/palette-gradient.css')}}">
@@ -54,14 +53,10 @@
 
     <link rel="stylesheet" type="text/css" href="{{ asset('/dashboard/app-assets/css/custom.css')}}">
     <!-- END: Page CSS-->
-
     <!-- BEGIN: Custom CSS-->
     <link rel="stylesheet" type="text/css" href="{{ asset('/dashboard/assets/css/style.css')}}">
     <!-- END: Custom CSS-->
     <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
-
-  
-
 </head>
 <!-- END: Head-->
 
@@ -89,68 +84,23 @@
 
 <div class="sidenav-overlay"></div>
 <div class="drag-target"></div>
-
-
 <footer class="footer footer-static footer-light navbar-border navbar-shadow">
-    <p class="clearfix blue-grey lighten-2 text-sm-center mb-0 px-2"><span class="float-md-left d-block d-md-inline-block">Copyright &copy; 2021 <a class="text-bold-800 grey darken-2" href="https://linkia.qa" target="_blank">Linkia</a></span><span class="float-md-right d-none d-lg-block">Made with<i class="ft-heart pink"></i><span id="scroll-top"></span></span></p>
+    <p class="clearfix blue-grey lighten-2 text-sm-center mb-0 px-2">
+        <span class="float-md-left d-block d-md-inline-block">Copyright &copy; 2021 
+            <a class="text-bold-800 grey darken-2" href="https://linkia.qa" target="_blank">Linkia</a>
+        </span>
+        <span class="float-md-right d-none d-lg-block">Made with<i class="ft-heart pink"></i>
+            <span id="scroll-top"></span>
+        </span>
+    </p>
 </footer>
 
+@include('dashboard.layouts.js')
 
-<script type="text/javascript">
-    document.onreadystatechange = function() { 
-    if (document.readyState !== "complete") { 
-        document.querySelector("body").style.visibility = "hidden"; 
-        document.querySelector(".preloadersection").style.visibility = "visible"; 
-    } else { 
-        document.querySelector(".preloadersection").style.display = "none"; 
-        document.querySelector("body").style.visibility = "visible"; 
-    } 
-};
-</script>
-<!-- BEGIN: Vendor JS-->
-<script src="{{ asset('/dashboard/app-assets/vendors/js/vendors.min.js')}}"></script>
-<!-- BEGIN Vendor JS-->
-
-<!-- BEGIN: Page Vendor JS-->
-
-<script src="{{ asset('/dashboard/app-assets/vendors/js/charts/chart.min.js')}}"></script>
-<script src="{{ asset('/dashboard/app-assets/vendors/js/charts/apexcharts/apexcharts.min.js')}}"></script>
-<script src="{{ asset('/dashboard/app-assets/vendors/js/charts/chartist.min.js')}}"></script>
-<script src="{{ asset('/dashboard/app-assets/vendors/js/charts/chartist-plugin-tooltip.min.js')}}"></script>
-<script src="{{ asset('/dashboard/app-assets/vendors/js/charts/raphael-min.js')}}"></script>
-<script src="{{ asset('/dashboard/app-assets/vendors/js/charts/morris.min.js')}}"></script>
-<script src="{{ asset('/dashboard/app-assets/vendors/js/timeline/horizontal-timeline.js')}}"></script>
-<!-- END: Page Vendor JS-->
-
-<!-- BEGIN: Theme JS-->
-<script src="{{ asset('/dashboard/app-assets/js/core/app-menu.js')}}"></script>
-<script src="{{ asset('/dashboard/app-assets/js/core/app.js')}}"></script>
-<!-- END: Theme JS-->
-
-<!-- BEGIN: Page JS-->
-<script src="{{ asset('/dashboard/app-assets/js/scripts/pages/dashboard-crypto.js')}}"></script>
-<script src="{{ asset('/dashboard/app-assets/js/scripts/pages/dashboard-ecommerce.js')}}"></script>
-<script src="{{ asset('/dashboard/app-assets/vendors/js/tables/datatable/datatables.min.js')}}"></script>
-<script src="{{ asset('/dashboard/app-assets/js/custom/userlist.js')}}"></script>
-<script src="{{ asset('/dashboard/app-assets/vendors/js/forms/toggle/bootstrap-switch.min.js')}}"></script>
-<script src="{{ asset('/dashboard/app-assets/vendors/js/forms/toggle/bootstrap-checkbox.min.js')}}"></script>
-<script src="{{ asset('/dashboard/app-assets/vendors/js/forms/toggle/switchery.min.js')}}"></script>
-<script src="{{ asset('/dashboard/app-assets/js/scripts/forms/switch.js')}}"></script>
-<!-- END: Page JS-->
+<!-- START: CUSTOM JS-->
+@yield('custom-js')
+<!-- END: CUSTOM JS-->
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-
-
-
 @include('sweetalert::alert')
-
-<script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
-<script type="text/javascript">
-    $(document).ready(function() {
-      $('.summernote').summernote();
-    });
-</script>
-
 </body>
-<!-- END: Body-->
-
 </html>

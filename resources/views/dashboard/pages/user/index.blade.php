@@ -61,25 +61,6 @@
                                             </tbody>
                                         </table>
                                     <!-- datatable ends -->
-
-
-
-
-
-
-
-
-
-
-
- 
-
-
-
-
-
-
-
                                 </div>
                             </div>
                         </div>
@@ -89,4 +70,8 @@
             </div>
         </div> 
     <!-- END: Content-->
+@endsection
+
+@section('custom-js')
+<script src="{{ asset('/dashboard/app-assets/js/custom/userlist.js')}}"></script>
 @endsection

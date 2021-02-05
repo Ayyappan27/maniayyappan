@@ -12,7 +12,7 @@ class AboutusController extends Controller
 {
     public function index() { 
         $data = About::all();
-    	return view('dashboard.pages.aboutus', [ 'data'=> $data ]);
+    	return view('dashboard.pages.helpandinfo.aboutus', [ 'data'=> $data ]);
     }
     public function update_about(Request $request){ 
     	$validator = Validator::make($request->all(), [

@@ -12,7 +12,7 @@ class TermsandconditionController extends Controller
 {
     public function index() { 
         $data = Privacy::all();
-    	return view('dashboard.pages.termsandcondition', [ 'data'=> $data ]); 
+    	return view('dashboard.pages.helpandinfo.termsandcondition', [ 'data'=> $data ]); 
     }
     public function update_termsandcondition(Request $request){ 
 

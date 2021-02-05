@@ -11,7 +11,7 @@ class ContactusController extends Controller
 {
     public function index() { 
     	$data = Contact::all();
-    	return view('dashboard.pages.contactus', [ 'data'=> $data ]);
+    	return view('dashboard.pages.helpandinfo.contactus', [ 'data'=> $data ]);
     }
     public function update_contact(Request $request){ 
 

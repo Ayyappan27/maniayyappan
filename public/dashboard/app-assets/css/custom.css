@@ -5,7 +5,7 @@
    padding: 8px 0px;
 	text-align: center;
 }
-.header-navbar .navbar-container{
+.header-navbar .navbar-container,.header-navbar{
 	background: #FCCF17;
 }
 .btn-green{
@@ -92,3 +92,22 @@ table tbody td{
   width: 20px;
   height:20px;
 }
+
+/*======= sector ========*/
+.sector_image{
+  width: 100px;
+  height: auto;
+}
+.text-white{
+  color: #ffffff;
+}
+body.vertical-layout.vertical-menu.menu-expanded .main-menu,
+body.vertical-layout.vertical-menu.menu-expanded .navbar .navbar-header{
+  width: 220px!important;
+}
+body.vertical-layout.vertical-menu.menu-expanded .navbar .navbar-container,
+body.vertical-layout.vertical-menu.menu-expanded .content, 
+body.vertical-layout.vertical-menu.menu-expanded .footer{
+  margin-left: 220px;
+}
+/*======= sector ========*/
