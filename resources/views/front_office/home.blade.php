@@ -13,14 +13,14 @@ banner -->
     <div class="row justify-content-center">
       <div class=" col-lg-9 col-md-9 d-flex">
         <div class="content text-center">
-          <h3 class="text-white mb-4">A <span class="text-primary"> Job Portal </span> with confidentiality at the core to enable <span class="text-primary"> your profile </span> visibility to the right  employer to maximize chances of getting <span class="text-primary"> your dream job.</span></h3> 
+          <h3 class="text-white mb-4">{{__('homepage.A')}} <span class="text-primary"> {{__('homepage.Job Portal')}} </span> {{__('homepage.with confidentiality at the core to enable')}} <span class="text-primary"> {{__('homepage.your profile')}} </span> {{__('homepage.visibility to the right employer to maximize chances of getting')}} <span class="text-primary"> {{__('homepage.your dream job.')}}</span></h3> 
           <div class="job-search-field">
             <div class="job-search-item">
               <form>
                 <div class="col-sm-12">
                   <div class="form-group mb-md-0 justify-content-center">
-                      <input type="text" class="form-control" name="job_title" placeholder="Job Title, Skill or Company">
-                    <button type="submit" class="btn btn-primary btn-lg m-0"><i class="fas fa-search"></i> Find Jobs</button>
+                      <input type="text" class="form-control" name="job_title" placeholder="{{ __('homepage.Job Title, Skill or Company') }}">
+                    <button type="submit" class="btn btn-primary btn-lg m-0"><i class="fas fa-search"></i> {{__('homepage.Find Jobs')}}</button>
                   </div>
                 </div>
               </form>
@@ -42,11 +42,11 @@ Action-box -->
     <div class="row align-items-center">
       <div class="col-lg-9 mb-4 mb-sm-4 mb-lg-0">
         <div class="d-sm-flex">
-          <h4 class="text-white">Create your Account at affordable pricing plans to get noticed by thousands of Employers in your area of expertise.</h4>
+          <h4 class="text-white">{{ __('homepage.Create your Account at affordable pricing plans to get noticed by thousands of Employers in your area of expertise.') }}</h4>
         </div>
       </div>
       <div class="col-md-3 text-lg-right">
-        <a class="btn btn-white btn-md" href="{{ route('front.registration', app()->getLocale()) }}">Register</a>
+        <a class="btn btn-white btn-md" href="{{ route('front.registration', app()->getLocale()) }}">{{__('homepage.Register')}}</a>
       </div>
     </div>
   </div>
@@ -61,8 +61,8 @@ Browse listing -->
     <div class="row justify-content-center">
       <div class="col-lg-8">
         <div class="section-title center">
-          <h2 class="title">Browse Listing</h2>
-          <p>Data trends and insights, tips for employers, product updates and best practices</p>
+          <h2 class="title">{{__('homepage.Browse Listing')}}</h2>
+          <p>{{__('homepage.Data trends and insights, tips for employers, product updates and best practices')}}</p>
         </div>
       </div>
     </div>
@@ -72,10 +72,10 @@ Browse listing -->
           <div class="style-01">
             <ul class="nav nav-tabs justify-content-center d-flex mt-0" id="myTab" role="tablist">
               <li class="nav-item">
-                <a class="nav-link  active" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Recent Candidates </a>
+                <a class="nav-link  active" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">{{__('homepage.Recent Candidates')}} </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Popular Candidates</a>
+                <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">{{__('homepage.Popular Candidates')}}</a>
               </li>
             </ul>
           </div>
@@ -87,6 +87,7 @@ Browse listing -->
         <div class="tab-content" id="myTabContent">
           <div class="tab-pane fade active show " id="profile" role="tabpanel" aria-labelledby="profile-tab">
             <div class="row mt-4">
+            @foreach($users as $user)
               <div class="col-lg-4 col-sm-4 display-grid">
                 <div class="job-list job-grid cursor-pointer">
                   <div class="job-list-logo ">
@@ -95,121 +96,35 @@ Browse listing -->
                   <div class="job-list-details">
                     <div class="job-list-info">
                       <div class="job-list-title">
-                        <h6><a href="job-detail.html">Mani</a></h6>
+                        <h6><a href="#">{{ $user->first_name }}</a></h6>
                       </div>
                       <div class="job-list-option">
-                          <p class="mb-1"><i class="fas fa-map-marker-alt pr-1"></i>New Castle, PA,</p>
-                          <p class="mb-1"><i class="fas fa-filter pr-1"></i>Banking</p>
-                          <p class="mb-1 temporary"> <i class="fas fa-suitcase pr-1"></i>Temporary</p>
+                        @if( $user->address == null )
+                          <p class="mb-1"><i class="fas fa-map-marker-alt pr-1"></i>N/A</p>
+                        @else
+                          <p class="mb-1"><i class="fas fa-map-marker-alt pr-1"></i>{{ $user->address }}</p>
+                        @endif
+                        @if( $user->nationality == null )
+                          <p class="mb-1"><i class="fas fa-filter pr-1"></i>N/A</p>
+                        @else
+                          <p class="mb-1"><i class="fas fa-filter pr-1"></i>{{ $user->nationality }}</p>
+                        @endif
+                        <p class="mb-1 temporary"> <i class="fas fa-suitcase pr-1"></i>Temporary</p>
                       </div>
                     </div>
-                  </div> 
-                </div>
-              </div>
-              <div class="col-lg-4 col-sm-4 display-grid">
-                <div class="job-list job-grid cursor-pointer">
-                  <div class="job-list-logo ">
-                    <img class="img-fluid" src="https://img.freepik.com/free-vector/businessman-character-avatar-isolated_24877-60111.jpg?size=338&ext=jpg" alt="">
                   </div>
-                  <div class="job-list-details">
-                    <div class="job-list-info">
-                      <div class="job-list-title">
-                        <h6><a href="job-detail.html">Mani</a></h6>
-                      </div>
-                      <div class="job-list-option">
-                          <p class="mb-1"><i class="fas fa-map-marker-alt pr-1"></i>New Castle, PA</p>
-                          <p class="mb-1"><i class="fas fa-filter pr-1"></i>Banking</p>
-                          <p class="mb-1 temporary"> <i class="fas fa-suitcase pr-1"></i>Temporary</p>
-                      </div>
-                    </div>
-                  </div> 
                 </div>
               </div>
-              <div class="col-lg-4 col-sm-4 display-grid">
-                <div class="job-list job-grid cursor-pointer">
-                  <div class="job-list-logo ">
-                    <img class="img-fluid" src="https://img.freepik.com/free-vector/businessman-character-avatar-isolated_24877-60111.jpg?size=338&ext=jpg" alt="">
-                  </div>
-                  <div class="job-list-details">
-                    <div class="job-list-info">
-                      <div class="job-list-title">
-                        <h6><a href="job-detail.html">Mani</a></h6>
-                      </div>
-                      <div class="job-list-option">
-                          <p class="mb-1"><i class="fas fa-map-marker-alt pr-1"></i>New Castle, PA</p>
-                          <p class="mb-1"><i class="fas fa-filter pr-1"></i>Banking</p>
-                          <p class="part-time" href="#"><i class="fas fa-suitcase pr-1"></i>Part-Time</p>
-                      </div>
-                    </div>
-                  </div> 
-                </div>
-              </div>
-              <div class="col-lg-4 col-sm-4 display-grid">
-                <div class="job-list job-grid cursor-pointer">
-                  <div class="job-list-logo ">
-                    <img class="img-fluid" src="https://img.freepik.com/free-vector/businessman-character-avatar-isolated_24877-60111.jpg?size=338&ext=jpg" alt="">
-                  </div>
-                  <div class="job-list-details">
-                    <div class="job-list-info">
-                      <div class="job-list-title">
-                        <h6><a href="job-detail.html">Mani</a></h6>
-                      </div>
-                      <div class="job-list-option">
-                          <p class="mb-1"><i class="fas fa-map-marker-alt pr-1"></i>New Castle, PA</p>
-                          <p class="mb-1"><i class="fas fa-filter pr-1"></i>Banking</p>
-                          <p class="part-time" href="#"><i class="fas fa-suitcase pr-1"></i>Part-Time</p>
-                      </div>
-                    </div>
-                  </div> 
-                </div>
-              </div>
-              <div class="col-lg-4 col-sm-4 display-grid">
-                <div class="job-list job-grid cursor-pointer">
-                  <div class="job-list-logo ">
-                    <img class="img-fluid" src="https://img.freepik.com/free-vector/businessman-character-avatar-isolated_24877-60111.jpg?size=338&ext=jpg" alt="">
-                  </div>
-                  <div class="job-list-details">
-                    <div class="job-list-info">
-                      <div class="job-list-title">
-                        <h6><a href="job-detail.html">Mani</a></h6>
-                      </div>
-                      <div class="job-list-option">
-                          <p class="mb-1"><i class="fas fa-map-marker-alt pr-1"></i>New Castle, PA,</p>
-                          <p class="mb-1"><i class="fas fa-filter pr-1"></i>Banking</p>
-                          <p class="mb-1 temporary"> <i class="fas fa-suitcase pr-1"></i>Temporary</p>
-                      </div>
-                    </div>
-                  </div> 
-                </div>
-              </div>
-              <div class="col-lg-4 col-sm-4 display-grid">
-                <div class="job-list job-grid cursor-pointer">
-                  <div class="job-list-logo ">
-                    <img class="img-fluid" src="https://img.freepik.com/free-vector/businessman-character-avatar-isolated_24877-60111.jpg?size=338&ext=jpg" alt="">
-                  </div>
-                  <div class="job-list-details">
-                    <div class="job-list-info">
-                      <div class="job-list-title">
-                        <h6><a href="job-detail.html">Mani</a></h6>
-                      </div>
-                      <div class="job-list-option">
-                          <p class="mb-1"><i class="fas fa-map-marker-alt pr-1"></i>New Castle, PA,</p>
-                          <p class="mb-1"><i class="fas fa-filter pr-1"></i>Banking</p>
-                          <p class="mb-1 temporary"> <i class="fas fa-suitcase pr-1"></i>Temporary</p>
-                      </div>
-                    </div>
-                  </div> 
-                </div>
-              </div>
-               
+              @endforeach
             </div>
             <div class="col-12 justify-content-center d-flex mt-4">
-              <a class="btn btn-white btn-lg" href="#">View More Candidates</a>
+              <a class="btn btn-white btn-lg" href="{{ route('front.candidates', app()->getLocale()) }}">{{__('homepage.View More Candidates')}}</a>
             </div>
           </div>
 
           <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
-            <div class="row mt-4">
+            <div class="row mt-4">     
+            @foreach($users as $user)
               <div class="col-lg-4 col-sm-4 display-grid">
                 <div class="job-list job-grid cursor-pointer">
                   <div class="job-list-logo ">
@@ -218,116 +133,29 @@ Browse listing -->
                   <div class="job-list-details">
                     <div class="job-list-info">
                       <div class="job-list-title">
-                        <h6><a href="job-detail.html">Mani</a></h6>
+                        <h6><a href="#">{{ $user->first_name }}</a></h6>
                       </div>
                       <div class="job-list-option">
-                          <p class="mb-1"><i class="fas fa-map-marker-alt pr-1"></i>New Castle, PA,</p>
-                          <p class="mb-1"><i class="fas fa-filter pr-1"></i>Banking</p>
-                          <p class="mb-1 temporary"> <i class="fas fa-suitcase pr-1"></i>Temporary</p>
+                        @if( $user->address == null )
+                          <p class="mb-1"><i class="fas fa-map-marker-alt pr-1"></i>N/A</p>
+                        @else
+                          <p class="mb-1"><i class="fas fa-map-marker-alt pr-1"></i>{{ $user->address }}</p>
+                        @endif
+                        @if( $user->nationality == null )
+                          <p class="mb-1"><i class="fas fa-filter pr-1"></i>N/A</p>
+                        @else
+                          <p class="mb-1"><i class="fas fa-filter pr-1"></i>{{ $user->nationality }}</p>
+                        @endif
+                        <p class="mb-1 temporary"> <i class="fas fa-suitcase pr-1"></i>Temporary</p>
                       </div>
                     </div>
-                  </div> 
-                </div>
-              </div>
-              <div class="col-lg-4 col-sm-4 display-grid">
-                <div class="job-list job-grid cursor-pointer">
-                  <div class="job-list-logo ">
-                    <img class="img-fluid" src="https://img.freepik.com/free-vector/businessman-character-avatar-isolated_24877-60111.jpg?size=338&ext=jpg" alt="">
                   </div>
-                  <div class="job-list-details">
-                    <div class="job-list-info">
-                      <div class="job-list-title">
-                        <h6><a href="job-detail.html">Mani</a></h6>
-                      </div>
-                      <div class="job-list-option">
-                          <p class="mb-1"><i class="fas fa-map-marker-alt pr-1"></i>New Castle, PA</p>
-                          <p class="mb-1"><i class="fas fa-filter pr-1"></i>Banking</p>
-                          <p class="mb-1 temporary"> <i class="fas fa-suitcase pr-1"></i>Temporary</p>
-                      </div>
-                    </div>
-                  </div> 
                 </div>
               </div>
-              <div class="col-lg-4 col-sm-4 display-grid">
-                <div class="job-list job-grid cursor-pointer">
-                  <div class="job-list-logo ">
-                    <img class="img-fluid" src="https://img.freepik.com/free-vector/businessman-character-avatar-isolated_24877-60111.jpg?size=338&ext=jpg" alt="">
-                  </div>
-                  <div class="job-list-details">
-                    <div class="job-list-info">
-                      <div class="job-list-title">
-                        <h6><a href="job-detail.html">Mani</a></h6>
-                      </div>
-                      <div class="job-list-option">
-                          <p class="mb-1"><i class="fas fa-map-marker-alt pr-1"></i>New Castle, PA</p>
-                          <p class="mb-1"><i class="fas fa-filter pr-1"></i>Banking</p>
-                          <p class="part-time" href="#"><i class="fas fa-suitcase pr-1"></i>Part-Time</p>
-                      </div>
-                    </div>
-                  </div> 
-                </div>
-              </div>
-              <div class="col-lg-4 col-sm-4 display-grid">
-                <div class="job-list job-grid cursor-pointer">
-                  <div class="job-list-logo ">
-                    <img class="img-fluid" src="https://img.freepik.com/free-vector/businessman-character-avatar-isolated_24877-60111.jpg?size=338&ext=jpg" alt="">
-                  </div>
-                  <div class="job-list-details">
-                    <div class="job-list-info">
-                      <div class="job-list-title">
-                        <h6><a href="job-detail.html">Mani</a></h6>
-                      </div>
-                      <div class="job-list-option">
-                          <p class="mb-1"><i class="fas fa-map-marker-alt pr-1"></i>New Castle, PA</p>
-                          <p class="mb-1"><i class="fas fa-filter pr-1"></i>Banking</p>
-                          <p class="part-time" href="#"><i class="fas fa-suitcase pr-1"></i>Part-Time</p>
-                      </div>
-                    </div>
-                  </div> 
-                </div>
-              </div>
-              <div class="col-lg-4 col-sm-4 display-grid">
-                <div class="job-list job-grid cursor-pointer">
-                  <div class="job-list-logo ">
-                    <img class="img-fluid" src="https://img.freepik.com/free-vector/businessman-character-avatar-isolated_24877-60111.jpg?size=338&ext=jpg" alt="">
-                  </div>
-                  <div class="job-list-details">
-                    <div class="job-list-info">
-                      <div class="job-list-title">
-                        <h6><a href="job-detail.html">Mani</a></h6>
-                      </div>
-                      <div class="job-list-option">
-                          <p class="mb-1"><i class="fas fa-map-marker-alt pr-1"></i>New Castle, PA,</p>
-                          <p class="mb-1"><i class="fas fa-filter pr-1"></i>Banking</p>
-                          <p class="mb-1 temporary"> <i class="fas fa-suitcase pr-1"></i>Temporary</p>
-                      </div>
-                    </div>
-                  </div> 
-                </div>
-              </div>
-              <div class="col-lg-4 col-sm-4 display-grid">
-                <div class="job-list job-grid cursor-pointer">
-                  <div class="job-list-logo ">
-                    <img class="img-fluid" src="https://img.freepik.com/free-vector/businessman-character-avatar-isolated_24877-60111.jpg?size=338&ext=jpg" alt="">
-                  </div>
-                  <div class="job-list-details">
-                    <div class="job-list-info">
-                      <div class="job-list-title">
-                        <h6><a href="job-detail.html">Mani</a></h6>
-                      </div>
-                      <div class="job-list-option">
-                          <p class="mb-1"><i class="fas fa-map-marker-alt pr-1"></i>New Castle, PA,</p>
-                          <p class="mb-1"><i class="fas fa-filter pr-1"></i>Banking</p>
-                          <p class="mb-1 temporary"> <i class="fas fa-suitcase pr-1"></i>Temporary</p>
-                      </div>
-                    </div>
-                  </div> 
-                </div>
-              </div>
-               
+              @endforeach          
             </div>
             <div class="col-12 justify-content-center d-flex mt-4">
-              <a class="btn btn-white btn-lg" href="#">View More Candidates</a>
+              <a class="btn btn-white btn-lg" href="{{ route('front.candidates', app()->getLocale()) }}">View More Candidates</a>
             </div>
           </div>
         </div>
@@ -336,7 +164,7 @@ Browse listing -->
         <div class="sidebar mb-0">
           <div class="widget bg-white p-4">
             <div class="widget-title widget-collapse">
-              <h5>Search</h5>
+              <h5>{{__('homepage.Search')}}</h5>
             </div>
             <div class="collapse show" id="specialism">
               <div class="widget-content">
@@ -360,11 +188,13 @@ Browse listing -->
                   <input type="checkbox" class="custom-control-input" id="specialism5">
                   <label class="custom-control-label" for="specialism5">Graduate</label>
                 </div>
+                <div class="custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input" id="specialism6">
+                  <label class="custom-control-label" for="specialism6">Others</label>
+                </div>
               </div>
             </div>
           </div>
-          
-         
         </div>
       </div>
     </div>
@@ -378,72 +208,25 @@ Category-style -->
 <section class="space-ptb">
   <div class="container">
     <div class="section-title center">
-      <h2 class="title">Choose Your Sector</h2>
-      <p class="mb-0">What made each of these people so successful? Motivation.</p>
+      <h2 class="title">{{__('homepage.Choose Your Sector')}}</h2>
+      <p class="mb-0">{{__('homepage.What made each of these people so successful? Motivation.')}}</p>
     </div>
     <div class="row">
       <div class="col-lg-12">
         <div class="category-style text-center">
+          @foreach($sectors as $sector)
           <a href="#" class="category-item">
             <div class="category-icon mb-4">
-              <i class="flaticon-account"></i>
+              <img src="{{ $sector->url }}" class="sector-img">
             </div>
-            <h6>Accountancy</h6>
-            <span class="mb-0">301 Open Position </span>
+            <h6>{{ $sector->sector_name }}</h6>
+            <span class="mb-0">{{ $sector->position }} Open Position </span>
           </a>
-          <a href="#" class="category-item">
-            <div class="category-icon mb-4">
-              <i class="flaticon-conversation"></i>
-            </div>
-            <h6>Apprenticeships</h6>
-            <span class="mb-0">287 Open Position </span>
-          </a>
-          <a href="#" class="category-item">
-            <div class="category-icon mb-4">
-              <i class="flaticon-money"></i>
-            </div>
-            <h6>Banking</h6>
-            <span class="mb-0">542 Open Position </span>
-          </a>
-          <a href="#" class="category-item">
-            <div class="category-icon mb-4">
-              <i class="flaticon-mortarboard"></i>
-            </div>
-            <h6>Education</h6>
-            <span class="mb-0">785 Open Position </span>
-          </a>
-          <a href="#" class="category-item">
-            <div class="category-icon mb-4">
-              <i class="flaticon-worker"></i>
-            </div>
-            <h6>Engineering</h6>
-            <span class="mb-0">862 Open Position </span>
-          </a>
-          <a href="#" class="category-item">
-            <div class="category-icon mb-4">
-              <i class="flaticon-businessman"></i>
-            </div>
-            <h6>Estate Agency</h6>
-            <span class="mb-0">423 Open Position </span>
-          </a>
-          <a href="#" class="category-item">
-            <div class="category-icon mb-4">
-              <i class="flaticon-coding"></i>
-            </div>
-            <h6>IT & Telecoms</h6>
-            <span class="mb-0">253 Open Position </span>
-          </a>
-          <a href="#" class="category-item">
-            <div class="category-icon mb-4">
-              <i class="flaticon-balance"></i>
-            </div>
-            <h6>Legal</h6>
-            <span class="mb-0">689 Open Position </span>
-          </a>
+          @endforeach
         </div>
       </div>
       <div class="col-12 justify-content-center d-flex mt-4">
-        <a class="btn btn-white btn-lg" href="#">View More Sector</a>
+        <a class="btn btn-white btn-lg" href="{{ route('front.sectors', app()->getLocale()) }}">View More Sector</a>
       </div>
 
     </div>
@@ -464,8 +247,8 @@ Why You Choose -->
           <div class="row">
             <div class="col-xl-10 col-lg-12">
               <div class="section-title-02">
-                <h2 class="text-capitalize" >we should mention about Referral System</h2>
-                <p>We know this in our gut, but what can we do about it? How can we motivate ourselves? One of the most difficult aspects of achieving success is staying motivated over the long haul.</p>
+                <h2 class="text-capitalize" >{{__('homepage.We Should Mention About Referral System')}}</h2>
+                <p>{{__('homepage.We know this in our gut, but what can we do about it? How can we motivate ourselves? One of the most difficult aspects of achieving success is staying motivated over the long haul.')}}</p>
               </div>
             </div>
           </div>
@@ -477,32 +260,32 @@ Why You Choose -->
                     <div class="category-icon mb-3">
                       <i class="flaticon-team"></i>
                     </div>
-                    <h6 class="mb-2">Best talented people</h6>
-                    <p>If success is a process with a number of defined steps.</p>
+                    <h6 class="mb-2">{{__('homepage.Best talented people')}}</h6>
+                    <p>{{__('homepage.If success is a process with a number of defined steps.')}}</p>
                   </div>
                   <div class="col-md-6 col-sm-12 mb-3">
                     <div class="category-icon mb-3">
                       <i class="flaticon-chat"></i>
                     </div>
-                    <h6 class="mb-2">Easy to communicate</h6>
-                    <p>Having clarity of purpose and a clear picture of what you desire.</p>
+                    <h6 class="mb-2">{{__('homepage.Easy to communicate')}}</h6>
+                    <p>{{__('homepage.Having clarity of purpose and a clear picture of what you desire.')}}</p>
                   </div>
                   <div class="col-md-6 col-sm-12 mb-3">
                     <div class="category-icon mb-3">
                       <i class="flaticon-job-3"></i>
                     </div>
-                    <h6 class="mb-2">Easy to find candidate</h6>
-                    <p>Introspection is the trick. Understand what you want.</p>
+                    <h6 class="mb-2">{{__('homepage.Easy to find candidate')}}</h6>
+                    <p>{{__('homepage.Introspection is the trick. Understand what you want.')}}</p>
                   </div>
                   <div class="col-md-6 col-sm-12 mb-3">
                     <div class="category-icon mb-3">
                       <i class="flaticon-job-2"></i>
                     </div>
-                    <h6 class="mb-2">Global recruitment option</h6>
-                    <p>There are basically six key areas to higher achievement.</p>
+                    <h6 class="mb-2">{{__('homepage.Global recruitment option')}}</h6>
+                    <p>{{__('homepage.There are basically six key areas to higher achievement.')}}</p>
                   </div>
                 </div>
-                <a class="btn btn-primary" href="#">Get Started</a>
+                <a class="btn btn-primary" href="#">{{__('homepage.Get Started')}}</a>
               </div>
             </div>
           </div>
@@ -521,8 +304,8 @@ Top Companies -->
     <div class="row justify-content-center">
       <div class="col-12 text-center">
         <div class="section-title center">
-          <h2 class="title">Top Companies</h2>
-          <p>Data trends and insights, tips for employers, product updates and best practices</p>
+          <h2 class="title">{{__('homepage.Top Companies')}}</h2>
+          <p>{{__('homepage.Data trends and insights, tips for employers, product updates and best practices')}}</p>
         </div>
         <div class="owl-carousel owl-nav-bottom-center" data-nav-arrow="false" data-nav-dots="true" data-items="4" data-md-items="3" data-sm-items="2" data-xs-items="1" data-xx-items="1" data-space="15" data-autoheight="true">
           <div class="item">
@@ -738,7 +521,7 @@ Easiest Way to Use -->
     <div class="row justify-content-center">
       <div class="col-lg-8 col-md-10">
         <div class="section-title-02 text-center text-white">
-          <h2 class="text-white">Job seeker Perspective</h2>
+          <h2 class="text-white">{{__('homepage.Job seeker Perspective')}}</h2>
         </div>
       </div>
     </div>
@@ -749,7 +532,7 @@ Easiest Way to Use -->
             <i class="flaticon-account"></i>
           </div>
           <div class=" text-white">
-            <h5>Create Account</h5>
+            <h5>{{__('homepage.Create Account')}}</h5>
           </div>
         </div>
       </div>
@@ -759,7 +542,7 @@ Easiest Way to Use -->
             <i class="flaticon-resume"></i>
           </div>
           <div class="text-white">
-            <h5>Prepare your Resume</h5>
+            <h5>{{__('homepage.Prepare your Resume')}}</h5>
           </div>
         </div>
       </div>
@@ -769,7 +552,7 @@ Easiest Way to Use -->
             <i class="flaticon-money"></i>
           </div>
           <div class=" text-white">
-            <h5>Refer your Friend and Earn Bonus</h5>
+            <h5>{{__('homepage.Refer your Friend and Earn Bonus')}}</h5>
           </div>
         </div>
       </div>
@@ -779,7 +562,7 @@ Easiest Way to Use -->
             <i class="flaticon-notification"></i>
           </div>
           <div class=" text-white">
-            <h5>Get Noticed</h5>
+            <h5>{{__('homepage.Get Noticed')}}</h5>
           </div>
         </div>
       </div>
@@ -789,7 +572,7 @@ Easiest Way to Use -->
             <i class="flaticon-job-1"></i>
           </div>
           <div class=" text-white">
-            <h5>Get Job</h5>
+            <h5>{{__('homepage.Get Job')}}</h5>
           </div>
         </div>
       </div>
@@ -808,7 +591,7 @@ Plans&and Packages -->
 
 
         <div class="section-title center">
-          <h2 class="title">Subscribe to Your Plans and Referral Scheme</h2>
+          <h2 class="title">{{__('homepage.Subscribe To Your Plans And Referral Scheme')}}</h2>
         </div>
       </div>
     </div>
@@ -825,9 +608,9 @@ Plans&and Packages -->
             <span>$3.99 </span>
           </div>
           <ul class="list-unstyled pricing-list">
-            <li>Subscription for one month</li>
+            <li>{{__('homepage.Subscription for one month')}}</li>
           </ul>
-          <a class="btn btn-outline" href="#">Get Started</a>
+          <a class="btn btn-outline" href="#">{{__('homepage.Get Started')}}</a>
         </div>
       </div>
       <div class="col-md-4 text-center">
@@ -841,8 +624,8 @@ Plans&and Packages -->
             <span>$12.99 </span>
           </div>
           <ul class="list-unstyled pricing-list">
-            <li>Subscription for one year</li></ul>
-          <a class="btn btn-outline" href="#">Get Started</a>
+            <li>{{__('homepage.Subscription for one year')}}</li></ul>
+          <a class="btn btn-outline" href="#">{{__('homepage.Get Started')}}</a>
         </div>
       </div>
       <div class="col-md-4 text-center">
@@ -856,9 +639,9 @@ Plans&and Packages -->
             <span>$8.99</span>
           </div>
           <ul class="list-unstyled pricing-list">
-            <li>Subscription for six month</li>
+            <li>{{('homepage.Subscription for Six Month')}}</li>
           </ul>
-          <a class="btn btn-outline" href="#">Get Started</a>
+          <a class="btn btn-outline" href="#">{{__('homepage.Get Started')}}</a>
         </div>
       </div>
     </div>

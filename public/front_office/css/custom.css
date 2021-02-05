@@ -119,3 +119,11 @@
 
 /*========= column 5  ==============*/
 
+nav svg{
+    height: 20px;
+}
+
+.sector-img{
+    width: 100%;
+    height: auto;
+}

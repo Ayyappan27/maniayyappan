@@ -39,6 +39,13 @@ return[
 	'Recruiter' => 'المجند',
 	'Are You Recruiting?' => 'هل تقوم بالتوظيف؟',
 	'Individuals' => 'الأفراد',
+	'A' => 'أ',
+	'Job Portal' => 'بوابة الوظائف',
+	'with confidentiality at the core to enable' => 'مع السرية في جوهر التمكين',
+	'your profile' => 'ملفك الشخصي',
+	'visibility to the right employer to maximize chances of getting' => 'الرؤية لصاحب العمل المناسب لزيادة فرص الحصول عليها',
+	'your dream job.' => 'وظيفة أحلامك.',
+	'Find Jobs' => 'العثور على وظائف'
  
 ] 
 ?>

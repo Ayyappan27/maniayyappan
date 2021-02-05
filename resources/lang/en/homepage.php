@@ -24,7 +24,6 @@ return[
 	'There are basically six key areas to higher achievement.' => 'There are basically six key areas to higher achievement.',
 	'Get Started' => 'Get Started',
 	'Top Companies' => 'Top Companies',
-	'Data trends and insights, tips for employers, product updates and best practices' => 'Data trends and insights, tips for employers, product updates and best practices',
 	'Job seeker Perspective' => 'Job seeker Perspective',
 	'Create Account' => 'Create Account',
 	'Prepare your Resume' => 'Prepare your Resume',
@@ -40,6 +39,12 @@ return[
 	'Recruiter' => 'Recruiter',
 	'Are You Recruiting?' => 'Are You Recruiting?',
 	'Individuals' => 'Individuals',
- 
+	'A' => 'A',
+	'Job Portal' => 'Job Portal',
+	'with confidentiality at the core to enable' => 'with confidentiality at the core to enable',
+	'your profile' => 'your profile',
+	'visibility to the right employer to maximize chances of getting' => 'visibility to the right employer to maximize chances of getting',
+	'your dream job.' => 'your dream job.',
+	'Find Jobs' => 'Find Jobs'
 ] 
 ?>

@@ -1,5 +1,5 @@
 <div class="tab-pane {{ Session::get('signinTab') == 'individual' ? 'active' : 'fade' }}" id="individual" role="tabpanel">
-    <form class="mt-4" action="{{ route('front.individuallogin', app()->getLocale()) }}" method="POST">
+    <form id="signin-individual" class="mt-4" action="{{ route('front.individuallogin', app()->getLocale()) }}" method="POST">
         {{ csrf_field() }}
         <div class="form-row">
             <div class="form-group col-12">

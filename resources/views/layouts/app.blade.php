@@ -55,7 +55,7 @@ feature info section -->
             <i class="flaticon-team"></i>
           </div>
           <div class="feature-info-content text-white pl-sm-4 pl-0">
-            <p>{{__('homepage.Jobseeker')}}</p>
+            <p>Jobseeker</p>
             <h5 class="text-white">Looking For Job?</h5>
           <!-- <a class="ml-auto align-self-center" href="#">Apply now<i class="fas fa-long-arrow-alt-right"></i> </a> -->
           </div>
@@ -70,8 +70,8 @@ feature info section -->
             <i class="flaticon-job-3"></i>
           </div>
           <div class="feature-info-content text-white pl-sm-4 pl-0">
-            <p>{{__('homepage.Recruiter')}}</p>
-            <h5 class="text-white">{{__('homepage.Are You Recruiting?')}}</h5>
+            <p>Recruiter</p>
+            <h5 class="text-white">Are You Recruiting?</h5>
             <!-- <a class="ml-auto align-self-center" href="#">Apply now<i class="fas fa-long-arrow-alt-right"></i> </a> -->
           </div>
         </div>
@@ -82,8 +82,8 @@ feature info section -->
             <i class="flaticon-job"></i>
           </div>
           <div class="feature-info-content text-white pl-sm-4 pl-0">
-            <p>{{__('homepage.Individuals')}}</p>
-            <h5 class="text-white">{{__('homepage.Looking For Job?')}}</h5>
+            <p>Individuals</p>
+            <h5 class="text-white">Looking For Job?</h5>
             <!-- <a class="ml-auto align-self-center" href="#">Apply now<i class="fas fa-long-arrow-alt-right"></i> </a> -->
           </div>
         </div>

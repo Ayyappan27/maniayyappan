@@ -1,11 +1,12 @@
 <?php
+use App\Http\Controllers\Dashboard;
 use Illuminate\Support\Facades\Route;
 
 Route::group(['prefix' => 'admin', 'namespace' => 'Dashboard'], function() {
     Config::set('auth.default', 'admin');
-    Route::get('login', 'Auth\LoginController@index');
-    Route::post('login', 'Auth\LoginController@login')->name('admin.login');
-    Route::any('/signout', 'Auth\LoginController@logout')->name('admin.logout');
+    Route::get('login', [ Dashboard\Auth\LoginController::class, 'index' ]);
+    Route::post('login', [ Dashboard\Auth\LoginController::class, 'login' ])->name('admin.login');
+    Route::any('/signout', [ Dashboard\Auth\LoginController::class, 'logout' ])->name('admin.logout');
 
     Route::group(['middleware' =>'admin:admin'], function() {
         Route::get('/', function () {
@@ -13,24 +14,26 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Dashboard'], function() {
         });
     });
 
-    Route::get('/dashboard', 'DashboardController@index');
-    Route::get('/users', 'UserlistController@index');
-    Route::get('/helpandinfo', 'HelpandinfoController@index');
-    Route::get('/aboutus', 'AboutusController@index');
-    Route::get('/contactus', 'ContactusController@index');
-    Route::get('/termsandcondition', 'TermsandconditionController@index');
-    Route::get('/sectors', 'SectorController@index');
-    Route::get('/sectorform', 'SectorController@sectorform');
-    Route::get('/editsectorform/{id}', 'SectorController@editsectorform');
-    Route::get('/deletesectorform/{id}', 'SectorController@deletesectorform');
+    Route::get('/dashboard', [ Dashboard\DashboardController::class, 'index' ]);
+    Route::get('/users', [ Dashboard\UserlistController::class, 'index' ]);
+    Route::get('/helpandinfo', [ Dashboard\HelpandinfoController::class, 'index' ]);
+    Route::get('/aboutus', [ Dashboard\AboutusController::class, 'index' ]);
+    Route::get('/contactus', [ Dashboard\ContactusController::class, 'index' ]);
+    Route::get('/termsandcondition', [ Dashboard\TermsandconditionController::class, 'index' ]);
+    Route::get('/sectors', [ Dashboard\SectorController::class, 'index' ]);
+    Route::get('/sectorform', [ Dashboard\SectorController::class, 'sectorform' ]);
+    Route::get('/editsectorform/{id}', [ Dashboard\SectorController::class, 'editsectorform' ]);
+    Route::get('/deletesectorform/{id}', [ Dashboard\SectorController::class, 'deletesectorform' ]);
 
-    Route::post('/update_about', 'AboutusController@update_about');
-    Route::post('/update_contact', 'ContactusController@update_contact');
-    Route::post('/update_termsandcondition', 'TermsandconditionController@update_termsandcondition');
-    Route::post('/add_sector', 'SectorController@add_sector');
-    Route::post('/edit_sector', 'SectorController@edit_sector')->name('admin.edit_sector');
+    Route::post('/update_about', [ Dashboard\AboutusController::class, 'update_about' ]);
+    Route::post('/update_contact', [ Dashboard\ContactusController::class, 'update_contact' ]);
+    Route::post('/update_termsandcondition', [ Dashboard\TermsandconditionController::class, 'update_termsandcondition' ]);
+    Route::post('/add_sector', [ Dashboard\SectorController::class, 'add_sector' ]);
+    Route::post('/edit_sector', [ Dashboard\SectorController::class, 'edit_sector' ])->name('admin.edit_sector');
 
-    Route::post('/updateuserstatus', 'UserlistController@updatestatus');
-    Route::get('/getuser', 'UserlistController@getuser');
+    Route::post('/updateuserstatus', [ Dashboard\UserlistController::class, 'updatestatus' ]);
+    Route::get('/getuser', [ Dashboard\UserlistController::class, 'user' ]);
+    Route::get('/appinfo', [ Dashboard\appinfoController::class, 'index' ]);
+    Route::post('/update_appinfo', [ Dashboard\appinfoController::class, 'update_appinfo' ]);
 
 });
