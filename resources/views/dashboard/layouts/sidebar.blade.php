@@ -27,6 +27,8 @@
                         </li>
                         <li class="nav-item {{ Request::segment(2) === 'sectors' || Request::segment(2) === 'sectorform' || Request::segment(2) === 'editsectorform' ? 'active' : null }}"><a class="menu-item" href="/admin/sectors"><i></i><span data-i18n="Sales">Sectors</span></a>
                         </li>
+                        <li class="nav-item {{ Request::segment(2) === 'appinfo' ? 'active' : null }}"><a class="menu-item" href="/admin/appinfo"><i></i><span data-i18n="Sales">App info</span></a>
+                        </li>
                     </ul>
                 </li>            
         </ul>
