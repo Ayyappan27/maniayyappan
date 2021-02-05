@@ -43,22 +43,22 @@
                                             <div class="mb-1 form-group row">
                                                 <label class="col-md-3 label-control mt-1" for="email" >Apk Link Status</label>
                                                 <div class="col-md-9 mx-auto mt-1">
-                                                        @if( $contact->apk_status == 'yes')
+                                                        @if( $contact->apk_status == 'Yes')
                                                        <div class="form-check form-check-inline">
-                                                          <input class="form-check-input" type="radio" name="apk_status" id="apk_status1" value="yes" checked="">
+                                                          <input class="form-check-input" type="radio" name="apk_status" id="apk_status1" value="Yes" checked="">
                                                           <label class="form-check-label" for="apk_status1">Active</label>
                                                         </div>
                                                         <div class="form-check form-check-inline">
-                                                          <input class="form-check-input" type="radio" name="apk_status" id="apk_status2" value="no">
+                                                          <input class="form-check-input" type="radio" name="apk_status" id="apk_status2" value="No">
                                                           <label class="form-check-label" for="apk_status2">Deactive</label>
                                                         </div>
-                                                        @elseif( $contact->apk_status == 'no')
+                                                        @elseif( $contact->apk_status == 'No')
                                                         <div class="form-check form-check-inline">
-                                                          <input class="form-check-input" type="radio" name="apk_status" id="apk_status1" value="yes" >
+                                                          <input class="form-check-input" type="radio" name="apk_status" id="apk_status1" value="Yes" >
                                                           <label class="form-check-label" for="apk_status1">Active</label>
                                                         </div>
                                                         <div class="form-check form-check-inline">
-                                                          <input class="form-check-input" type="radio" name="apk_status" id="apk_status2" value="no" checked="">
+                                                          <input class="form-check-input" type="radio" name="apk_status" id="apk_status2" value="No" checked="">
                                                           <label class="form-check-label" for="apk_status2">Deactive</label>
                                                         </div>
                                                         @endif
@@ -75,22 +75,22 @@
                                             <div class="mb-1 form-group row">
                                                 <label class="col-md-3 label-control mt-1" for="email" >IOS Link Status</label>
                                                 <div class="col-md-9 mx-auto mt-1">
-                                                        @if( $contact->ios_status == 'yes')
+                                                        @if( $contact->ios_status == 'Yes')
                                                        <div class="form-check form-check-inline">
-                                                          <input class="form-check-input" type="radio" name="ios_status" id="ios_status1" value="yes" checked="">
+                                                          <input class="form-check-input" type="radio" name="ios_status" id="ios_status1" value="Yes" checked="">
                                                           <label class="form-check-label" for="ios_status1">Active</label>
                                                         </div>
                                                         <div class="form-check form-check-inline">
-                                                          <input class="form-check-input" type="radio" name="ios_status" id="ios_status2" value="no">
+                                                          <input class="form-check-input" type="radio" name="ios_status" id="ios_status2" value="No">
                                                           <label class="form-check-label" for="ios_status2">Deactive</label>
                                                         </div>
-                                                        @elseif( $contact->ios_status == 'no')
+                                                        @elseif( $contact->ios_status == 'No')
                                                         <div class="form-check form-check-inline">
-                                                          <input class="form-check-input" type="radio" name="ios_status" id="ios_status1" value="yes" >
+                                                          <input class="form-check-input" type="radio" name="ios_status" id="ios_status1" value="Yes" >
                                                           <label class="form-check-label" for="ios_status1">Active</label>
                                                         </div>
                                                         <div class="form-check form-check-inline">
-                                                          <input class="form-check-input" type="radio" name="ios_status" id="ios_status2" value="no" checked="">
+                                                          <input class="form-check-input" type="radio" name="ios_status" id="ios_status2" value="No" checked="">
                                                           <label class="form-check-label" for="ios_status2">Deactive</label>
                                                         </div>
                                                         @endif
@@ -100,22 +100,22 @@
                                             <div class="mb-1 form-group row">
                                                 <label class="col-md-3 label-control mt-1" for="email" >App Info Status</label>
                                                 <div class="col-md-9 mx-auto mt-1">
-                                                        @if( $contact->status == 'yes')
+                                                        @if( $contact->status == 'Yes')
                                                        <div class="form-check form-check-inline">
-                                                          <input class="form-check-input" type="radio" name="status" id="inlineRadio1" value="yes" checked="">
+                                                          <input class="form-check-input" type="radio" name="status" id="inlineRadio1" value="Yes" checked="">
                                                           <label class="form-check-label" for="inlineRadio1">Active</label>
                                                         </div>
                                                         <div class="form-check form-check-inline">
-                                                          <input class="form-check-input" type="radio" name="status" id="inlineRadio2" value="no">
+                                                          <input class="form-check-input" type="radio" name="status" id="inlineRadio2" value="No">
                                                           <label class="form-check-label" for="inlineRadio2">Deactive</label>
                                                         </div>
-                                                        @elseif( $contact->status == 'no')
+                                                        @elseif( $contact->status == 'No')
                                                         <div class="form-check form-check-inline">
-                                                          <input class="form-check-input" type="radio" name="status" id="inlineRadio1" value="yes" >
+                                                          <input class="form-check-input" type="radio" name="status" id="inlineRadio1" value="Yes" >
                                                           <label class="form-check-label" for="inlineRadio1">Active</label>
                                                         </div>
                                                         <div class="form-check form-check-inline">
-                                                          <input class="form-check-input" type="radio" name="status" id="inlineRadio2" value="no" checked="">
+                                                          <input class="form-check-input" type="radio" name="status" id="inlineRadio2" value="No" checked="">
                                                           <label class="form-check-label" for="inlineRadio2">Deactive</label>
                                                         </div>
                                                         @endif
