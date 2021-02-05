@@ -15,7 +15,10 @@ class CreateAppinfoTable extends Migration
     {
         Schema::create('appinfo', function (Blueprint $table) {
             $table->id();
-            $table->string('app_link');
+            $table->string('apk_link');
+            $table->string('apk_status');
+            $table->string('ios_link');
+            $table->string('ios_status');
             $table->string('status');
             $table->timestamps();
         });

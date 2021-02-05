@@ -13,12 +13,11 @@ class AppinfoSeeder extends Seeder
     {
         DB::table('appinfo')->insert([
             [
-                'app_link' => '#',
+                'apk_link' => '#',
+                'apk_status' => 'Yes',
+                'ios_link' => '#',
+                'ios_status' => 'No',
                 'status' => 'Yes',
-            ],
-            [
-                'app_link' => '#',
-                'status' => 'No',
             ]
         ]);
     }
