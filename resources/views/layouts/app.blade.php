@@ -55,7 +55,7 @@ feature info section -->
             <i class="flaticon-team"></i>
           </div>
           <div class="feature-info-content text-white pl-sm-4 pl-0">
-            <p>Jobseeker</p>
+            <p>{{__('homepage.Jobseeker')}}</p>
             <h5 class="text-white">Looking For Job?</h5>
           <!-- <a class="ml-auto align-self-center" href="#">Apply now<i class="fas fa-long-arrow-alt-right"></i> </a> -->
           </div>
@@ -70,8 +70,8 @@ feature info section -->
             <i class="flaticon-job-3"></i>
           </div>
           <div class="feature-info-content text-white pl-sm-4 pl-0">
-            <p>Recruiter</p>
-            <h5 class="text-white">Are You Recruiting?</h5>
+            <p>{{__('homepage.Recruiter')}}</p>
+            <h5 class="text-white">{{__('homepage.Are You Recruiting?')}}</h5>
             <!-- <a class="ml-auto align-self-center" href="#">Apply now<i class="fas fa-long-arrow-alt-right"></i> </a> -->
           </div>
         </div>
@@ -82,8 +82,8 @@ feature info section -->
             <i class="flaticon-job"></i>
           </div>
           <div class="feature-info-content text-white pl-sm-4 pl-0">
-            <p>Individuals</p>
-            <h5 class="text-white">Looking For Job?</h5>
+            <p>{{__('homepage.Individuals')}}</p>
+            <h5 class="text-white">{{__('homepage.Looking For Job?')}}</h5>
             <!-- <a class="ml-auto align-self-center" href="#">Apply now<i class="fas fa-long-arrow-alt-right"></i> </a> -->
           </div>
         </div>
@@ -106,8 +106,8 @@ feature info section -->
     </div>
     <div class="container pt-5">
       <div class="row mt-5">
-        @foreach($appinfo as $value)
-          @if($value->status == 'No')
+        @foreach($appinfo ?? [] as $value)
+          @if($value->status === 'No')
           <div class="col-lg-4 col-md-6">
           @else
           <div class="col-lg-3 col-md-6">
@@ -228,7 +228,7 @@ feature info section -->
     <script src="{{ asset('front_office/js/slideshow/jquery.kenburnsy.js') }}"></script>
 
     <script src="{{ asset('front_office/js/jquery.appear.js') }}"></script>
-    <script src="{{ asset('front_office/counter/jquery.countTo.js') }}"></script>
+    <script src="{{ asset('front_office/js/counter/jquery.countTo.js') }}"></script>
     <script src="{{ asset('front_office/js/magnific-popup/jquery.magnific-popup.min.js') }}"></script>
 
     <!-- Template Scripts (Do not remove)-->

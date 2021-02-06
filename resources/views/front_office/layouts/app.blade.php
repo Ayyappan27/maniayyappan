@@ -106,8 +106,8 @@ feature info section -->
     </div>
     <div class="container pt-5">
       <div class="row mt-5">
-        @foreach($appinfo as $value)
-          @if($value->status == 'No')
+        @foreach($appinfo ?? [] as $value)
+          @if($value->status === 'No')
           <div class="col-lg-4 col-md-6">
           @else
           <div class="col-lg-3 col-md-6">
@@ -228,7 +228,7 @@ feature info section -->
     <script src="{{ asset('front_office/js/slideshow/jquery.kenburnsy.js') }}"></script>
 
     <script src="{{ asset('front_office/js/jquery.appear.js') }}"></script>
-    <script src="{{ asset('front_office/counter/jquery.countTo.js') }}"></script>
+    <script src="{{ asset('front_office/js/counter/jquery.countTo.js') }}"></script>
     <script src="{{ asset('front_office/js/magnific-popup/jquery.magnific-popup.min.js') }}"></script>
 
     <!-- Template Scripts (Do not remove)-->

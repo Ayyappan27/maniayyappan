@@ -8,13 +8,10 @@ use App\Models\Jobseeker;
 
 class Candidates extends Component
 {
-    use WithPagination;
+    // use WithPagination;
     public function render()
     {
-        $candidates = Jobseeker::join('users', 'jobseekers.id', 'users.id')
-            ->where('users.userable_type', 'App\Models\Jobseeker')
-            ->orderby('jobseekers.id','DESC')
-            ->paginate(5);
+        $candidates = Jobseeker::with('user')->paginate(8);
         return view('livewire.candidates', ['candidates' => $candidates]);
     }
 
