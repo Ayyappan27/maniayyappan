@@ -5,6 +5,7 @@ namespace App\Http\Livewire;
 use Livewire\Component;
 use Livewire\WithPagination;
 use App\Models\Sector;
+use App\Models\Appinfo;
 
 class Sectors extends Component
 {
@@ -16,6 +17,7 @@ class Sectors extends Component
             ->where('images.type', 'sectors')
             ->orderBy('sectors.id', 'desc')
             ->paginate(5); 
-        return view('livewire.sectors', ['sectors' => $sectors]);
+        $appinfo = Appinfo::all(); 
+        return view('livewire.sectors', compact('candidates'))->extends('front_office.layouts.app', compact('appinfo'));
     }
 }

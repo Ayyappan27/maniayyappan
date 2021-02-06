@@ -56,7 +56,7 @@ feature info section -->
           </div>
           <div class="feature-info-content text-white pl-sm-4 pl-0">
             <p>{{__('homepage.Jobseeker')}}</p>
-            <h5 class="text-white">Looking For Job?</h5>
+            <h5 class="text-white">{{__('homepage.Looking For Job?')}}</h5>
           <!-- <a class="ml-auto align-self-center" href="#">Apply now<i class="fas fa-long-arrow-alt-right"></i> </a> -->
           </div>
         </div>
