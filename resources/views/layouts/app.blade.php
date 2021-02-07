@@ -31,6 +31,7 @@
 
     @livewireStyles
 
+   
 </head>
 <body>
   <div class="preloadersection ">
