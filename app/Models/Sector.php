@@ -10,7 +10,7 @@ class Sector extends Model
 
     protected $fillable = ['sector_name', 'position'];
 
-    public function imageable()
+    public function image()
     {
         return $this->morphOne(Image::class, 'imageable');
     }

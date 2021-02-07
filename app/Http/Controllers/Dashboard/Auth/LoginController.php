@@ -12,7 +12,7 @@ class LoginController extends Controller
     {
         if (Auth::guard('admin')->check()) {
             return redirect('admin');
-        } 
+        }
         return view('dashboard.auth.login');
     }
 
@@ -23,11 +23,11 @@ class LoginController extends Controller
             'password'    => 'required|string'
         ]);
         $rememberme = $request->rememberme == 'on' ? true : false;
-        if(auth()->guard('admin')->attempt([
+        if (auth()->guard('admin')->attempt([
             'email'    => $request->email,
             'password' => $request->password
         ], $rememberme)) {
-            return redirect('admin/dashboard')->with('success', 'Login Succesfully!');
+            return redirect('admin')->with('success', 'Login Succesfully!');
         } else {
             return redirect()->back()->with('info', 'Incorrect email or password!');
         }
