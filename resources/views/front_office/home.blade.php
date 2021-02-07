@@ -639,7 +639,7 @@ Plans&and Packages -->
             <span>$8.99</span>
           </div>
           <ul class="list-unstyled pricing-list">
-            <li>{{('homepage.Subscription for Six Month')}}</li>
+            <li>{{__('homepage.Subscription for Six Month')}}</li>
           </ul>
           <a class="btn btn-outline" href="#">{{__('homepage.Get Started')}}</a>
         </div>

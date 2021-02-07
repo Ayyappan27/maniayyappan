@@ -1,4 +1,3 @@
-@extends('front_office.layouts.app')
 @section('content')
 <section class="space-ptb">
   <div class="container">

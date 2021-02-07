@@ -5,14 +5,29 @@ namespace App\Http\Livewire;
 use Livewire\Component;
 use Livewire\WithPagination;
 use App\Models\Jobseeker;
+use App\Models\Appinfo;
 
 class Candidates extends Component
 {
-    // use WithPagination;
+    use WithPagination;
     public function render()
     {
-        $candidates = Jobseeker::with('user')->paginate(8);
-        return view('livewire.candidates', ['candidates' => $candidates]);
+        $candidates = $this->getcandidates();
+        $appinfo = $this->getappinfo();
+        return view('livewire.candidates', compact('candidates'))->extends('front_office.layouts.app', compact('appinfo'));
+    }
+
+    public function getcandidates(){
+        $candidates = Jobseeker::join('users', 'jobseekers.id', 'users.id')
+            ->where('users.userable_type', 'App\Models\Jobseeker')
+            ->orderby('jobseekers.id','DESC')
+            ->paginate(8);
+        return $candidates;
+    }
+
+    public function getappinfo(){
+        $appinfo = Appinfo::all(); 
+        return $appinfo;
     }
 
 }

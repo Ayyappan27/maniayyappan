@@ -34,11 +34,7 @@ class WelcomeController extends Controller
 
     public function getjobseekers()
     { 
-        $users = Jobseeker::join('users', 'jobseekers.id', 'users.id')
-            ->where('users.userable_type', 'App\Models\Jobseeker')
-            ->orderby('jobseekers.id','DESC')
-            ->limit(6)
-            ->get();
+        $users = Jobseeker::with('user')->get();
         return $users;
     }
 
